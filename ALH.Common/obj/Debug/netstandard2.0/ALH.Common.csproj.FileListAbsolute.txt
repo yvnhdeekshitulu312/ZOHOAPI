@@ -1,0 +1,119 @@
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Users\Srihari Surendra\source\repos\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\PP Latest\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+D:\Latest Patient Portal API\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Source\ZOHO\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\Users\Srihari Surendra\source\repos\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.deps.json
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.dll
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\bin\Debug\netstandard2.0\ALH.Common.pdb
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfoInputs.cache
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.AssemblyInfo.cs
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.dll
+C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\obj\Debug\netstandard2.0\ALH.Common.pdb

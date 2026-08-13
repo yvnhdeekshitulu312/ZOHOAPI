@@ -1,0 +1,3650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Wipro.NxG.HIS" elementFormDefault="qualified" targetNamespace="http://Wipro.NxG.HIS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetInpatientDiscountData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intAdmissionID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInpatientDiscountDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetInpatientDiscountDataResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageInfoDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmissionNM" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTBL" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageInfoDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackageInfoDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTBL" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackageListResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientPackageorders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intAdmissionNo" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="dtPkgDtl">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientPackageordersResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="DeletePatientPackageorders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePatientPackageordersResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="SaveBillClearenceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ScheduleID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Isverifyed" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Remarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="CreateDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBillClearenceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveBillClearenceStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleTime">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetScheduleTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetScheduleTimeResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateScheduleTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="scheduleTime" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateScheduleTimeResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="IsProcessRunning">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="IsProcessRunningResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IsProcessRunningResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProcessStartedState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="processRunning" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProcessStartedStateResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="LastProcessTime">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="LastProcessTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="LastProcessTimeResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLastProcessDate">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="UpdateLastProcessDateResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetCancelBillsDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIpNo" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCancelBillsDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCancelBillsDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientBills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientBillsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPatientBillsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExcludeBedRentalNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEmployeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DeductStartingBedRental" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExcludeBedRentalNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateBillExcludeBedRentalNewResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateInterimBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEmployeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DeductStartingBedRental" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="fromdate" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="todate" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateInterimBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateInterimBillResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackageItemsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPatientAdmitDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intFeatureId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intFunctionId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCallContext" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" nillable="true" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPatientAdmitDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ModifyPatientAdmitDateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intBedId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="dtDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTbl" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BedDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="BedDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDischargeMODA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDischargeReason" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strExpiryDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRemarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DischargeStatus" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intToHospitalId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DAMADischargeReasonId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDischargeMODAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveDischargeMODAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPBillDetailsAdv">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="GetIPBillDetailsAdvResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="FetchConsultationOrderIDDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="startRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="EndRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FilterCondition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Featureid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Functionid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CallContext" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OrderType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchConsultationOrderIDDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchConsultationOrderIDDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProcdureOrderItemDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="OrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProcdureOrderItemDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetProcdureOrderItemDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProcdureOrderIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="startRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="EndRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FilterCondition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Featureid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Functionid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CallContext" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OrderType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProcdureOrderIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchProcdureOrderIDsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInvestigationOrderIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="startRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="EndRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FilterCondition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Featureid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Functionid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CallContext" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OrderType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInvestigationOrderIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchInvestigationOrderIDsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchConsumptionOrderIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="startRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="EndRow" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FilterCondition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Featureid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Functionid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CallContext" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OrderType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchConsumptionOrderIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchConsumptionOrderIDsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientDischargeClearance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCallContext" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkstationid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientDischargeClearanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatientDischargeClearanceResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestRequisitionDetailsWARD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="blnWithFlow" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngOrderId" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestRequisitionDetailsWARDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetTestRequisitionDetailsWARDResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPNo" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnDeleted" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatientDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientBeds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPNo" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientBedsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatientBedsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedTransferDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedTransferDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBedTransferDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="strIntrimBill" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="CheckForDuplicates" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveBillResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInterimMainBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="billtype" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FeatureId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FunctionId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCallcontext" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInterimMainBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveInterimMainBillResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBillDispatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="Billid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDispatchto" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRemarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FeatureId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FunctionId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCallcontext" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBillDispatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveBillDispatchResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargePatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargePatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DischargePatientResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargeCancelReason">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DischareCancelReason" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargeCancelReasonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DischargeCancelReasonResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargeCancelReasonMODA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DischareCancelReason" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DischargeCancelReasonMODAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DischargeCancelReasonMODAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeCancelReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="Type" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="userid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDischargeCancelReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDischargeCancelReasonsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelDischarge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelDischargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CancelDischargeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPendingOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPendingOrdersResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngBillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDiscountDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientBillDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientBillDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPatientBillDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPrices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsItemsList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="OrderDate" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BedTypeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="OrderTypeID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="TableID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetServiceItemPricesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMiscOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="AdmissionID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DsItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMiscOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveMiscOrderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMiscOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsItems">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMiscOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="UpdateMiscOrderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMiscOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="MiscOrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMiscOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DeleteMiscOrderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="FilterCondition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetServicesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetServiceOrdersResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultiPayerServiceOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ServiceID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMultiPayerServiceOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetMultiPayerServiceOrdersResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrderItemPrices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DsPrices">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveOrderItemPricesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveOrderItemPricesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsAndDepositRefunds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsAndDepositRefundsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDepositsAndDepositRefundsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsAndDepositRefundsTuned">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="AdmissionId" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsAndDepositRefundsTunedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDepositsAndDepositRefundsTunedResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInPatients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInPatientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchInPatientsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchtCurrentInPatients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="sSelect" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchtCurrentInPatientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchtCurrentInPatientsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCurrentInPatientPayableReportResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportUI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportUIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCurrentInPatientPayableReportUIResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intFirst" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCurrentInPatientPayableReportDetailsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportDetailsUI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DsBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intFirst" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCurrentInPatientPayableReportDetailsUIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCurrentInPatientPayableReportDetailsUIResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelMultiPayerInpatientBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="PrimaryBillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="SecondaryBillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="AuthEmp" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="StrReason" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="LetterId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelMultiPayerInpatientBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CancelMultiPayerInpatientBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillSpecificDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lnbillid" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lnIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillSpecificDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBillSpecificDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lnIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBillMasterResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCancelledBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lnIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCancelledBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCancelledBillResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherPayerBills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lnbillid" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lnIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOtherPayerBillsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetOtherPayerBillsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsForPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositsForPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDepositsForPatientResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelInpatientBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="PrimaryBillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="SecondaryBillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="AuthEmp" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="StrReason" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="LetterId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelInpatientBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CancelInpatientBillResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLetterDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intLetterId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLevel" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLetterDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetLetterDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADVProcedureDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ProcedureName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Filter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WstationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADVProcedureDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchADVProcedureDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strOrder" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBillIDResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchBillDispatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="BillDispatchID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="tagid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchBillDispatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchBillDispatchResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCopmanyDocumentCheckList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsSave">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCopmanyDocumentCheckListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCopmanyDocumentCheckListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCheckListMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="documentid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Documentname" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Documenttype" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Code" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FunctionID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="USERID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WORKSTATIONID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strName2L" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnblocked" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCheckListMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveCheckListMasterResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDIschargeCheckListMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strOrder" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDIschargeCheckListMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDIschargeCheckListMasterResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCancelAvailedDeposit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsReceipt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCancelAvailedDepositResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveCancelAvailedDepositResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchBillDispatchsADV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strfilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchBillDispatchsADVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchBillDispatchsADVResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAdmitDischargedPatient1">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="prevbedID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="NewBedID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ReadmitDate" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillBedTypeid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ReqbedTypeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="AllotBedTypeid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="PatientType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAdmitDischargedPatient1Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ReAdmitDischargedPatient1Result" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAdmitDischargedPatient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="prevbedID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="NewBedID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ReadmitDate" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillBedTypeid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ReqbedTypeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="AllotBedTypeid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReAdmitDischargedPatientResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ReAdmitDischargedPatientResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInterimPatients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="BillDays" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCurrentdate" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IntWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="FunctionId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CallContext" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInterimPatientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchInterimPatientsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateBillResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillForPayOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="fromdate" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="todate" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillForPayOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateBillForPayOutResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="BillID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateBillExclusionResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExcludeBedRental">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsFinal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strAdmitDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDischargeDateTime" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEmployeeType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExcludeBedRentalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateBillExcludeBedRentalResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoundedValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="BillValue" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoundedValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetRoundedValueResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoundedValueHospID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="BillValue" type="xs:decimal" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoundedValueHospIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetRoundedValueHospIDResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAgreementData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsAggData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intEligibleBedTypeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAgreementDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="UpdateAgreementDataResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDeductables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCompanyType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDeductablesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCompanyDeductablesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackagesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackagesServiceId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intServiceId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackagesServiceIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackagesServiceIdResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ServiceName" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetServiceIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedConfigurationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intResult" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedConfigurationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBedConfigurationDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetOrderTypesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetTariffDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffDetailsEstimation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="PatType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffDetailsEstimationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetTariffDetailsEstimationResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyBedRentalsLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strCompanyType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyBedRentalsLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCompanyBedRentalsLimitResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntrimBillDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="BillID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntrimBillDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetIntrimBillDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTaxConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strTblID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intArgeemenID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBedTypeID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strServiceID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strSpecialiseID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTaxConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="GetServiceTaxConfigurationResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchDisplayService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchDisplayServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchDisplayServiceResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceDependencyDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTable" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceDependencyDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetServiceDependencyDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="PackageID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackageDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPBillDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strSelect" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strOrder" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIPBillDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetIPBillDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScrollReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsScroll">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intScrollModuleId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ScrollUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intRoutID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveScrollReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveScrollReportResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScrollReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intScrollId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTbl" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScrollReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetScrollReportDataResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProceduresOrdered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkstationid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProceduresOrderedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveProceduresOrderedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTestRequisition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" maxOccurs="1" name="dsRequisition">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTestRequisitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveTestRequisitionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPConsultation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intConsultationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="bytBlocked" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPConsultationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveIPConsultationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDoctorVisits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intConsultationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="bytBlocked" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveIPDoctorVisitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveIPDoctorVisitsResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEquipmentUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEquipmentUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveEquipmentUsageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchIPConsultations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStation" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchIPConsultationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchIPConsultationsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchIPOrdersForBilling">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="IPOrdeID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchIPOrdersForBillingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchIPOrdersForBillingResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackagesForConsumption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="IPOrdeID" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackagesForConsumptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackagesForConsumptionResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersOfService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="TableID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrdersOfServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetOrdersOfServiceResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProceduersOrdered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkstationid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyProceduersOrderedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ModifyProceduersOrderedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteIPDoctorVisits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intConsultationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteIPDoctorVisitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DeleteIPDoctorVisitsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProceduresOrdered">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProceduresOrderedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DeleteProceduresOrderedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTestRequisition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngTestOrderId" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTestRequisitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DeleteTestRequisitionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestRequisitionDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="blnWithFlow" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngOrderId" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strTableId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestRequisitionDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetTestRequisitionDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecializationConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intResult" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecializationConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSpecializationConfigResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strProcedureID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchSurgeryDataResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDSSurgery">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SaveSurgeryRecordResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatSurgeryCaseSheet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intSurgeryID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intAdmissionID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intOrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatSurgeryCaseSheetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatSurgeryCaseSheetResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatCaseSheet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intBillItemSeq" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatCaseSheetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SavePatCaseSheetResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryOrdersDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intOrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryOrdersDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchSurgeryOrdersDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelSurgeryRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intOrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intRevert" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelSurgeryRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CancelSurgeryRecordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAnaesthesia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchAnaesthesiaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchAnaesthesiaResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPriority">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPriorityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPriorityResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryResources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intSurgeryID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryResourcesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchSurgeryResourcesResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchOTs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDeptID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchOTsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchOTsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentTaskStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEquipmentTaskStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetEquipmentTaskStatusResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEquipmentUsageforConsumption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="objDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEquipmentUsageforConsumptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveEquipmentUsageforConsumptionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientIPDemographics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strIPId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientIPDemographicsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatientIPDemographicsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchEquipmentConnection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intConnectionID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchEquipmentConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchEquipmentConnectionResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelEquipmentUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intOrderID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelEquipmentUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="CancelEquipmentUsageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientEpisode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intEpisodeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intMonitorID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intVisitID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientEpisodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="FetchPatientEpisodeResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="tariffId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Userid" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="workstationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPatientServicesResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHISConfigurationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intResult" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHISConfigurationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetHISConfigurationDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDischarge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDischargeReason" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strExpiryDateTime" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRemarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="DischargeStatus" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveDischargeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveDischargeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientIPID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientIPIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPatientIPIDResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientStatus" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnDeleted" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Languageid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPatientDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBedTransReqDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strType" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="dtFromDate" type="xs:dateTime" />
+        <xs:element minOccurs="1" maxOccurs="1" name="dtToDate" type="xs:dateTime" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getBedTransReqDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="getBedTransReqDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasters">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="LanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMastersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetMastersResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyAgreementRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="EBedType" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DsPayerBill">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="PatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intIPID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="IsIntrimBill" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApplyAgreementRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApplyAgreementRuleResult" type="tns:ArrayOfDataSet" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfDataSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSet" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculateServiceTaxandTotal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dtIPBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateServiceTaxandTotalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateServiceTaxandTotalResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateServiceTaxandTotalC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dtIPBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intSpecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateServiceTaxandTotalCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateServiceTaxandTotalCResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateServiceTaxandTotalCPerf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsIPBillDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="1" maxOccurs="1" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRegCode" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intSpecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateServiceTaxandTotalCPerfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CalculateServiceTaxandTotalCPerfResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositRefundReciepts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Condition" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDepositRefundRecieptsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetDepositRefundRecieptsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageBreakupDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="strBillNo" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intSequence" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageBreakupDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetPackageBreakupDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientRemarks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="intpatientid" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="remarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Error" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="ipid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePatientRemarksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SavePatientRemarksResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarksDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="intType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strFilter" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRemarksDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetRemarksDetailsResult">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInpatientDiscount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="dsDiscount">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="lngAdmissionID" type="xs:long" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intAuthorisedBy" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strRemarks" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDiscountTypeID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intDiscountID" type="xs:int" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDiscountDate" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="strDiscountNo" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intInpatientDiscountID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="1" maxOccurs="1" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInpatientDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="SaveInpatientDiscountResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

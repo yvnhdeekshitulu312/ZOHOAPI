@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Wipro.NxG.HIS" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BillingFacadeService" targetNamespace="http://Wipro.NxG.HIS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Wipro.NxG.HIS/Imports">
+      <xsd:import namespace="http://Wipro.NxG.HIS" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="BillingFacadeServiceContract_GetBillDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillDetails" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_GetBillDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBillDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteOPBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteOPBill" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteOPBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteOPBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteOPBillNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteOPBillNew" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteOPBillNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteOPBillNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBill" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillForPayOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillForPayOut" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillForPayOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillForPayOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalculateBillExclusion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateBillExclusion" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalculateBillExclusion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateBillExclusionResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteDiscount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteDiscount" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteDiscount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteDiscountResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentals_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentals" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentals_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentalsNew" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentalsNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_Perf_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentalsNew_Perf" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_Perf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillExcludeBedRentalsNew_PerfResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteInterimBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteInterimBill" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteInterimBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteInterimBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillMODA_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillMODA" />
+  </wsdl:message>
+  <wsdl:message name="BillingFacadeServiceContract_CalucalteIPBillMODA_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalucalteIPBillMODAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BillingFacadeServiceContract">
+    <wsdl:operation name="GetBillDetails">
+      <wsdl:input wsaw:Action="GetBillDetails" message="tns:BillingFacadeServiceContract_GetBillDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/GetBillDetailsResponse" message="tns:BillingFacadeServiceContract_GetBillDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteOPBill">
+      <wsdl:input wsaw:Action="CalucalteOPBill" message="tns:BillingFacadeServiceContract_CalucalteOPBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteOPBillResponse" message="tns:BillingFacadeServiceContract_CalucalteOPBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteOPBillNew">
+      <wsdl:input wsaw:Action="CalucalteOPBillNew" message="tns:BillingFacadeServiceContract_CalucalteOPBillNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteOPBillNewResponse" message="tns:BillingFacadeServiceContract_CalucalteOPBillNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBill">
+      <wsdl:input wsaw:Action="CalucalteIPBill" message="tns:BillingFacadeServiceContract_CalucalteIPBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillForPayOut">
+      <wsdl:input wsaw:Action="CalucalteIPBillForPayout" message="tns:BillingFacadeServiceContract_CalucalteIPBillForPayOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillForPayOutResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBillForPayOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateBillExclusion">
+      <wsdl:input wsaw:Action="CalculateBillExclusion" message="tns:BillingFacadeServiceContract_CalculateBillExclusion_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalculateBillExclusionResponse" message="tns:BillingFacadeServiceContract_CalculateBillExclusion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteDiscount">
+      <wsdl:input wsaw:Action="CalucalteDiscount" message="tns:BillingFacadeServiceContract_CalucalteDiscount_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteDiscountResponse" message="tns:BillingFacadeServiceContract_CalucalteDiscount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentals">
+      <wsdl:input wsaw:Action="CalucalteIPBillExcludeBedRentals" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentals_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillExcludeBedRentalsResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentals_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentalsNew">
+      <wsdl:input wsaw:Action="CalucalteIPBillExcludeBedRentalsNew" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillExcludeBedRentalsNewResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentalsNew_Perf">
+      <wsdl:input wsaw:Action="CalucalteIPBillExcludeBedRentalsNew_Perf" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_Perf_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillExcludeBedRentalsNew_PerfResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBillExcludeBedRentalsNew_Perf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteInterimBill">
+      <wsdl:input wsaw:Action="CalucalteInterimBill" message="tns:BillingFacadeServiceContract_CalucalteInterimBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteInterimBillResponse" message="tns:BillingFacadeServiceContract_CalucalteInterimBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillMODA">
+      <wsdl:input wsaw:Action="CalucalteIPBillMODA" message="tns:BillingFacadeServiceContract_CalucalteIPBillMODA_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/BillingFacadeServiceContract/CalucalteIPBillMODAResponse" message="tns:BillingFacadeServiceContract_CalucalteIPBillMODA_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BillingFacadeEndpoint" type="tns:BillingFacadeServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBillDetails">
+      <soap:operation soapAction="GetBillDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteOPBill">
+      <soap:operation soapAction="CalucalteOPBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteOPBillNew">
+      <soap:operation soapAction="CalucalteOPBillNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBill">
+      <soap:operation soapAction="CalucalteIPBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillForPayOut">
+      <soap:operation soapAction="CalucalteIPBillForPayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateBillExclusion">
+      <soap:operation soapAction="CalculateBillExclusion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteDiscount">
+      <soap:operation soapAction="CalucalteDiscount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentals">
+      <soap:operation soapAction="CalucalteIPBillExcludeBedRentals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentalsNew">
+      <soap:operation soapAction="CalucalteIPBillExcludeBedRentalsNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillExcludeBedRentalsNew_Perf">
+      <soap:operation soapAction="CalucalteIPBillExcludeBedRentalsNew_Perf" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteInterimBill">
+      <soap:operation soapAction="CalucalteInterimBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalucalteIPBillMODA">
+      <soap:operation soapAction="CalucalteIPBillMODA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BillingFacadeService">
+    <wsdl:port name="BillingFacadeEndpoint" binding="tns:BillingFacadeEndpoint">
+      <soap:address location="http://ahh-nu-dev.ahh.com/Wipro.NxG.BillingFacade/BillingFacadeServiceReference.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

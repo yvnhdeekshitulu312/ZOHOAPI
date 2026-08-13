@@ -1,0 +1,4327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Wipro.NxG.HIS" elementFormDefault="qualified" targetNamespace="http://Wipro.NxG.HIS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FetchPatientDefaultLOAItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="compantID" type="xs:int" />
+        <xs:element minOccurs="0" name="gradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="IsCompoundCompany" type="xs:int" />
+        <xs:element minOccurs="0" name="patientType" type="xs:int" />
+        <xs:element minOccurs="0" name="type" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPatientDefaultLOAItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPatientDefaultLOAItemsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBulkPatientItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dtPatientItems" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBulkPatientItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveBulkPatientItemsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intIndex" type="xs:short" />
+        <xs:element minOccurs="0" name="intIDValue" type="xs:int" />
+        <xs:element minOccurs="0" name="blnBit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStation" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBlockReason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteCompanyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSavedConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intcompanyid" type="xs:int" />
+        <xs:element minOccurs="0" name="strtbl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnisinsurance" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intpatienttype" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSavedConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSavedConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisitionMODA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="dsSave" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="dsDeduct" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisitionMODAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCompanyRequisitionMODAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCopyCompanyConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intFromCID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFromGID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFromGSPID" type="xs:int" />
+        <xs:element minOccurs="0" name="intToCID" type="xs:int" />
+        <xs:element minOccurs="0" name="intToGID" type="xs:int" />
+        <xs:element minOccurs="0" name="intToGSPID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCopyCompanyConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCopyCompanyConfigResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInsuranceINCEXC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intinscompid" type="xs:int" />
+        <xs:element minOccurs="0" name="dtItems" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intPType" type="xs:int" />
+        <xs:element minOccurs="0" name="blntype" type="xs:boolean" />
+        <xs:element minOccurs="0" name="inthospitalid" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserid" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationid" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveInsuranceINCEXCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveInsuranceINCEXCResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementGradesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveGradeLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsGrades" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveGradeLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveGradeLocationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEligibilitySponserMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eligibilityID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsSponsors" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveEligibilitySponserMappingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveEligibilitySponserMappingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVATConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="IntUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVATConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVATConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVATViewDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="IntUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVATViewDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVATViewDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVATConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="PatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="EffectiveDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsSaveConfiguration" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="WORKSTATIONID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveVATConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveVATConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update30DaysApprovalNotRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="Is30DaysApprovalNotRequired" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Update30DaysApprovalNotRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Update30DaysApprovalNotRequiredResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNphiesLicences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchNphiesLicencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchNphiesLicencesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalCompanyDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsByDiagIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="DiagnosisIDs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsByDiagIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyDetailsByDiagIDsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsLanguageID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsLanguageIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyDetailsLanguageIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalCompanyDetailsLanguageIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADVProcedureDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcedureName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="WstationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchADVProcedureDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchADVProcedureDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageIDMODA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageIDMODAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalCompanyDetailsLanguageIDMODAResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlaces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlacesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlacesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="dsSave" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="dsDeduct" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisitionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCompanyRequisitionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisitionNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyRequisitionNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCompanyRequisitionNewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRoomRentConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRoomRentConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRoomRentConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHospitalRoomRentConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHospitalRoomRentConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveHospitalRoomRentConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomRentConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="intResult" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoomRentConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRoomRentConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalRoomRentConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="intResult" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalRoomRentConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalRoomRentConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsAgreement" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strTariffName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnBlocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAgreementResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgreementNo" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AgreementNo" type="xs:int" />
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementTypeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdminMasterResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminMasterintLanguageID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAdminMasterintLanguageIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAdminMasterintLanguageIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IntUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServicesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesWithSortOption">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IntUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServicesWithSortOptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServicesWithSortOptionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strServiceType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceTypeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lngPackageId" type="xs:long" />
+        <xs:element minOccurs="0" name="strPackageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPackageName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnNoDayLimit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intMaxdays" type="xs:int" />
+        <xs:element minOccurs="0" name="intStartBefore" type="xs:int" />
+        <xs:element minOccurs="0" name="strWithEffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnIsDOA" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsPackages" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="blnBlocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="strHospId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCallContext" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePackageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lngPackageId" type="xs:long" />
+        <xs:element minOccurs="0" name="intId" type="xs:int" />
+        <xs:element minOccurs="0" name="intLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="strTableId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strHospitalId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPackageResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackageTagId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lngPackageId" type="xs:long" />
+        <xs:element minOccurs="0" name="intId" type="xs:int" />
+        <xs:element minOccurs="0" name="intLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="strTableId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="TagId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackageTagIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPackageTagIdResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceItemsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intType" type="xs:int" />
+        <xs:element minOccurs="0" name="strResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceListResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyPriceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="strPrice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyPriceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveModifyPriceListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyPriceListDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bModify" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsPrice" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyPriceListDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveModifyPriceListDetailsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSlotDuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceItemID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTblID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStation" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSlotDurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSlotDurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalSlotDuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceItemID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTblID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStation" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalSlotDurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalSlotDurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceListWithCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsSaveCopyPricelist" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="blnCode" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceListWithCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyPriceListWithCodeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPrices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceItemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTble" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceItemPricesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICUServiceItemPrices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceItemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTble" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="statusICU" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICUServiceItemPricesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetICUServiceItemPricesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesLangId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceItemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTble" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="LangId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesLangIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceItemPricesLangIdResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesByPatientType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceItemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTble" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="LangId" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesByPatientTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceItemPricesByPatientTypeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveServiceDependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsConfig" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveServiceDependencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveServiceDependencyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceDependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageId" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceDependencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceDependencyResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLOA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsLOA" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLOAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveLOAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHospitalLOA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsLOA" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHospitalLOAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveHospitalLOAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLOAOPPacakge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsLOA" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+        <xs:element minOccurs="0" name="BillID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLOAOPPacakgeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveLOAOPPacakgeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intLetterId" type="xs:int" />
+        <xs:element minOccurs="0" name="intLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="strTableId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLOAResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAHospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intLetterId" type="xs:int" />
+        <xs:element minOccurs="0" name="intLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="strTableId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAHospitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLOAHospitalResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSavingStructure">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSavingStructureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSavingStructureResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTableId" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrganizationDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsApproval" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetApprovalStatusResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceMasterResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTariffPriceDependecies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intBedTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="strPrice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTariffPriceDependeciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveTariffPriceDependeciesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependenciesHospitalWise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependenciesHospitalWiseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceTariffDependenciesHospitalWiseResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependenciesLangID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependenciesLangIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceTariffDependenciesLangIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependencies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strParentBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriceTariffDependenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPriceTariffDependenciesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPackagesPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intSerID" type="xs:int" />
+        <xs:element minOccurs="0" name="strPkgID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strHospID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTariffID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBdID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrdrID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTblID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserid" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPackagesPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllPackagesPriceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementBedTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceItemID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="statusICU" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementBedTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementBedTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementServicesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementServiceItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementServiceItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementServiceItemsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceListByDataBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsSave" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceListByDataBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyPriceListByDataBaseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceItemID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffId" type="xs:int" />
+        <xs:element minOccurs="0" name="strBedTypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrdertypeID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTble" type="xs:int" />
+        <xs:element minOccurs="0" name="strBlocked" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceItemPricesReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceItemPricesReportResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementSpecialisations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementSpecialisationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementSpecialisationsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveServiceTaxConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsSendToSave" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCallContext" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveServiceTaxConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveServiceTaxConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTaxConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strTblID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intArgeemenID" type="xs:int" />
+        <xs:element minOccurs="0" name="intBedTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSpecialiseID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceTaxConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceTaxConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intworkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiscountCategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyDiscount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsSaveDiscount" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveModifyDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveModifyDiscountResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intDiscountID" type="xs:int" />
+        <xs:element minOccurs="0" name="strTbl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intfunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallcontext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDiscountResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOACloserData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOACloserDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLOACloserDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LOAForceCloser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsLOACloser" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LOAForceCloserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LOAForceCloserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAForceCloser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAForceCloserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLOAForceCloserResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommonDeleteInt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intIndex" type="xs:short" />
+        <xs:element minOccurs="0" name="intIDValue" type="xs:int" />
+        <xs:element minOccurs="0" name="blnBit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStation" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommonDeleteIntResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CommonDeleteIntResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePINBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePINBlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePINBlockResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePINBlock">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePINBlockResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePINBlockResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINBlockDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINBlockDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPINBlockDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINBlockDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINBlockDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPINBlockDetailResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPINMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPINMessagesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsSaveCopyPricelist" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyPriceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyPriceListResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorWithSpecialisation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDoctorWithSpecialisationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDoctorWithSpecialisationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsAgreement" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strTariffName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTariffName2l" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTariffCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnBlocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAgreementGradesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyAgreementGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="TargetTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="SourceGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="TargetGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="fromPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="toPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="workstation" type="xs:int" />
+        <xs:element minOccurs="0" name="userid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyAgreementGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyAgreementGradesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTariffGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="strTableID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLangID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTariffGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchTariffGradesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveGeneralExclusions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsConfig" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveGeneralExclusionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveGeneralExclusionsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimStatusReasons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dsRequisition" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveClaimStatusReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveClaimStatusReasonsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchfromAdv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strProcedureName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchfromAdvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchfromAdvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchfromAdvLangID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strProcedureName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LangId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchfromAdvLangIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchfromAdvLangIDResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommonDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strPrName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIDFieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intIDValue" type="xs:int" />
+        <xs:element minOccurs="0" name="blnBit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStation" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommonDeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CommonDeleteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAGradeBedTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOAGradeBedTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLOAGradeBedTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchClinicalConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CaseSheetID" type="xs:int" />
+        <xs:element minOccurs="0" name="CSTemplateType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CaseSheetType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchClinicalConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchClinicalConditionsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReferenceCodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsSave" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveReferenceCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveReferenceCodesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaxCollectable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dtFromdate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="dtToDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intSpecialisationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLOAID" type="xs:int" />
+        <xs:element minOccurs="0" name="strtbl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="strCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaxCollectableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMaxCollectableResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GradeIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyGradesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultants">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intServiceId" type="xs:int" />
+        <xs:element minOccurs="0" name="btIsMedical" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="btMedicalType" type="xs:unsignedByte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConsultantsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetConsultantsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementServiceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTblID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBedTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBedTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchEmployeedata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strEmpId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEmpno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intDeleted" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStid" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchEmployeedataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchEmployeedataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSpecialization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="LangId" type="xs:int" />
+        <xs:element minOccurs="0" name="strOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSpecializationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchSpecializationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPackagesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageHospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsPackage" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageHospitalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePackageHospitalResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyMappedDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDocumentID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsMappedDoc" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCompanyMappedDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveCompanyMappedDocumentsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMappedCompanyDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchMappedCompanyDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchMappedCompanyDocumentsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage_Partone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lngPackageId" type="xs:long" />
+        <xs:element minOccurs="0" name="strPackageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPackageName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnNoDayLimit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intMaxdays" type="xs:int" />
+        <xs:element minOccurs="0" name="intStartBefore" type="xs:int" />
+        <xs:element minOccurs="0" name="strWithEffectDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnIsDOA" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsPackages" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="blnBlocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="strHospId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCallContext" type="xs:int" />
+        <xs:element minOccurs="0" name="packagecode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRemarks" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage_PartoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePackage_PartoneResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage_Parttwo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lngPackageId" type="xs:long" />
+        <xs:element minOccurs="0" name="dsPackages" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strHospId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCallContext" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackage_ParttwoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePackage_ParttwoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICUConfig">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetICUConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetICUConfigResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategorys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Type" type="xs:int" />
+        <xs:element minOccurs="0" name="FilterCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="FunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="CallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategorysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategorysResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="FunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="CallContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryItemsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryItems_Pharma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CategoryIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="FunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="CallContext" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryItems_PharmaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryItems_PharmaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMappedCategoryItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="dtCategoryItems" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="Blocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Error" type="xs:int" />
+        <xs:element minOccurs="0" name="HospDeptID" type="xs:int" />
+        <xs:element minOccurs="0" name="SpecialiseID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMappedCategoryItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveMappedCategoryItemsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMultipleSvcCategoryItems">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="dtCategoryItems" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="Blocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveMultipleSvcCategoryItemsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveMultipleSvcCategoryItemsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tablename" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoriesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLuxuryTaxConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LuxuryTaxConfigurationId" type="xs:int" />
+        <xs:element minOccurs="0" name="CAPAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="Tax" type="xs:decimal" />
+        <xs:element minOccurs="0" name="LuxuryTaxRequired" type="xs:boolean" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="Error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLuxuryTaxConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveLuxuryTaxConfigurationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLuxuryTaxConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Type" type="xs:int" />
+        <xs:element minOccurs="0" name="FilterCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserId" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="Error" type="xs:int" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="FeatureID" type="xs:int" />
+        <xs:element minOccurs="0" name="FunctionID" type="xs:int" />
+        <xs:element minOccurs="0" name="CallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLuxuryTaxConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLuxuryTaxConfigurationResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockExistingLOA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BlockExistingLOAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BlockExistingLOAResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTariffSurgConfigMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Tariffid" type="xs:int" />
+        <xs:element minOccurs="0" name="facilityid" type="xs:int" />
+        <xs:element minOccurs="0" name="Configid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="WorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="locationID" type="xs:int" />
+        <xs:element minOccurs="0" name="billtypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="error" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTariffSurgConfigMappingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveTariffSurgConfigMappingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Configid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchSurgeryConfigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryConfigs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSurgConfigs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConfigid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="intHospid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveSurgeryConfigsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveSurgeryConfigsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryConfigurationsTariffWise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffid" type="xs:int" />
+        <xs:element minOccurs="0" name="intBilltype" type="xs:int" />
+        <xs:element minOccurs="0" name="intFacilityid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSurgeryConfigurationsTariffWiseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchSurgeryConfigurationsTariffWiseResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPriceForPackages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intTariffid" type="xs:int" />
+        <xs:element minOccurs="0" name="intBedTypeid" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPriceForPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPriceForPackagesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTariffSurgConfigMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intFacilityTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchTariffSurgConfigMappingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchTariffSurgConfigMappingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceWiseTariffDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedTypeIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSelectedDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceWiseTariffDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServiceWiseTariffDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffUpdateReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="strServiceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBedTypeIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSelectedDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TBL" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTariffUpdateReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTariffUpdateReportResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageAgreement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkstationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePackageAgreementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePackageAgreementResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackageAgreement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intPackageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPackageAgreementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchPackageAgreementResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementCoverageRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Isdefault" type="xs:int" />
+        <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+        <xs:element minOccurs="0" name="strXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strHospId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="intFunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementCoverageRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAgreementCoverageRulesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoverageRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Isdefault" type="xs:int" />
+        <xs:element minOccurs="0" name="AgreementId" type="xs:int" />
+        <xs:element minOccurs="0" name="AgreementCoverageRuleID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalId" type="xs:int" />
+        <xs:element minOccurs="0" name="Tbl" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="FeatureId" type="xs:int" />
+        <xs:element minOccurs="0" name="FunctionId" type="xs:int" />
+        <xs:element minOccurs="0" name="CallContext" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoverageRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCoverageRulesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementME">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="dsAgreement" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strTariffName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="blnBlocked" type="xs:boolean" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveAgreementMEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveAgreementMEResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementConfigurationME">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intAgreementID" type="xs:int" />
+        <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgreementConfigurationMEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAgreementConfigurationMEResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageID_ME">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+        <xs:element minOccurs="0" name="HospitalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHospitalCompanyDetailsLanguageID_MEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHospitalCompanyDetailsLanguageID_MEResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsME">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCompanyType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strTable" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="strCompanyName2L" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyDetailsMEResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCompanyDetailsMEResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCompanyGrades">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GradeIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationID" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="companyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCompanyGradesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FetchCompanyGradesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

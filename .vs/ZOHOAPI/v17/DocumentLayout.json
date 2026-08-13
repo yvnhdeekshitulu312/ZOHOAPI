@@ -1,0 +1,379 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\esignservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\esignservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\controllers\\esigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\controllers\\esigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\entites\\esigndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\entites\\esigndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\pdfstampingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\pdfstampingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|c:\\repos\\zohoapi\\zohoapi\\alhmobileappapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\filebasedesignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\filebasedesignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\app_data\\esigndata\\recipients.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\app_data\\esigndata\\recipients.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\handlers\\basicauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\handlers\\basicauthhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\iesignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\iesignrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\loggingesignnotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\loggingesignnotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\iesigndependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\iesigndependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\models\\esignmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\models\\esignmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\controllers\\esignfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\controllers\\esignfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\app_data\\esigndata\\documents.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\app_data\\esigndata\\documents.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\app_data\\esigndata\\auditlog.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\app_data\\esigndata\\auditlog.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\alhappdal\\signaturedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\alhappdal\\signaturedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\services\\signatureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\services\\signatureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\controllers\\signaturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\controllers\\signaturecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\entites\\simplesuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\entites\\simplesuccessresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|C:\\repos\\ZOHOAPI\\ZOHOAPI\\alhmobileappapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}|ALHMobileAppAPI\\ZOHOAPI.csproj|solutionrelative:alhmobileappapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EsignController.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\EsignController.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Controllers\\EsignController.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\EsignController.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Controllers\\EsignController.cs",
+              "ViewState": "AQIAADUBAAAAAAAAAAAwwE0BAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:19:14.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAkwBQAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T04:11:25.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EsignService.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\EsignService.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\EsignService.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\EsignService.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\EsignService.cs",
+              "ViewState": "AQIAAJwBAAAAAAAAAAAgwKwBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T16:17:00.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EsignDtos.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Entites\\EsignDtos.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Entites\\EsignDtos.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Entites\\EsignDtos.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Entites\\EsignDtos.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAuwHIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:03:31.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PdfStampingService.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\PdfStampingService.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\PdfStampingService.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\PdfStampingService.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\PdfStampingService.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAwE4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:14:10.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "recipients.json",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\recipients.json",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\App_Data\\EsignData\\recipients.json",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\recipients.json",
+              "RelativeToolTip": "ALHMobileAppAPI\\App_Data\\EsignData\\recipients.json",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-04T16:13:21.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FileBasedEsignRepository.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\FileBasedEsignRepository.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\FileBasedEsignRepository.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\FileBasedEsignRepository.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\FileBasedEsignRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T16:12:15.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BasicAuthHandler.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Handlers\\BasicAuthHandler.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Handlers\\BasicAuthHandler.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Handlers\\BasicAuthHandler.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Handlers\\BasicAuthHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T04:09:31.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEsignRepository.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\IEsignRepository.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\IEsignRepository.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\IEsignRepository.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\IEsignRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T16:17:31.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IEsignDependencies.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\IEsignDependencies.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\IEsignDependencies.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\IEsignDependencies.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\IEsignDependencies.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA2wDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T03:16:53.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoggingEsignNotificationService.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\LoggingEsignNotificationService.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\LoggingEsignNotificationService.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\LoggingEsignNotificationService.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\LoggingEsignNotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T03:17:48.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "auditlog.json",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\auditlog.json",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\App_Data\\EsignData\\auditlog.json",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\auditlog.json",
+              "RelativeToolTip": "ALHMobileAppAPI\\App_Data\\EsignData\\auditlog.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-04T16:13:44.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "documents.json",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\documents.json",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\App_Data\\EsignData\\documents.json",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\App_Data\\EsignData\\documents.json",
+              "RelativeToolTip": "ALHMobileAppAPI\\App_Data\\EsignData\\documents.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-04T16:13:35.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SignatureService.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\SignatureService.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Services\\SignatureService.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Services\\SignatureService.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Services\\SignatureService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T15:36:49.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EsignModels.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Models\\EsignModels.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Models\\EsignModels.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Models\\EsignModels.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Models\\EsignModels.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAA3wG8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T11:08:40.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EsignFilesController.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\EsignFilesController.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Controllers\\EsignFilesController.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\EsignFilesController.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Controllers\\EsignFilesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:33:56.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Startup.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Startup.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Startup.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Startup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:03:17.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SimpleSuccessResult.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Entites\\SimpleSuccessResult.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Entites\\SimpleSuccessResult.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Entites\\SimpleSuccessResult.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Entites\\SimpleSuccessResult.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T10:02:10.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SignatureDAL.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\ALHAppDAL\\SignatureDAL.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\ALHAppDAL\\SignatureDAL.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\ALHAppDAL\\SignatureDAL.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\ALHAppDAL\\SignatureDAL.cs",
+              "ViewState": "AQIAAE8BAAAAAAAAAADwv14BAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T06:31:14.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T06:26:00.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SignatureController.cs",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\SignatureController.cs",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Controllers\\SignatureController.cs",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Controllers\\SignatureController.cs",
+              "RelativeToolTip": "ALHMobileAppAPI\\Controllers\\SignatureController.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAA7wMMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-04T06:24:22.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Web.config",
+              "RelativeDocumentMoniker": "ALHMobileAppAPI\\Web.config",
+              "ToolTip": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALHMobileAppAPI\\Web.config",
+              "RelativeToolTip": "ALHMobileAppAPI\\Web.config",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABUAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-08-04T06:18:14.825Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

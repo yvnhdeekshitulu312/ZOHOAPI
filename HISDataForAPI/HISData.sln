@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISData", "HISData.csproj", "{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.csproj", "{BA36CA3E-1FD0-4205-AEE8-AF55821F7672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA36CA3E-1FD0-4205-AEE8-AF55821F7672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA36CA3E-1FD0-4205-AEE8-AF55821F7672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA36CA3E-1FD0-4205-AEE8-AF55821F7672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA36CA3E-1FD0-4205-AEE8-AF55821F7672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF4704D1-E1E9-46E1-A220-59BEA65A97D9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.152.3.85:8080/tfs/tfs2008nmc_collection
+		SccProjectUniqueName0 = HISData.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = http://10.152.3.85:8080/tfs/tfs2008nmc_collection
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

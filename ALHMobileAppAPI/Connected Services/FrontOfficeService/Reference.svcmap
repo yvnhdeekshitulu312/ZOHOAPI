@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="130b5bfd-56fe-4b25-845c-a2559e3a45c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Wipro.NXG.wsdl" MetadataType="Wsdl" ID="53fd5309-e3fc-4619-95fc-0d735fd39fdb" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="Wipro.NXG.xsd" MetadataType="Schema" ID="4975f8da-d373-4404-91dd-3fe340d3924e" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="cc138e7f-8b30-4fe6-be27-808a160106a7" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="14a04094-9fab-4f1d-a5e9-d5d3b024bab4" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="HIS.CustomException.xsd" MetadataType="Schema" ID="3a552844-bc04-44bb-b84a-28c13027c9f8" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="8c596269-6aa0-448a-a6a8-98262bc698c9" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="4d2550bc-67ee-4620-8e67-d74525e5eefa" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NXG.FrontOffice/FrontOfficeServiceReference.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

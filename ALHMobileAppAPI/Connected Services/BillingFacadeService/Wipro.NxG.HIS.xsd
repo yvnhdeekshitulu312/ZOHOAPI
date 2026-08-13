@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Wipro.NxG.HIS" elementFormDefault="qualified" targetNamespace="http://Wipro.NxG.HIS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetBillDetails">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBillDetailsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteOPBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="InputWorkStationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteOPBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteOPBillResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteOPBillNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteOPBillNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteOPBillNewResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="strValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StrClinical" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillForPayOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="fromDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillForPayOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillForPayOutResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="BillID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalculateBillExclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalculateBillExclusionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteDiscount">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteDiscountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteDiscountResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentals">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="0" name="intEmployeeType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentalsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillExcludeBedRentalsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentalsNew">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="0" name="intEmployeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="DeductStartingBedRental" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentalsNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillExcludeBedRentalsNewResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentalsNew_Perf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="0" name="intEmployeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="DeductStartingBedRental" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillExcludeBedRentalsNew_PerfResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillExcludeBedRentalsNew_PerfResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteInterimBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+        <xs:element minOccurs="0" name="intExcludeBedRentalDays" type="xs:int" />
+        <xs:element minOccurs="0" name="intEmployeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="DeductStartingBedRental" type="xs:int" />
+        <xs:element minOccurs="0" name="fromdate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="todate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteInterimBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteInterimBillResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillMODA">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefTariffID" type="xs:int" />
+        <xs:element minOccurs="0" name="intEBedType" type="xs:int" />
+        <xs:element minOccurs="0" name="blnIsServiceTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="lngIPID" type="xs:long" />
+        <xs:element minOccurs="0" name="strRegCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientFeeType" type="xs:int" />
+        <xs:element minOccurs="0" name="intBillType" type="xs:int" />
+        <xs:element minOccurs="0" name="intLoacationID" type="xs:int" />
+        <xs:element minOccurs="0" name="strAdmitDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDischargeDateTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intTableID" type="xs:int" />
+        <xs:element minOccurs="0" name="strFilter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intLetterID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGradeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCompanyID" type="xs:int" />
+        <xs:element minOccurs="0" name="intUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="intWorkStationId" type="xs:int" />
+        <xs:element minOccurs="0" name="intError" type="xs:int" />
+        <xs:element minOccurs="0" name="IsDischarged" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsOPPackage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IsIntrimBill" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strSessionID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intPatientID" type="xs:int" />
+        <xs:element minOccurs="0" name="intPatientType" type="xs:int" />
+        <xs:element minOccurs="0" name="intDefaultSpecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CalucalteIPBillMODAResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CalucalteIPBillMODAResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

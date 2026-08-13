@@ -1,0 +1,1172 @@
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Antlr3.Runtime.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Shared.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Web.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\HISData.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Helpers.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.WebHost.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Mvc.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Optimization.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Razor.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.WebPages.Deployment.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.WebPages.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.WebPages.Razor.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebGrease.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Shared.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Web.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Antlr3.Runtime.pdb
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\stdole.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Engine.Libraries.InterSoftPointOfSales.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.BusinessEntities.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.Utilities.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Spanapi.dll
+D:\HammadiWHIS-V4.0-ME\OtherSupportProjects\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.Common.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\SRIHARI-PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+G:\PP Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+G:\PP_LATEST_20221202\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\Srihari-PP-Latest\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Log4Net.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.rsp
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.rsp
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.rsp
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\netstandard.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Concurrent.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.NonGeneric.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Collections.Specialized.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.EventBasedAsync.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ComponentModel.TypeConverter.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Console.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Data.Common.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Contracts.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Debug.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Process.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TextWriterTraceListener.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tools.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.TraceSource.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Diagnostics.Tracing.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Drawing.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Dynamic.Runtime.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Globalization.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.DriveInfo.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.FileSystem.Watcher.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.IsolatedStorage.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.MemoryMappedFiles.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.Pipes.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.IO.UnmanagedMemoryStream.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Expressions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Parallel.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Linq.Queryable.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NameResolution.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.NetworkInformation.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Ping.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Requests.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Security.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebHeaderCollection.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.Client.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.WebSockets.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ObjectModel.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Reflection.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Reader.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.ResourceManager.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Resources.Writer.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.VisualC.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Handles.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Numerics.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Formatters.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Json.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Runtime.Serialization.Xml.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Claims.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Csp.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.Principal.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Security.SecureString.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.Encoding.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Text.RegularExpressions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Overlapped.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Tasks.Parallel.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Thread.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.ThreadPool.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Threading.Timer.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XDocument.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XmlSerializer.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Shared.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Web.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\HISData.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Owin.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Cors.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\WebActivatorEx.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Engine.Libraries.InterSoftPointOfSales.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.BusinessEntities.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.Utilities.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Spanapi.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.Common.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\ALH.Common.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Shared.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Web.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\log4net.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\System.Web.Http.Cors.xml
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.AssemblyReference.cache
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CoreCompileInputs.cache
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.csproj.CopyComplete
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\obj\Release\ALHMobileAppAPI.pdb
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Spanapi.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Wipro.Interfaces.Shared.Libraries.Common.dll
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Shared.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\CrystalDecisions.Web.xml
+C:\Source\PATIENT-PORTAL\Patient-Portal-Srihari-07-Dec\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\Antlr3.Runtime.pdb
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csc.exe
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\csi.exe
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.AppContext.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Console.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Globalization.Calendars.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Http.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Net.Sockets.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.ValueTuple.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\vbc.exe
+C:\Source\PATIENT-PORTAL\ALHMobileAppAPINoSecurity\ALHMobileAppAPI\bin\roslyn\VBCSCompiler.exe

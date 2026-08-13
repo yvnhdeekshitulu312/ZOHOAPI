@@ -1,0 +1,1283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://Wipro.NxG.HIS" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CommonSearchService" targetNamespace="http://Wipro.NxG.HIS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://Wipro.NxG.HIS/Imports">
+      <xsd:import namespace="http://Wipro.NxG.HIS" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/HIS.CustomException" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResults" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsWardId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsWardId" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsWardId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsWardIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWiseWardId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWiseWardId" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWiseWardId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWiseWardIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWise" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsTagIdForPHC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsTagIdForPHC" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsTagIdForPHC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsTagIdForPHCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsTagId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsTagId" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsTagId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsTagIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetails" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchInvestigationandProcedures_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchInvestigationandProcedures" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchInvestigationandProcedures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchInvestigationandProceduresResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetails" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetails_ICD_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetails_ICD" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetails_ICD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetails_ICDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoaded_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoaded" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoaded_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoadedResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoadedEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoadedEx" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoadedEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoadedExResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoadedMultiEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoadedMultiEx" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchDetailsOverLoadedMultiEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchDetailsOverLoadedMultiExResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveSingleMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSingleMaster" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveSingleMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSingleMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetails1" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetails1Response" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetails" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetails2" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetails2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetails2Response" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListUHID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListUHID" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListUHID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListUHIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetFoodOrderWorkList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodOrderWorkList" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetFoodOrderWorkList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFoodOrderWorkListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsstrOrderBy_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsstrOrderBy" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsstrOrderBy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsstrOrderByResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListHospitalDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListHospitalDetails" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListHospitalDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListHospitalDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsByOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsByOrder" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsByOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsByOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsByFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsByFilter" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsByFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsByFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartSearchResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartSearchResults" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartSearchResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartSearchResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetItemMasterSmartSearchResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemMasterSmartSearchResults" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetItemMasterSmartSearchResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemMasterSmartSearchResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartSearchResultsparam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartSearchResultsparam" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartSearchResultsparam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartSearchResultsparamResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetCompletionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionList" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetCompletionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetItemMasterCompletionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemMasterCompletionList" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetItemMasterCompletionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemMasterCompletionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetInvestigationCompletionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigationCompletionList" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetInvestigationCompletionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigationCompletionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetCompletionListparam_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionListparam" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetCompletionListparam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompletionListparamResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalCompletionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalCompletionList" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalCompletionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalCompletionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartConResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartConResults" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartConResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartConResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSSResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSResult" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSSResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalSSResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalSSResult" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalSSResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalSSResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSSResultDataset_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSResultDataset" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSSResultDataset_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSSResultDatasetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetDOCResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDOCResult" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetDOCResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDOCResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartConsultation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartConsultation" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSmartConsultation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmartConsultationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalSmartConsultation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalSmartConsultation" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHospitalSmartConsultation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHospitalSmartConsultationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchUserPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUserPermissions" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchUserPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUserPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchUserPermissions_NextGenCustomExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/HIS.CustomException" name="detail" element="q1:NextGenCustomException" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveMasterLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMasterLocations" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveMasterLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveMasterLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchMasterLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMasterLocations" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchMasterLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchMasterLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsHospitalWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsHospitalWise" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsHospitalWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsHospitalWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsHospitalTestWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsHospitalTestWise" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsHospitalTestWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsHospitalTestWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchDataForDashBoard_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDataForDashBoard" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchDataForDashBoard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchDataForDashBoardResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchOrderLevelStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchOrderLevelStatus" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchOrderLevelStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchOrderLevelStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsPerfByDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsPerfByDates" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetWorkListDetailsPerfByDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkListDetailsPerfByDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SavePatientUploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SavePatientUploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePatientUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveCompanyUploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveCompanyUploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCompanyUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchPatientUploadedFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchPatientUploadedFile" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchPatientUploadedFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchPatientUploadedFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchCompanyUploadedFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCompanyUploadedFile" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_FetchCompanyUploadedFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCompanyUploadedFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMS" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmail" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiers" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersById" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersByName" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersByType" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetIdentifiersByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentifiersByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction1ByIPID" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction1ByIPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPIDMonitorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction1ByIPIDMonitorID" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPIDMonitorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction1ByIPIDMonitorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPID" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPIDIdentifierId" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPIDIdentifierIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveHTMLTemplateTransaction1_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHTMLTemplateTransaction1" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveHTMLTemplateTransaction1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHTMLTemplateTransaction1Response" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveHTMLTemplateTransaction2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHTMLTemplateTransaction2" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_SaveHTMLTemplateTransaction2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHTMLTemplateTransaction2Response" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetTemplateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateData" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetTemplateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_NationalityIDSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:NationalityIDSearch" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_NationalityIDSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NationalityIDSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWiseMedicationError_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWiseMedicationError" />
+  </wsdl:message>
+  <wsdl:message name="CommonSearchServiceContract_GetSearchResultsPageWiseMedicationError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSearchResultsPageWiseMedicationErrorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CommonSearchServiceContract">
+    <wsdl:operation name="GetSearchResults">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResults" message="tns:CommonSearchServiceContract_GetSearchResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsResponse" message="tns:CommonSearchServiceContract_GetSearchResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsWardId">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTuned" message="tns:CommonSearchServiceContract_GetSearchResultsWardId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsWardIdResponse" message="tns:CommonSearchServiceContract_GetSearchResultsWardId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWiseWardId">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWiseTuned" message="tns:CommonSearchServiceContract_GetSearchResultsPageWiseWardId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsPageWiseWardIdResponse" message="tns:CommonSearchServiceContract_GetSearchResultsPageWiseWardId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWise">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWise" message="tns:CommonSearchServiceContract_GetSearchResultsPageWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsPageWiseResponse" message="tns:CommonSearchServiceContract_GetSearchResultsPageWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsTagIdForPHC">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTagIdForPHC" message="tns:CommonSearchServiceContract_GetSearchResultsTagIdForPHC_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsTagIdForPHCResponse" message="tns:CommonSearchServiceContract_GetSearchResultsTagIdForPHC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsTagId">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTagId" message="tns:CommonSearchServiceContract_GetSearchResultsTagId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsTagIdResponse" message="tns:CommonSearchServiceContract_GetSearchResultsTagId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetDetails" message="tns:CommonSearchServiceContract_GetDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetDetailsResponse" message="tns:CommonSearchServiceContract_GetDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchInvestigationandProcedures">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/FetchInvestigationandProcedures" message="tns:CommonSearchServiceContract_FetchInvestigationandProcedures_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchInvestigationandProceduresResponse" message="tns:CommonSearchServiceContract_FetchInvestigationandProcedures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetails">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchDetails" message="tns:CommonSearchServiceContract_GetSearchDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsResponse" message="tns:CommonSearchServiceContract_GetSearchDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetails_ICD">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchDetails_ICD" message="tns:CommonSearchServiceContract_GetSearchDetails_ICD_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetails_ICDResponse" message="tns:CommonSearchServiceContract_GetSearchDetails_ICD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoaded">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoaded" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoaded_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedResponse" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoaded_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoadedEx">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedEx" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoadedEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedExResponse" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoadedEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoadedMultiEx">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedMultiEx" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoadedMultiEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedMultiExResponse" message="tns:CommonSearchServiceContract_GetSearchDetailsOverLoadedMultiEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSingleMaster">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveSingleMaster" message="tns:CommonSearchServiceContract_SaveSingleMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveSingleMasterResponse" message="tns:CommonSearchServiceContract_SaveSingleMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails1">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails1" message="tns:CommonSearchServiceContract_GetWorkListDetails1_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetails1Response" message="tns:CommonSearchServiceContract_GetWorkListDetails1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails" message="tns:CommonSearchServiceContract_GetWorkListDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetailsResponse" message="tns:CommonSearchServiceContract_GetWorkListDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails2">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails2" message="tns:CommonSearchServiceContract_GetWorkListDetails2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetails2Response" message="tns:CommonSearchServiceContract_GetWorkListDetails2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListUHID">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListUHID" message="tns:CommonSearchServiceContract_GetWorkListUHID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListUHIDResponse" message="tns:CommonSearchServiceContract_GetWorkListUHID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodOrderWorkList">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetFoodOrderWorkList" message="tns:CommonSearchServiceContract_GetFoodOrderWorkList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetFoodOrderWorkListResponse" message="tns:CommonSearchServiceContract_GetFoodOrderWorkList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsstrOrderBy">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsstrOrderBy" message="tns:CommonSearchServiceContract_GetWorkListDetailsstrOrderBy_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetailsstrOrderByResponse" message="tns:CommonSearchServiceContract_GetWorkListDetailsstrOrderBy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListHospitalDetails">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListHospitalDetails" message="tns:CommonSearchServiceContract_GetWorkListHospitalDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListHospitalDetailsResponse" message="tns:CommonSearchServiceContract_GetWorkListHospitalDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsByOrder">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsByOrder" message="tns:CommonSearchServiceContract_GetWorkListDetailsByOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetailsByOrderResponse" message="tns:CommonSearchServiceContract_GetWorkListDetailsByOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsByFilter">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsByFilter" message="tns:CommonSearchServiceContract_GetWorkListDetailsByFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetailsByFilterResponse" message="tns:CommonSearchServiceContract_GetWorkListDetailsByFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartSearchResults">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartSearchresults" message="tns:CommonSearchServiceContract_GetSmartSearchResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSmartSearchResultsResponse" message="tns:CommonSearchServiceContract_GetSmartSearchResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemMasterSmartSearchResults">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetItemMasterSmartSearchResults" message="tns:CommonSearchServiceContract_GetItemMasterSmartSearchResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetItemMasterSmartSearchResultsResponse" message="tns:CommonSearchServiceContract_GetItemMasterSmartSearchResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartSearchResultsparam">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartSearchResultsparam" message="tns:CommonSearchServiceContract_GetSmartSearchResultsparam_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSmartSearchResultsparamResponse" message="tns:CommonSearchServiceContract_GetSmartSearchResultsparam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionList">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetCompletionList" message="tns:CommonSearchServiceContract_GetCompletionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetCompletionListResponse" message="tns:CommonSearchServiceContract_GetCompletionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemMasterCompletionList">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetItemMasterCompletionList" message="tns:CommonSearchServiceContract_GetItemMasterCompletionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetItemMasterCompletionListResponse" message="tns:CommonSearchServiceContract_GetItemMasterCompletionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigationCompletionList">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetInvestigationCompletionList" message="tns:CommonSearchServiceContract_GetInvestigationCompletionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetInvestigationCompletionListResponse" message="tns:CommonSearchServiceContract_GetInvestigationCompletionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListparam">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetCompletionListparam" message="tns:CommonSearchServiceContract_GetCompletionListparam_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetCompletionListparamResponse" message="tns:CommonSearchServiceContract_GetCompletionListparam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalCompletionList">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalCompletionList" message="tns:CommonSearchServiceContract_GetHospitalCompletionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHospitalCompletionListResponse" message="tns:CommonSearchServiceContract_GetHospitalCompletionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartConResults">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartConResults" message="tns:CommonSearchServiceContract_GetSmartConResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSmartConResultsResponse" message="tns:CommonSearchServiceContract_GetSmartConResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSSResult">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSSResult" message="tns:CommonSearchServiceContract_GetSSResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSSResultResponse" message="tns:CommonSearchServiceContract_GetSSResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalSSResult">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalSSResult" message="tns:CommonSearchServiceContract_GetHospitalSSResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHospitalSSResultResponse" message="tns:CommonSearchServiceContract_GetHospitalSSResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSSResultDataset">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSSResultDataset" message="tns:CommonSearchServiceContract_GetSSResultDataset_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSSResultDatasetResponse" message="tns:CommonSearchServiceContract_GetSSResultDataset_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDOCResult">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetDOCResult" message="tns:CommonSearchServiceContract_GetDOCResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetDOCResultResponse" message="tns:CommonSearchServiceContract_GetDOCResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartConsultation">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartConsultation" message="tns:CommonSearchServiceContract_GetSmartConsultation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSmartConsultationResponse" message="tns:CommonSearchServiceContract_GetSmartConsultation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalSmartConsultation">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalSmartConsultation" message="tns:CommonSearchServiceContract_GetHospitalSmartConsultation_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHospitalSmartConsultationResponse" message="tns:CommonSearchServiceContract_GetHospitalSmartConsultation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchUserPermissions">
+      <wsdl:input wsaw:Action="http://Wipro/HISNxG/IAdmin/FetchUserPermissions" message="tns:CommonSearchServiceContract_FetchUserPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro/HISNxG/IAdmin/FetchUserPermissions" message="tns:CommonSearchServiceContract_FetchUserPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchUserPermissionsNextGenCustomExceptionFault" name="NextGenCustomExceptionFault" message="tns:CommonSearchServiceContract_FetchUserPermissions_NextGenCustomExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveMasterLocations">
+      <wsdl:input wsaw:Action="http://Wipro.NXG/SearchServiceContrac/SaveMasterLocations" message="tns:CommonSearchServiceContract_SaveMasterLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveMasterLocationsResponse" message="tns:CommonSearchServiceContract_SaveMasterLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchMasterLocations">
+      <wsdl:input wsaw:Action="http://Wipro.NXG/SearchServiceContrac/FetchMasterLocations" message="tns:CommonSearchServiceContract_FetchMasterLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchMasterLocationsResponse" message="tns:CommonSearchServiceContract_FetchMasterLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsHospitalWise">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsHospitalWise" message="tns:CommonSearchServiceContract_GetSearchResultsHospitalWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsHospitalWiseResponse" message="tns:CommonSearchServiceContract_GetSearchResultsHospitalWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsHospitalTestWise">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsHospitalTestWise" message="tns:CommonSearchServiceContract_GetSearchResultsHospitalTestWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsHospitalTestWiseResponse" message="tns:CommonSearchServiceContract_GetSearchResultsHospitalTestWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchDataForDashBoard">
+      <wsdl:input wsaw:Action="http://Wipro.NxG/SubStoresServiceContract/FetchDataForDashBoard" message="tns:CommonSearchServiceContract_FetchDataForDashBoard_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchDataForDashBoardResponse" message="tns:CommonSearchServiceContract_FetchDataForDashBoard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchOrderLevelStatus">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/FetchOrderLevelStatus" message="tns:CommonSearchServiceContract_FetchOrderLevelStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchOrderLevelStatusResponse" message="tns:CommonSearchServiceContract_FetchOrderLevelStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsPerfByDates">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsPerfByDates" message="tns:CommonSearchServiceContract_GetWorkListDetailsPerfByDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetWorkListDetailsPerfByDatesResponse" message="tns:CommonSearchServiceContract_GetWorkListDetailsPerfByDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientUploadFile">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SavePatientUploadFile" message="tns:CommonSearchServiceContract_SavePatientUploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SavePatientUploadFileResponse" message="tns:CommonSearchServiceContract_SavePatientUploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompanyUploadFile">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveCompanyUploadFile" message="tns:CommonSearchServiceContract_SaveCompanyUploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveCompanyUploadFileResponse" message="tns:CommonSearchServiceContract_SaveCompanyUploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchPatientUploadedFile">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/FetchPatientUploadedFile" message="tns:CommonSearchServiceContract_FetchPatientUploadedFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchPatientUploadedFileResponse" message="tns:CommonSearchServiceContract_FetchPatientUploadedFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCompanyUploadedFile">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/FetchCompanyUploadedFile" message="tns:CommonSearchServiceContract_FetchCompanyUploadedFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/FetchCompanyUploadedFileResponse" message="tns:CommonSearchServiceContract_FetchCompanyUploadedFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMS">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveSMS" message="tns:CommonSearchServiceContract_SaveSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveSMSResponse" message="tns:CommonSearchServiceContract_SaveSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmail">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveEmail" message="tns:CommonSearchServiceContract_SaveEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveEmailResponse" message="tns:CommonSearchServiceContract_SaveEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiers">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiers" message="tns:CommonSearchServiceContract_GetIdentifiers_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetIdentifiersResponse" message="tns:CommonSearchServiceContract_GetIdentifiers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersById">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersById" message="tns:CommonSearchServiceContract_GetIdentifiersById_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetIdentifiersByIdResponse" message="tns:CommonSearchServiceContract_GetIdentifiersById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersByName">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersByName" message="tns:CommonSearchServiceContract_GetIdentifiersByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetIdentifiersByNameResponse" message="tns:CommonSearchServiceContract_GetIdentifiersByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersByType">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersByType" message="tns:CommonSearchServiceContract_GetIdentifiersByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetIdentifiersByTypeResponse" message="tns:CommonSearchServiceContract_GetIdentifiersByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction1ByIPID">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction1ByIPID" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHTMLTemplateTransaction1ByIPIDResponse" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction1ByIPIDMonitorID">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction1ByIPIDMonitorID" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPIDMonitorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHTMLTemplateTransaction1ByIPIDMonitorIDResponse" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction1ByIPIDMonitorID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPID">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPID" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPID_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHTMLTemplateTransaction2ByIPIDResponse" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPIDIdentifierId">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPIDIdentifierId" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHTMLTemplateTransaction2ByIPIDIdentifierIdResponse" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorIdResponse" message="tns:CommonSearchServiceContract_GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHTMLTemplateTransaction1">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveHTMLTemplateTransaction1" message="tns:CommonSearchServiceContract_SaveHTMLTemplateTransaction1_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveHTMLTemplateTransaction1Response" message="tns:CommonSearchServiceContract_SaveHTMLTemplateTransaction1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHTMLTemplateTransaction2">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/SaveHTMLTemplateTransaction2" message="tns:CommonSearchServiceContract_SaveHTMLTemplateTransaction2_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/SaveHTMLTemplateTransaction2Response" message="tns:CommonSearchServiceContract_SaveHTMLTemplateTransaction2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateData">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetTemplateData" message="tns:CommonSearchServiceContract_GetTemplateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetTemplateDataResponse" message="tns:CommonSearchServiceContract_GetTemplateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NationalityIDSearch">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/NationalityIDSearch" message="tns:CommonSearchServiceContract_NationalityIDSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/NationalityIDSearchResponse" message="tns:CommonSearchServiceContract_NationalityIDSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWiseMedicationError">
+      <wsdl:input wsaw:Action="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWiseMedicationError" message="tns:CommonSearchServiceContract_GetSearchResultsPageWiseMedicationError_InputMessage" />
+      <wsdl:output wsaw:Action="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchResultsPageWiseMedicationErrorResponse" message="tns:CommonSearchServiceContract_GetSearchResultsPageWiseMedicationError_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommonSearchSvcEndpoint" type="tns:CommonSearchServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSearchResults">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsWardId">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTuned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWiseWardId">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWiseTuned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWise">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsTagIdForPHC">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTagIdForPHC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsTagId">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsTagId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetails">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchInvestigationandProcedures">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/FetchInvestigationandProcedures" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetails">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetails_ICD">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchDetails_ICD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoaded">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoaded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoadedEx">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchDetailsOverLoadedMultiEx">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/CommonSearchServiceContract/GetSearchDetailsOverLoadedMultiEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSingleMaster">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveSingleMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails1">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetails2">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetails2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListUHID">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListUHID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFoodOrderWorkList">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetFoodOrderWorkList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsstrOrderBy">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsstrOrderBy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListHospitalDetails">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListHospitalDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsByOrder">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsByOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsByFilter">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsByFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartSearchResults">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartSearchresults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemMasterSmartSearchResults">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetItemMasterSmartSearchResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartSearchResultsparam">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartSearchResultsparam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionList">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetCompletionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemMasterCompletionList">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetItemMasterCompletionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigationCompletionList">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetInvestigationCompletionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompletionListparam">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetCompletionListparam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalCompletionList">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalCompletionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartConResults">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartConResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSSResult">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSSResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalSSResult">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalSSResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSSResultDataset">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSSResultDataset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDOCResult">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetDOCResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmartConsultation">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSmartConsultation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHospitalSmartConsultation">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHospitalSmartConsultation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchUserPermissions">
+      <soap:operation soapAction="http://Wipro/HISNxG/IAdmin/FetchUserPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NextGenCustomExceptionFault">
+        <soap:fault use="literal" name="NextGenCustomExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveMasterLocations">
+      <soap:operation soapAction="http://Wipro.NXG/SearchServiceContrac/SaveMasterLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchMasterLocations">
+      <soap:operation soapAction="http://Wipro.NXG/SearchServiceContrac/FetchMasterLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsHospitalWise">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsHospitalWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsHospitalTestWise">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsHospitalTestWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchDataForDashBoard">
+      <soap:operation soapAction="http://Wipro.NxG/SubStoresServiceContract/FetchDataForDashBoard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchOrderLevelStatus">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/FetchOrderLevelStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkListDetailsPerfByDates">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetWorkListDetailsPerfByDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePatientUploadFile">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SavePatientUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCompanyUploadFile">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveCompanyUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchPatientUploadedFile">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/FetchPatientUploadedFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCompanyUploadedFile">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/FetchCompanyUploadedFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSMS">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEmail">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiers">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersById">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersByName">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentifiersByType">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetIdentifiersByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction1ByIPID">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction1ByIPID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction1ByIPIDMonitorID">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction1ByIPIDMonitorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPID">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPIDIdentifierId">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPIDIdentifierId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetHTMLTemplateTransaction2ByIPIDIdentifierIdMonitorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHTMLTemplateTransaction1">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveHTMLTemplateTransaction1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHTMLTemplateTransaction2">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/SaveHTMLTemplateTransaction2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateData">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetTemplateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NationalityIDSearch">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/NationalityIDSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchResultsPageWiseMedicationError">
+      <soap:operation soapAction="http://Wipro.NxG.HIS/SearchServiceContrac/GetSearchResultsPageWiseMedicationError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonSearchService">
+    <wsdl:port name="CommonSearchSvcEndpoint" binding="tns:CommonSearchSvcEndpoint">
+      <soap:address location="http://ahh-nu-dev.ahh.com/Wipro.NxG.Common/CommonSearchService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

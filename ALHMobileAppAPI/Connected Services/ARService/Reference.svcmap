@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="124ee68e-5feb-47b8-a11e-75617da30e4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Wipro.NxG.HIS.wsdl" MetadataType="Wsdl" ID="4c27fca5-3feb-4aff-b93c-80be8a673889" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="Wipro.NxG.HIS.xsd" MetadataType="Schema" ID="7d404860-2d4e-4daa-8be1-7291648ff761" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="0e83328e-6428-4cdc-a415-6844512941f9" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e5bf7fe9-f9b8-4018-8c5a-dea17764faca" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="HIS.CustomException.xsd" MetadataType="Schema" ID="a34272e0-6828-4df7-9ef2-f3239c2a9fd6" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="12a32960-2486-43ae-81ac-bac691c79c3d" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="bc714325-04e5-45a2-a20f-7a44813a96f2" SourceId="1" SourceUrl="http://172.18.17.219/Wipro.NxG.AR/ARServiceReference.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
