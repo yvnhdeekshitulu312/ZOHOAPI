@@ -1,0 +1,29 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.wsuo
+
+# Build output
+**/[Bb]in/
+**/[Oo]bj/
+
+# NuGet
+packages/
+
+# Visual Studio / build caches
+*.pdb
+*.cache
+*.csproj.FileListAbsolute.txt
+*.AssemblyReference.cache
+*.CoreCompileInputs.cache
+*.assets.cache
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
+*.nuget.cache
+
+# Temporary files
+*.tmp
+*.temp
+*.log

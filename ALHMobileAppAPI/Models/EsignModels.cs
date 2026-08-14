@@ -61,6 +61,7 @@ namespace ALHMobileAppAPI.Esign.Models
 
         public List<EsignRecipient> Recipients { get; set; } = new List<EsignRecipient>();
         public List<EsignField> Fields { get; set; } = new List<EsignField>();
+        public List<string> CachedPageImages { get; set; } = new List<string>();
     }
 
     public class EsignRecipient

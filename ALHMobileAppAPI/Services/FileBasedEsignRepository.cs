@@ -280,5 +280,19 @@ namespace ALHMobileAppAPI.Esign.Services
             }
             finally { _lock.Release(); }
         }
+
+        public async Task DeleteDocumentAsync(int documentId)
+        {
+            await _lock.WaitAsync();
+            try
+            {
+                var docs = LoadList<EsignDocument>(DocumentsPath);
+                var doc = docs.FirstOrDefault(d => d.Id == documentId);
+                if (doc == null) throw new InvalidOperationException($"Document {documentId} not found.");
+                doc.IsDeleted = true;
+                SaveList(DocumentsPath, docs);
+            }
+            finally { _lock.Release(); }
+        }
     }
 }

@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32602.291
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZOHOAPI", "ALHMobileAppAPI\ZOHOAPI.csproj", "{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALH.Common", "ALH.Common\ALH.Common.csproj", "{644A81E1-2D8C-4737-BD71-9B5889B1B50B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HISData", "HISDataForAPI\HISData.csproj", "{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ALH.Common", "ALH.Common\ALH.Common.csproj", "{07D0E225-545B-403E-97C3-2214F188B6E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE010B01-6286-4E29-83C3-F1CAEC3E43E0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{644A81E1-2D8C-4737-BD71-9B5889B1B50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{644A81E1-2D8C-4737-BD71-9B5889B1B50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{644A81E1-2D8C-4737-BD71-9B5889B1B50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{644A81E1-2D8C-4737-BD71-9B5889B1B50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE81A38-1085-4AA1-92ED-83AC8B9F6D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D0E225-545B-403E-97C3-2214F188B6E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D0E225-545B-403E-97C3-2214F188B6E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D0E225-545B-403E-97C3-2214F188B6E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D0E225-545B-403E-97C3-2214F188B6E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
