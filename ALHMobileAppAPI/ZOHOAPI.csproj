@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ALHMobileAppAPI</RootNamespace>
     <AssemblyName>ALHMobileAppAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -32,6 +32,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -276,6 +277,7 @@
       <HintPath>..\packages\System.CodeDom.7.0.0\lib\netstandard2.0\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.2\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -342,11 +344,11 @@
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.3.0\lib\net45\System.Web.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -383,7 +385,6 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
@@ -397,6 +398,7 @@
     <Reference Include="System.Web.Optimization">
       <HintPath>..\..\..\..\ALHMobileWebAPI\bin\System.Web.Optimization.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
@@ -420,8 +422,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ALHAppDAL\SignatureDAL.cs" />
-    <Compile Include="App_GlobalResources\Arabic.designer.cs" />
-    <Compile Include="App_GlobalResources\English.designer.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -499,15 +499,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
-    <Content Include="App_GlobalResources\Arabic.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Arabic1.designer.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_GlobalResources\English.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>English1.designer.cs</LastGenOutput>
-    </Content>
+   
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="App_Data\EsignData\auditlog.json" />
     <Content Include="App_Data\EsignData\documents.json" />
@@ -588,6 +580,7 @@
     <Content Include="System.Data.DataTable1.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_GlobalResources\" />
     <Folder Include="Assets\" />
     <Folder Include="Views\Signature\" />
   </ItemGroup>

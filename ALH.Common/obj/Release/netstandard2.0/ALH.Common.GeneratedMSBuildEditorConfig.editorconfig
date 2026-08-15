@@ -1,5 +1,3 @@
 is_global = true
 build_property.RootNamespace = ALH.Common
-build_property.ProjectDir = C:\repos\ZOHOAPI\ZOHOAPI\ALH.Common\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = D:\GIT\ZOHOAPI\ALH.Common\

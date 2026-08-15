@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj": {}
+    "D:\\GIT\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj": {}
   },
   "projects": {
-    "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj": {
+    "D:\\GIT\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj",
+        "projectUniqueName": "D:\\GIT\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj",
         "projectName": "ALH.Common",
-        "projectPath": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj",
-        "packagesPath": "C:\\Users\\sriha\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\ZOHOAPI\\ZOHOAPI\\ALH.Common\\obj\\",
+        "projectPath": "D:\\GIT\\ZOHOAPI\\ALH.Common\\ALH.Common.csproj",
+        "packagesPath": "C:\\Users\\pavan\\.nuget\\packages\\",
+        "outputPath": "D:\\GIT\\ZOHOAPI\\ALH.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sriha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pavan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -35,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,12 +62,11 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
