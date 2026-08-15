@@ -561,6 +561,7 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Xml.XPath.XDocument.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Antlr3.Runtime.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Aspose.PDF.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\BouncyCastle.Crypto.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\BouncyCastle.Cryptography.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\CrystalDecisions.CrystalReports.Engine.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\CrystalDecisions.ReportSource.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\CrystalDecisions.Shared.dll
@@ -584,6 +585,7 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.sign.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.styledxmlparser.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.svg.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\log4net.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MailKit.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authentication.Core.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authorization.dll
@@ -619,6 +621,7 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.Security.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MimeKit.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Newtonsoft.Json.Bson.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Newtonsoft.Json.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Owin.dll
@@ -630,6 +633,7 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Swashbuckle.Core.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Buffers.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.CodeDom.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Diagnostics.DiagnosticSource.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Formats.Asn1.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Management.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Memory.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Net.Http.Extensions.dll
@@ -637,6 +641,9 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Net.Http.Formatting.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Net.Http.Primitives.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Numerics.Vectors.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Security.Cryptography.Cng.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Security.Cryptography.Pkcs.dll
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Encoding.CodePages.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Encodings.Web.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Json.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Threading.Tasks.Extensions.dll
@@ -669,6 +676,7 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\CrystalDecisions.ReportAppServer.CommonContro
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\stdole.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Aspose.PDF.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\BouncyCastle.Crypto.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\BouncyCastle.Cryptography.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Google.Api.Gax.pdb
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Google.Api.Gax.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Google.Api.Gax.Rest.pdb
@@ -696,6 +704,9 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.sign.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.styledxmlparser.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\itext.svg.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\log4net.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MailKit.pdb
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MailKit.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MailKit.dll.config
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authentication.Core.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.AspNetCore.Authorization.xml
@@ -728,6 +739,9 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.Cors.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.Security.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MimeKit.pdb
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MimeKit.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\MimeKit.dll.config
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Newtonsoft.Json.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Newtonsoft.Json.Bson.pdb
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Newtonsoft.Json.Bson.xml
@@ -737,11 +751,15 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\SixLabors.ImageSharp.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Buffers.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.CodeDom.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Diagnostics.DiagnosticSource.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Formats.Asn1.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Management.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Memory.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Net.Http.Formatting.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Numerics.Vectors.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Security.Cryptography.Cng.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Security.Cryptography.Pkcs.xml
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Encoding.CodePages.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Encodings.Web.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Text.Json.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Threading.Tasks.Extensions.xml
@@ -757,8 +775,8 @@ D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Web.WebPages.Deployment.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\System.Web.WebPages.Razor.xml
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\Antlr3.Runtime.pdb
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\bin\de\PdfSharpCore.resources.dll
-D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ZOHOAPI.csproj.AssemblyReference.cache
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ZOHOAPI.csproj.CoreCompileInputs.cache
-D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ZOHOAPI.csproj.Up2Date
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ZOHOAPI.csproj.CopyComplete
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ALHMobileAppAPI.dll
 D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ALHMobileAppAPI.pdb
+D:\GIT\ZOHOAPI\ALHMobileAppAPI\obj\Debug\ZOHOAPI.csproj.AssemblyReference.cache

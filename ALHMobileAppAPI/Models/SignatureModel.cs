@@ -19,7 +19,8 @@ namespace ALHMobileAppAPI.Models
         public string Notes { get; set; }
         public string HTMLDocumentName { get; set; }
         public string HTMLStringForSignature { get; set; }
-        public List<ReciepientsXML> ReciepientsXML { get; set; }
+        // public List<ReciepientsXML> ReciepientsXML { get; set; }
+        public List<SignatureReciepient> ReciepientsXML { get; set; }
         public int UserId { get; set; }
         public int WorkStationID { get; set; }
         public int HospitalId { get; set; }
@@ -30,6 +31,15 @@ namespace ALHMobileAppAPI.Models
         public string NAME { get; set; }
         public string RUSERID { get; set; }        
 
+    }
+    public class SignatureReciepient
+    {
+        public string Email { get; set; }
+        public string ReciepientName { get; set; }
+        public string Role { get; set; }
+        public int? SigningOrder { get; set; }
+        public int? ReciepientUserID { get; set; }
+        public string DeliveryMethod { get; set; }
     }
     public class ConfigDetails : Base
     {

@@ -7,3 +7,4 @@ D:\GIT\ZOHOAPI\ALH.Common\obj\Release\netstandard2.0\ALH.Common.AssemblyInfo.cs
 D:\GIT\ZOHOAPI\ALH.Common\obj\Release\netstandard2.0\ALH.Common.csproj.CoreCompileInputs.cache
 D:\GIT\ZOHOAPI\ALH.Common\obj\Release\netstandard2.0\ALH.Common.dll
 D:\GIT\ZOHOAPI\ALH.Common\obj\Release\netstandard2.0\ALH.Common.pdb
+D:\GIT\ZOHOAPI\ALH.Common\obj\Release\netstandard2.0\ALH.Common.csproj.AssemblyReference.cache
