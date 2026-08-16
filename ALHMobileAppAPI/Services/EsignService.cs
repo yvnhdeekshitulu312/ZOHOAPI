@@ -5,8 +5,11 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Web;
 using ALHMobileAppAPI.Esign.DTOs;
 using ALHMobileAppAPI.Esign.Models;
+using ALHMobileAppAPI.CommonUtilities; // EmailHelper (adjust if it lives in another namespace)
 
 namespace ALHMobileAppAPI.Esign.Services
 {
@@ -333,18 +336,121 @@ namespace ALHMobileAppAPI.Esign.Services
                 Details = $"Sent by {sentBy} to {savedRecipients.Count} recipient(s), ordered={request.IsOrdered}"
             });
 
-            var toNotify = request.IsOrdered
+            var toNotify = (request.IsOrdered
                 ? savedRecipients.Where(r => r.SigningOrder == 1)
-                : savedRecipients;
+                : savedRecipients).ToList();
 
             foreach (var recipient in toNotify)
             {
-                var link = _signingBaseUrl + recipient.AccessToken;
-                await _notifier.NotifyRecipientAsync(recipient, doc, link);
+                // Email is now sent by SendSignatureEmailsAsync (branded HTML via EmailHelper)
+                // below, so the notifier's email call is disabled here to avoid sending twice.
+                // Re-enable these two lines if IEsignNotificationService also drives other
+                // channels (Slack / Teams / internal) that you still want fired at this point.
+                // var link = _signingBaseUrl + recipient.AccessToken;
+                // await _notifier.NotifyRecipientAsync(recipient, doc, link);
                 recipient.Status = RecipientStatus.Sent;
                 recipient.SentOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
             }
+
+            // Send branded signature-request emails AFTER a successful save. Mirrors
+            // SignatureService.SendSignatureEmailsAsync: resilient per recipient, and an
+            // email failure must NOT turn a successful send into a failure. Ordered-vs-all
+            // is already decided by `toNotify`.
+            try
+            {
+                await SendSignatureEmailsAsync(doc, toNotify, CancellationToken.None)
+                    .ConfigureAwait(false);
+            }
+            catch (Exception ex)
+            {
+                HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                    ex, "EsignService", "Error sending signature emails", "");
+            }
+        }
+
+        // =========================================================
+        // Send branded signature-request emails
+        // Ported from SignatureService.SendSignatureEmailsAsync, adapted to the typed
+        // EsignRecipient model (no reflection GetProp/ParseInt needed here).
+        // =========================================================
+        private async Task SendSignatureEmailsAsync(
+            EsignDocument doc,
+            IEnumerable<EsignRecipient> recipients,
+            CancellationToken cancellationToken)
+        {
+            if (doc == null || recipients == null) return;
+
+            var targets = recipients
+                .Where(r => r != null && !string.IsNullOrWhiteSpace(r.Email))
+                .ToList();
+            if (targets.Count == 0) return;
+
+            string baseUrl = ConfigurationManager.AppSettings["EsignAppBaseUrl"] ?? string.Empty;
+            string docName = string.IsNullOrWhiteSpace(doc.Name) ? "a document" : doc.Name;
+
+            foreach (var target in targets)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                string subject = "Signature requested: " + docName;
+                string body = BuildEmailBody(target.Name, docName, baseUrl);
+
+                try
+                {
+                    bool sent = await EmailHelper
+                        .SendEmailAsync(target.Email, target.Name, subject, body, cancellationToken)
+                        .ConfigureAwait(false);
+
+                    if (!sent)
+                    {
+                        HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                            new Exception("EmailHelper returned false."),
+                            "EsignService", "Email was not sent", target.Email);
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    // Bubble cancellation up so the caller logs it once.
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    // One recipient failing must not prevent the next from being processed.
+                    HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                        ex, "EsignService", "Error sending email to " + target.Email, "");
+                }
+            }
+        }
+
+        // =========================================================
+        // Email body (approved palette + Noto Kufi Arabic)
+        // =========================================================
+        private static string BuildEmailBody(string name, string docName, string baseUrl)
+        {
+            string greeting = string.IsNullOrWhiteSpace(name) ? "Hello," : "Dear " + name + ",";
+
+            string link = string.IsNullOrEmpty(baseUrl)
+                ? string.Empty
+                : "<p style=\"margin:22px 0;\">" +
+                  "<a href=\"" +
+                  HttpUtility.HtmlAttributeEncode(baseUrl + "/dashboard/pendingdocuments") +
+                  "\" style=\"" +
+                  "background:#1855A4;color:#FFFFFF;text-decoration:none;" +
+                  "padding:11px 20px;border-radius:8px;" +
+                  "font-family:'Noto Kufi Arabic',sans-serif;font-weight:700;" +
+                  "display:inline-block;\">Open the document</a></p>";
+
+            return
+                "<div style=\"font-family:'Noto Kufi Arabic',Arial,sans-serif;" +
+                "color:#002654;font-size:14px;line-height:1.7;\">" +
+                "<p>" + HttpUtility.HtmlEncode(greeting) + "</p>" +
+                "<p>You have a document waiting for your signature: <b>" +
+                HttpUtility.HtmlEncode(docName) + "</b>.</p>" +
+                link +
+                "<p style=\"color:#969696;font-size:12px;\">" +
+                "Al Hammadi Hospitals \u2014 Document Signing Portal</p>" +
+                "</div>";
         }
 
         public async Task<DocumentDetailResponse> GetDocumentAsync(int documentId)
