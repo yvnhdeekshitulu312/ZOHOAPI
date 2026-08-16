@@ -2,191 +2,474 @@
 using ALHMobileAppAPI.CommonUtilities;
 using ALHMobileAppAPI.Models;
 using CommanUtilities.Models;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
-using Newtonsoft.Json.Linq;
 
 namespace ALHMobileAppAPI.Services
 {
     public class SignatureService
     {
-        public LoginDetails ValidateLoginCredentials(string username, string password)
+        // =========================================================
+        // Login
+        // =========================================================
+
+        public LoginDetails ValidateLoginCredentials(
+            string username,
+            string password)
         {
             SignatureDAL dal = new SignatureDAL();
-            LoginDetails obj = dal.ValidateLoginCredentials(username, password);
-            return obj;
+
+            return dal.ValidateLoginCredentials(
+                username,
+                password);
         }
 
-        public Base SaveSignatureRequests(SignatureModel SigParams)
+        // =========================================================
+        // Save Signature Request - ASYNC
+        // =========================================================
+
+        public async Task<Base> SaveSignatureRequestsAsync(
+            SignatureModel sigParams,
+            CancellationToken cancellationToken = default(CancellationToken))
         {
             SignatureDAL dal = new SignatureDAL();
-            var result = dal.SaveSignatureRequests(SigParams);
 
-            // Fire signature-request emails only when the save succeeded.
-            // Never let an email failure break the API response.
-            try
+            // -----------------------------------------------------
+            // Save first
+            // -----------------------------------------------------
+
+            var result =
+                dal.SaveSignatureRequests(sigParams);
+
+            // -----------------------------------------------------
+            // Only send email after successful save
+            // -----------------------------------------------------
+
+            if (result != null &&
+                result.Code == CommanUtilities.Models.ProcessStatus.Success)
             {
-                if (result != null && result.Code == CommanUtilities.Models.ProcessStatus.Success)
+                try
                 {
-                    SendSignatureEmails(SigParams);
+                    await SendSignatureEmailsAsync(
+                        sigParams,
+                        cancellationToken)
+                        .ConfigureAwait(false);
                 }
-            }
-            catch (Exception ex)
-            {
-                HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(ex, "SignatureService", "Error sending signature emails", "");
+                catch (OperationCanceledException)
+                {
+                    // Request was cancelled.
+                    // Do not turn successful DB operation into failure.
+                    HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                        new Exception(
+                            "Signature email operation was cancelled."),
+                        "SignatureService",
+                        "Email cancellation",
+                        "");
+                }
+                catch (Exception ex)
+                {
+                    // Email failure must NOT break the successful
+                    // signature request.
+                    HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                        ex,
+                        "SignatureService",
+                        "Error sending signature emails",
+                        "");
+                }
             }
 
             return result;
         }
 
-        public Base FetchSignatureRequests(string RequestId)
+        // =========================================================
+        // Fetch
+        // =========================================================
+
+        public Base FetchSignatureRequests(
+            string RequestId)
         {
             SignatureDAL dal = new SignatureDAL();
-            return dal.FetchSignatureRequests(RequestId);
+
+            return dal.FetchSignatureRequests(
+                RequestId);
         }
 
-        public Base FetchSSSignatureReciepientUsers(string name)
+        // =========================================================
+        // Fetch recipients
+        // =========================================================
+
+        public Base FetchSSSignatureReciepientUsers(
+            string name)
         {
             SignatureDAL dal = new SignatureDAL();
-            return dal.FetchSSSignatureReciepientUsers(name);
+
+            return dal.FetchSSSignatureReciepientUsers(
+                name);
         }
 
-        // ─────────────────────────────────────────────────────────────
-        //  Email notifications (SMTP via EmailHelper / Web.config)
-        // ─────────────────────────────────────────────────────────────
+        // =========================================================
+        // Send Signature Emails
+        // =========================================================
 
-        /// <summary>
-        /// Emails recipients of a signature request. When SendInOrder is true,
-        /// only the first signer (lowest signing order) is notified; the rest
-        /// are emailed as each prior signer completes (call ResendNext there).
-        /// </summary>
-        private void SendSignatureEmails(SignatureModel sig)
+        private async Task SendSignatureEmailsAsync(
+            SignatureModel sig,
+            CancellationToken cancellationToken)
         {
-            if (sig == null || sig.ReciepientsXML == null) { return; }
+            if (sig == null)
+                return;
 
-            var recips = sig.ReciepientsXML.Cast<object>().ToList();
-            if (recips.Count == 0) { return; }
+            if (sig.ReciepientsXML == null)
+                return;
 
-            string baseUrl = ConfigurationManager.AppSettings["EsignAppBaseUrl"] ?? string.Empty;
-            string docName = string.IsNullOrWhiteSpace(sig.RequestDocumentName) ? "a document" : sig.RequestDocumentName;
+            var recips =
+                sig.ReciepientsXML
+                    .Cast<object>()
+                    .ToList();
 
-            // Extract (email, name, order) from each recipient object regardless of
-            // the exact property names your recipient model uses.
-            var targets = recips
-                .Select(r => new
-                {
-                    Email = GetProp(r, "Email", "EmailId", "EmailAddress"),
-                    Name  = GetProp(r, "ReciepientName", "RecipientName", "Name", "FullName"),
-                    Order = ParseInt(GetProp(r, "SigningOrder", "SendingOrder", "Order", "SigningorderId"))
-                })
-                .Where(x => !string.IsNullOrWhiteSpace(x.Email))
-                .ToList();
+            if (recips.Count == 0)
+                return;
 
-            if (targets.Count == 0) { return; }
+            string baseUrl =
+                ConfigurationManager
+                    .AppSettings["EsignAppBaseUrl"]
+                ?? string.Empty;
 
-            // send-in-order? notify only the first signer; else notify everyone
-            var toNotify = sig.SendInOrder
-                ? targets.OrderBy(t => t.Order == 0 ? int.MaxValue : t.Order).Take(1).ToList()
-                : targets;
+            string docName =
+                string.IsNullOrWhiteSpace(
+                    sig.RequestDocumentName)
+                    ? "a document"
+                    : sig.RequestDocumentName;
 
-            foreach (var t in toNotify)
+            // -----------------------------------------------------
+            // Extract recipients
+            // -----------------------------------------------------
+
+            var targets =
+                recips
+                    .Select(r => new RecipientEmailTarget
+                    {
+                        Email = GetProp(
+                            r,
+                            "Email",
+                            "EmailId",
+                            "EmailAddress"),
+
+                        Name = GetProp(
+                            r,
+                            "ReciepientName",
+                            "RecipientName",
+                            "Name",
+                            "FullName"),
+
+                        Order = ParseInt(
+                            GetProp(
+                                r,
+                                "SigningOrder",
+                                "SendingOrder",
+                                "Order",
+                                "SigningorderId"))
+                    })
+                    .Where(x =>
+                        !string.IsNullOrWhiteSpace(
+                            x.Email))
+                    .ToList();
+
+            if (targets.Count == 0)
+                return;
+
+            // -----------------------------------------------------
+            // Determine who gets email
+            // -----------------------------------------------------
+
+            List<RecipientEmailTarget> toNotify;
+
+            if (sig.SendInOrder)
             {
-                string subject = "Signature requested: " + docName;
-                string body = BuildEmailBody(t.Name, docName, baseUrl);
-                EmailHelper.SendEmail(t.Email, t.Name, subject, body);
+                toNotify =
+                    targets
+                        .OrderBy(t =>
+                            t.Order == 0
+                                ? int.MaxValue
+                                : t.Order)
+                        .Take(1)
+                        .ToList();
+            }
+            else
+            {
+                toNotify = targets;
+            }
+
+            // -----------------------------------------------------
+            // Send emails
+            //
+            // IMPORTANT:
+            // Each email gets its own SMTP connection.
+            // -----------------------------------------------------
+
+            foreach (var target in toNotify)
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                string subject =
+                    "Signature requested: " +
+                    docName;
+
+                string body =
+                    BuildEmailBody(
+                        target.Name,
+                        docName,
+                        baseUrl);
+
+                try
+                {
+                    bool sent =
+                        await EmailHelper
+                            .SendEmailAsync(
+                                target.Email,
+                                target.Name,
+                                subject,
+                                body,
+                                cancellationToken)
+                            .ConfigureAwait(false);
+
+                    if (!sent)
+                    {
+                        HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                            new Exception(
+                                "EmailHelper returned false."),
+                            "SignatureService",
+                            "Email was not sent",
+                            target.Email);
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    // One recipient failing should not prevent
+                    // the next recipient from being processed.
+                    HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                        ex,
+                        "SignatureService",
+                        "Error sending email to " +
+                        target.Email,
+                        "");
+                }
             }
         }
 
-        private static string BuildEmailBody(string name, string docName, string baseUrl)
+        // =========================================================
+        // Email body
+        // =========================================================
+
+        private static string BuildEmailBody(
+            string name,
+            string docName,
+            string baseUrl)
         {
-            string greeting = string.IsNullOrWhiteSpace(name) ? "Hello," : ("Dear " + name + ",");
-            string link = string.IsNullOrEmpty(baseUrl)
-                ? string.Empty
-                : "<p style=\"margin:22px 0;\"><a href=\"" + baseUrl + "/dashboard/pendingdocuments\" " +
-                  "style=\"background:#1855A4;color:#FFFFFF;text-decoration:none;padding:11px 20px;border-radius:8px;" +
-                  "font-family:'Noto Kufi Arabic',sans-serif;font-weight:700;display:inline-block;\">Open the document</a></p>";
+            string greeting =
+                string.IsNullOrWhiteSpace(name)
+                    ? "Hello,"
+                    : "Dear " + name + ",";
+
+            string link =
+                string.IsNullOrEmpty(baseUrl)
+                    ? string.Empty
+                    :
+                    "<p style=\"margin:22px 0;\">" +
+                    "<a href=\"" +
+                    HttpUtility.HtmlAttributeEncode(
+                        baseUrl +
+                        "/dashboard/pendingdocuments") +
+                    "\" " +
+                    "style=\"" +
+                    "background:#1855A4;" +
+                    "color:#FFFFFF;" +
+                    "text-decoration:none;" +
+                    "padding:11px 20px;" +
+                    "border-radius:8px;" +
+                    "font-family:'Noto Kufi Arabic',sans-serif;" +
+                    "font-weight:700;" +
+                    "display:inline-block;\">" +
+                    "Open the document" +
+                    "</a>" +
+                    "</p>";
 
             return
-                "<div style=\"font-family:'Noto Kufi Arabic',Arial,sans-serif;color:#002654;font-size:14px;line-height:1.7;\">" +
-                    "<p>" + System.Web.HttpUtility.HtmlEncode(greeting) + "</p>" +
-                    "<p>You have a document waiting for your signature: <b>" +
-                        System.Web.HttpUtility.HtmlEncode(docName) + "</b>.</p>" +
-                    link +
-                    "<p style=\"color:#969696;font-size:12px;\">Al Hammadi Hospitals — Document Signing Portal</p>" +
+                "<div " +
+                "style=\"" +
+                "font-family:'Noto Kufi Arabic',Arial,sans-serif;" +
+                "color:#002654;" +
+                "font-size:14px;" +
+                "line-height:1.7;\">" +
+
+                "<p>" +
+                HttpUtility.HtmlEncode(greeting) +
+                "</p>" +
+
+                "<p>" +
+                "You have a document waiting for your signature: " +
+                "<b>" +
+                HttpUtility.HtmlEncode(docName) +
+                "</b>." +
+                "</p>" +
+
+                link +
+
+                "<p " +
+                "style=\"color:#969696;font-size:12px;\">" +
+                "Al Hammadi Hospitals — Document Signing Portal" +
+                "</p>" +
+
                 "</div>";
         }
 
-        /// <summary>Reads the first matching property (as string) from an object via reflection.</summary>
-        /// <summary>
-        /// Reads the first matching property (as string) from a recipient item,
-        /// whether it deserialized into a typed object, a Newtonsoft JObject, or
-        /// an IDictionary. Loosely-typed ReciepientsXML arrives as JObject, so a
-        /// plain reflection GetProperty("Email") returns null — hence targets = 0.
-        /// </summary>
-        private static string GetProp(object obj, params string[] names)
-        {
-            if (obj == null) { return null; }
+        // =========================================================
+        // Recipient helper model
+        // =========================================================
 
-            // Newtonsoft JObject (the usual case for object/dynamic-typed ReciepientsXML)
-            JObject jo = obj as JObject;
+        private sealed class RecipientEmailTarget
+        {
+            public string Email { get; set; }
+
+            public string Name { get; set; }
+
+            public int Order { get; set; }
+        }
+
+        // =========================================================
+        // Get property
+        // =========================================================
+
+        private static string GetProp(
+            object obj,
+            params string[] names)
+        {
+            if (obj == null)
+                return null;
+
+            // -----------------------------------------------------
+            // JObject
+            // -----------------------------------------------------
+
+            JObject jo =
+                obj as JObject;
+
             if (jo != null)
             {
-                foreach (string n in names)
+                foreach (string name in names)
                 {
-                    JToken tok;
-                    if (jo.TryGetValue(n, StringComparison.OrdinalIgnoreCase, out tok)
-                        && tok != null && tok.Type != JTokenType.Null)
+                    JToken token;
+
+                    if (jo.TryGetValue(
+                            name,
+                            StringComparison.OrdinalIgnoreCase,
+                            out token)
+                        &&
+                        token != null &&
+                        token.Type != JTokenType.Null)
                     {
-                        string val = tok.ToString();
-                        if (!string.IsNullOrWhiteSpace(val)) { return val; }
+                        string value =
+                            token.ToString();
+
+                        if (!string.IsNullOrWhiteSpace(value))
+                            return value;
                     }
                 }
+
                 return null;
             }
 
-            // IDictionary<string, object> (ExpandoObject / some model binders)
-            var dict = obj as System.Collections.Generic.IDictionary<string, object>;
-            if (dict != null)
+            // -----------------------------------------------------
+            // IDictionary
+            // -----------------------------------------------------
+
+            var dictionary =
+                obj as IDictionary<string, object>;
+
+            if (dictionary != null)
             {
-                foreach (string n in names)
+                foreach (string name in names)
                 {
-                    foreach (var kv in dict)
+                    foreach (var item in dictionary)
                     {
-                        if (string.Equals(kv.Key, n, StringComparison.OrdinalIgnoreCase) && kv.Value != null)
+                        if (string.Equals(
+                                item.Key,
+                                name,
+                                StringComparison.OrdinalIgnoreCase)
+                            &&
+                            item.Value != null)
                         {
-                            string val = kv.Value.ToString();
-                            if (!string.IsNullOrWhiteSpace(val)) { return val; }
+                            string value =
+                                item.Value.ToString();
+
+                            if (!string.IsNullOrWhiteSpace(value))
+                                return value;
                         }
                     }
                 }
+
                 return null;
             }
 
-            // Typed CLR object (reflection)
-            Type type = obj.GetType();
-            foreach (string n in names)
+            // -----------------------------------------------------
+            // Normal CLR object
+            // -----------------------------------------------------
+
+            Type type =
+                obj.GetType();
+
+            foreach (string name in names)
             {
-                var pi = type.GetProperty(n);
-                if (pi != null)
+                var property =
+                    type.GetProperty(name);
+
+                if (property == null)
+                    continue;
+
+                object value =
+                    property.GetValue(
+                        obj,
+                        null);
+
+                if (value == null)
+                    continue;
+
+                string stringValue =
+                    value.ToString();
+
+                if (!string.IsNullOrWhiteSpace(
+                        stringValue))
                 {
-                    object v = pi.GetValue(obj, null);
-                    if (v != null)
-                    {
-                        string val = v.ToString();
-                        if (!string.IsNullOrWhiteSpace(val)) { return val; }
-                    }
+                    return stringValue;
                 }
             }
+
             return null;
         }
 
-        private static int ParseInt(string s)
+        // =========================================================
+        // Parse integer
+        // =========================================================
+
+        private static int ParseInt(
+            string value)
         {
-            int v;
-            return int.TryParse(s, out v) ? v : 0;
+            int result;
+
+            return int.TryParse(
+                value,
+                out result)
+                ? result
+                : 0;
         }
     }
 }

@@ -4,6 +4,7 @@ using ALHMobileAppAPI.Models;
 using ALHMobileAppAPI.Services;
 using Aspose.Pdf;
 using Aspose.Pdf.Devices;
+using CommanUtilities.Models;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Xobject;
 using Microsoft.AspNetCore.Http;
@@ -51,12 +52,12 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpPost]
         [Route("API/SaveSignatureRequests")]
-        public IHttpActionResult Post([FromBody] SignatureModel DocParams)
+        public async Task<IHttpActionResult> Post([FromBody] SignatureModel DocParams)
         {
             try
             {
                 SignatureService svcObj = new SignatureService();
-                var result = svcObj.SaveSignatureRequests(DocParams);
+                Base result =  await svcObj.SaveSignatureRequestsAsync(DocParams);
                 return OkOrNotFound(result);
             }
             catch (SqlException ex)

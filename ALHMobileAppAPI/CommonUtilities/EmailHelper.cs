@@ -1,81 +1,235 @@
 using System;
 using System.Configuration;
 using System.Security.Authentication;
+using System.Threading;
+using System.Threading.Tasks;
+
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
 
-// NuGet:  Install-Package MailKit      (pulls in MimeKit)
-//
-// Microsoft 365 SMTP settings (Web.config <appSettings>):
-//   Smtp.Host        = smtp.office365.com
-//   Smtp.Port        = 587
-//   Smtp.Username    = full mailbox address (e.g. no-reply@alhammadi.com)
-//   Smtp.FromAddress = SAME mailbox you authenticate as
-//
+using Microsoft.Identity.Client;
+
 namespace ALHMobileAppAPI.CommonUtilities
 {
     public static class EmailHelper
     {
+        // =========================================================
+        // Configuration
+        // =========================================================
+
         private static string Cfg(string key)
         {
             return ConfigurationManager.AppSettings[key];
         }
 
-        public static bool SendEmail(string toEmail, string toName, string subject, string htmlBody)
+        // =========================================================
+        // MSAL Application
+        //
+        // IMPORTANT:
+        // This is intentionally created only once.
+        // MSAL maintains its token cache internally.
+        // =========================================================
+
+        private static readonly Lazy<IConfidentialClientApplication> MsalApp =
+            new Lazy<IConfidentialClientApplication>(() =>
+            {
+                string clientId = Cfg("AzureAd.ClientId");
+                string clientSecret = Cfg("AzureAd.ClientSecret");
+                string tenantId = Cfg("AzureAd.TenantId");
+
+                if (string.IsNullOrWhiteSpace(clientId))
+                    throw new ConfigurationErrorsException(
+                        "AzureAd.ClientId is missing.");
+
+                if (string.IsNullOrWhiteSpace(clientSecret))
+                    throw new ConfigurationErrorsException(
+                        "AzureAd.ClientSecret is missing.");
+
+                if (string.IsNullOrWhiteSpace(tenantId))
+                    throw new ConfigurationErrorsException(
+                        "AzureAd.TenantId is missing.");
+
+                return ConfidentialClientApplicationBuilder
+                    .Create(clientId)
+                    .WithClientSecret(clientSecret)
+                    .WithAuthority(
+                        "https://login.microsoftonline.com/" + tenantId)
+                    .Build();
+            });
+
+        // =========================================================
+        // Get OAuth token
+        // =========================================================
+
+        private static async Task<string> GetAccessTokenAsync(
+            CancellationToken cancellationToken)
         {
-            if (string.IsNullOrWhiteSpace(toEmail)) { return false; }
+            var result = await MsalApp.Value
+                .AcquireTokenForClient(
+                    new[]
+                    {
+                        "https://outlook.office365.com/.default"
+                    })
+                .ExecuteAsync(cancellationToken)
+                .ConfigureAwait(false);
 
-            string host     = Cfg("Smtp.Host") ?? "smtp.office365.com";
-            int    port     = int.TryParse(Cfg("Smtp.Port"), out var p) ? p : 587;
-            string fromName = Cfg("Smtp.FromName") ?? "Al Hammadi e-Signature";
+            if (result == null ||
+                string.IsNullOrWhiteSpace(result.AccessToken))
+            {
+                throw new InvalidOperationException(
+                    "Microsoft Entra ID returned an empty access token.");
+            }
 
-            string user = Cfg("Smtp.Username") ?? Environment.GetEnvironmentVariable("SMTP_USERNAME");
-            string pass = Cfg("Smtp.Password") ?? Environment.GetEnvironmentVariable("SMTP_PASSWORD");
+            return result.AccessToken;
+        }
 
-            string fromAddr = Cfg("Smtp.FromAddress");
-            if (string.IsNullOrWhiteSpace(fromAddr)) { fromAddr = user; }
+        // =========================================================
+        // Public async method
+        // =========================================================
 
-            var msg = new MimeMessage();
-            msg.From.Add(new MailboxAddress(fromName, fromAddr));
-            msg.To.Add(new MailboxAddress(string.IsNullOrWhiteSpace(toName) ? toEmail : toName, toEmail));
-            msg.Subject = subject;
-            msg.Body = new BodyBuilder { HtmlBody = htmlBody }.ToMessageBody();
+        public static async Task<bool> SendEmailAsync(
+            string toEmail,
+            string toName,
+            string subject,
+            string htmlBody,
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (string.IsNullOrWhiteSpace(toEmail))
+                return false;
+
+            // -----------------------------------------------------
+            // Configuration
+            // -----------------------------------------------------
+
+            string host =
+                Cfg("Smtp.Host") ??
+                "smtp.office365.com";
+
+            int port =
+                int.TryParse(
+                    Cfg("Smtp.Port"),
+                    out int configuredPort)
+                    ? configuredPort
+                    : 587;
+
+            string fromName =
+                Cfg("Smtp.FromName") ??
+                "Al Hammadi e-Signature";
+
+            string fromAddress =
+                Cfg("Smtp.FromAddress");
+
+            if (string.IsNullOrWhiteSpace(fromAddress))
+            {
+                throw new ConfigurationErrorsException(
+                    "Smtp.FromAddress is missing.");
+            }
+
+            // -----------------------------------------------------
+            // Create message
+            // -----------------------------------------------------
+
+            var message = new MimeMessage();
+
+            message.From.Add(
+                new MailboxAddress(
+                    fromName,
+                    fromAddress));
+
+            message.To.Add(
+                new MailboxAddress(
+                    string.IsNullOrWhiteSpace(toName)
+                        ? toEmail
+                        : toName,
+                    toEmail));
+
+            message.Subject = subject;
+
+            message.Body = new BodyBuilder
+            {
+                HtmlBody = htmlBody
+            }.ToMessageBody();
+
+            // -----------------------------------------------------
+            // Get OAuth token
+            // -----------------------------------------------------
+
+            string accessToken =
+                await GetAccessTokenAsync(cancellationToken)
+                    .ConfigureAwait(false);
+
+            cancellationToken.ThrowIfCancellationRequested();
+
+            // -----------------------------------------------------
+            // SMTP
+            // -----------------------------------------------------
 
             using (var client = new SmtpClient())
             {
-                // restrict to modern TLS (1.2, and 1.3 where the OS/.NET supports it)
-                client.SslProtocols = SslProtocols.Tls12;
-                try { client.SslProtocols |= (SslProtocols)12288; /* Tls13 if available */ } catch { }
+                // 30 second MailKit timeout
+                client.Timeout = 30000;
 
-                // EXPLICIT STARTTLS on 587 — this is the "assign STARTTLS to mail" step
-                client.Connect(host, port, SecureSocketOptions.StartTls);
+                // TLS 1.2
+                client.SslProtocols =
+                    SslProtocols.Tls12;
 
-                // Basic auth (username must be the full email; see OAuth2 note below if this 535s)
-                client.Authenticate(user, pass);
+                // -------------------------------------------------
+                // Connect
+                // -------------------------------------------------
 
-                client.Send(msg);
-                client.Disconnect(true);
+                await client
+                    .ConnectAsync(
+                        host,
+                        port,
+                        SecureSocketOptions.StartTls,
+                        cancellationToken)
+                    .ConfigureAwait(false);
+
+                cancellationToken.ThrowIfCancellationRequested();
+
+                // -------------------------------------------------
+                // OAuth2 / XOAUTH2
+                // -------------------------------------------------
+
+                var oauth2 =
+                    new SaslMechanismOAuth2(
+                        fromAddress,
+                        accessToken);
+
+                await client
+                    .AuthenticateAsync(
+                        oauth2,
+                        cancellationToken)
+                    .ConfigureAwait(false);
+
+                cancellationToken.ThrowIfCancellationRequested();
+
+                // -------------------------------------------------
+                // Send
+                // -------------------------------------------------
+
+                await client
+                    .SendAsync(
+                        message,
+                        cancellationToken)
+                    .ConfigureAwait(false);
+
+                // -------------------------------------------------
+                // Disconnect
+                // -------------------------------------------------
+
+                if (client.IsConnected)
+                {
+                    await client
+                        .DisconnectAsync(
+                            true,
+                            cancellationToken)
+                        .ConfigureAwait(false);
+                }
             }
+
             return true;
         }
-
-        // ── If Basic auth STILL returns 535, the mailbox/tenant blocks it. ──
-        // Switch AuthenticateAsync to OAuth2 (no password):
-        //
-        //   // 1) get an app-only token with MSAL (Microsoft.Identity.Client)
-        //   var app = ConfidentialClientApplicationBuilder.Create(clientId)
-        //       .WithClientSecret(clientSecret)
-        //       .WithTenantId(tenantId).Build();
-        //   var token = (await app.AcquireTokenForClient(
-        //       new[] { "https://outlook.office365.com/.default" }).ExecuteAsync()).AccessToken;
-        //
-        //   // 2) authenticate with the token instead of a password
-        //   var oauth2 = new SaslMechanismOAuth2(user, token);
-        //   client.Connect(host, port, SecureSocketOptions.StartTls);
-        //   client.Authenticate(oauth2);
-        //
-        // Azure AD app needs application permission "SMTP.SendAsApp" (admin-consented)
-        // and the mailbox granted. Say the word and I'll write this out in full.
     }
 }
