@@ -85,6 +85,8 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 Id = doc.Id,
                 Name = doc.Name,
+                CreatedOn = Convert.ToDateTime(doc.CreatedOn).ToString(),
+                CreatedBy = doc.CreatedBy,
                 Status = doc.Status.ToString(),
                 IsOrdered = doc.IsOrdered,
                 ViewerGcsUrl = viewerUrl,
@@ -93,6 +95,8 @@ namespace ALHMobileAppAPI.Esign.Services
                 {
                     Id = r.Id,
                     Name = r.Name,
+                    CreateDate = r.CreatedOn,
+                    CreatedBy = r.CreatedBy,
                     Email = r.Email,
                     Role = r.Role.ToString(),
                     Status = r.Status.ToString(),
@@ -167,7 +171,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 CachedPageImages = pageImages,
                 Status = DocumentStatus.Draft,
                 CreatedBy = uploadedBy,
-                CreatedOn = DateTime.UtcNow
+                CreatedOn = DateTime.Now
             };
 
             doc.Id = await _repo.CreateDocumentAsync(doc);
@@ -176,7 +180,7 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 DocumentId = doc.Id,
                 Action = "Created",
-                Timestamp = DateTime.UtcNow,
+                Timestamp = DateTime.Now,
                 Details = $"Uploaded by {uploadedBy}"
             });
 
@@ -199,7 +203,8 @@ namespace ALHMobileAppAPI.Esign.Services
             doc.ReminderDays = request.ReminderDays;
             doc.Note = request.Note;
             doc.Status = DocumentStatus.Pending;
-            doc.SentOn = DateTime.UtcNow;
+            //doc.SentOn = DateTime.UtcNow;
+            doc.SentOn = DateTime.Now;
 
             var recipientEntities = request.Recipients.Select((r, idx) => new EsignRecipient
             {
@@ -215,22 +220,107 @@ namespace ALHMobileAppAPI.Esign.Services
 
             var savedRecipients = await _repo.AddRecipientsAsync(doc.Id, recipientEntities);
 
-            var clientIdToRecipientId = request.Recipients
-                .Select((r, idx) => new { r.ClientId, RecipientId = savedRecipients[idx].Id })
-                .ToDictionary(x => x.ClientId, x => x.RecipientId);
-
-            var fieldEntities = request.Fields.Select(f => new EsignField
+            // Map each client-side ClientId -> the DB id of its saved recipient.
+            // Correlate by a stable natural key (email), NOT by list position:
+            // AddRecipientsAsync does not guarantee it returns rows in the order they
+            // were passed, so an index-based pairing silently binds fields to the wrong
+            // recipient the moment there is more than one recipient.
+            var reqRecipients = request.Recipients.ToList();
+            var clientIdToRecipientId = new Dictionary<string, int>(StringComparer.Ordinal);
+            for (int i = 0; i < reqRecipients.Count; i++)
             {
-                DocumentId = doc.Id,
-                RecipientId = clientIdToRecipientId[f.RecipientClientId],
-                FieldType = (FieldType)Enum.Parse(typeof(FieldType), f.FieldType),
-                PageNumber = f.PageNumber,
-                XPct = f.XPct,
-                YPct = f.YPct,
-                WidthPct = f.WidthPct,
-                HeightPct = f.HeightPct,
-                IsRequired = f.IsRequired
+                var req = reqRecipients[i];
+                if (string.IsNullOrWhiteSpace(req.ClientId)) continue;
+
+                var saved = savedRecipients.FirstOrDefault(s =>
+                                !string.IsNullOrEmpty(s.Email) &&
+                                s.Email.Equals(req.Email, StringComparison.OrdinalIgnoreCase))
+                            ?? (i < savedRecipients.Count ? savedRecipients[i] : null);
+
+                if (saved != null)
+                    clientIdToRecipientId[req.ClientId.Trim()] = saved.Id;
+            }
+
+            //var fieldEntities = request.Fields.Select(f => new EsignField
+            //{
+            //    DocumentId = doc.Id,
+            //    RecipientId = clientIdToRecipientId[f.RecipientClientId],
+            //    FieldType = (FieldType)Enum.Parse(typeof(FieldType), f.FieldType),
+            //    PageNumber = f.PageNumber,
+            //    XPct = f.XPct,
+            //    YPct = f.YPct,
+            //    WidthPct = f.WidthPct,
+            //    HeightPct = f.HeightPct,
+            //    IsRequired = f.IsRequired
+            //}).ToList();
+
+
+            // Only used to rescue single-recipient docs whose fields arrive unlabelled.
+            var singleRecipientId = savedRecipients.Count == 1 ? savedRecipients[0].Id : (int?)null;
+
+            var fieldEntities = request.Fields.Select(f =>
+            {
+                var clientId = f.RecipientClientId?.Trim();
+                int recipientId = 0;
+                bool resolved = false;
+
+                // 1) Exact match on the client id the recipient was actually sent with.
+                if (!string.IsNullOrEmpty(clientId) &&
+                    clientIdToRecipientId.TryGetValue(clientId, out recipientId))
+                {
+                    resolved = true;
+                }
+
+                // 2) Prefix fallback: "r1_..." -> 1st recipient, "r2_..." -> 2nd, etc.
+                if (!resolved && !string.IsNullOrEmpty(clientId))
+                {
+                    var prefix = clientId.Split('_')[0];              // e.g. "r1"
+                    if (int.TryParse(prefix.TrimStart('r', 'R'), out var oneBased))
+                    {
+                        var index = oneBased - 1;                     // 1-based -> 0-based
+                        if (index >= 0 && index < savedRecipients.Count)
+                        {
+                            recipientId = savedRecipients[index].Id;
+                            resolved = true;
+                        }
+                    }
+                }
+
+                // 3) Single-recipient document: an unlabelled field can only belong to
+                //    that lone recipient, so bind it rather than dropping it to id 0.
+                if (!resolved && singleRecipientId.HasValue)
+                {
+                    recipientId = singleRecipientId.Value;
+                    resolved = true;
+                }
+
+                // 4) Genuinely ambiguous -> fail loudly. Writing RecipientId = 0 (the old
+                //    behaviour) persists an invalid FK and silently breaks signing/stamping.
+                if (!resolved)
+                {
+                    throw new InvalidOperationException(
+                        $"Could not bind a field to a recipient. RecipientClientId='{f.RecipientClientId}'. " +
+                        $"Known client ids: [{string.Join(", ", clientIdToRecipientId.Keys)}]. " +
+                        "Check that the client sends each field's RecipientClientId matching a recipient's ClientId.");
+                }
+
+                return new EsignField
+                {
+                    DocumentId = doc.Id,
+                    RecipientId = recipientId,
+                    FieldType = Enum.TryParse<FieldType>(f.FieldType, true, out var fieldType) ? fieldType : default,
+                    PageNumber = f.PageNumber,
+                    XPct = f.XPct,
+                    YPct = f.YPct,
+                    WidthPct = f.WidthPct,
+                    HeightPct = f.HeightPct,
+                    IsRequired = f.IsRequired
+                };
             }).ToList();
+
+           
+
+
 
             await _repo.AddFieldsAsync(doc.Id, fieldEntities);
             await _repo.UpdateDocumentAsync(doc);
@@ -239,7 +329,7 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 DocumentId = doc.Id,
                 Action = "Sent",
-                Timestamp = DateTime.UtcNow,
+                Timestamp = DateTime.Now,
                 Details = $"Sent by {sentBy} to {savedRecipients.Count} recipient(s), ordered={request.IsOrdered}"
             });
 
@@ -252,7 +342,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 var link = _signingBaseUrl + recipient.AccessToken;
                 await _notifier.NotifyRecipientAsync(recipient, doc, link);
                 recipient.Status = RecipientStatus.Sent;
-                recipient.SentOn = DateTime.UtcNow;
+                recipient.SentOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
             }
         }
@@ -272,14 +362,14 @@ namespace ALHMobileAppAPI.Esign.Services
             if (recipient.Status == RecipientStatus.Sent)
             {
                 recipient.Status = RecipientStatus.Viewed;
-                recipient.ViewedOn = DateTime.UtcNow;
+                recipient.ViewedOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
                 await _repo.LogAuditAsync(new EsignAuditLog
                 {
                     DocumentId = recipient.DocumentId,
                     RecipientId = recipient.Id,
                     Action = "Viewed",
-                    Timestamp = DateTime.UtcNow
+                    Timestamp = DateTime.Now
                 });
             }
 
@@ -295,7 +385,7 @@ namespace ALHMobileAppAPI.Esign.Services
             if (recipient.Status == RecipientStatus.Sent)
             {
                 recipient.Status = RecipientStatus.Viewed;
-                recipient.ViewedOn = DateTime.UtcNow;
+                recipient.ViewedOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
             }
 
@@ -332,7 +422,7 @@ namespace ALHMobileAppAPI.Esign.Services
                     await _repo.UpdateFieldValueAsync(fv.FieldId, fv.Value);
 
                 recipient.Status = RecipientStatus.Signed;
-                recipient.SignedOn = DateTime.UtcNow;
+                recipient.SignedOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
 
                 await _repo.LogAuditAsync(new EsignAuditLog
@@ -340,7 +430,7 @@ namespace ALHMobileAppAPI.Esign.Services
                     DocumentId = recipient.DocumentId,
                     RecipientId = recipient.Id,
                     Action = "Signed",
-                    Timestamp = DateTime.UtcNow,
+                    Timestamp = DateTime.Now,
                     IpAddress = ipAddress
                 });
 
@@ -374,14 +464,14 @@ namespace ALHMobileAppAPI.Esign.Services
                     }
 
                     doc.Status = DocumentStatus.Completed;
-                    doc.CompletedOn = DateTime.UtcNow;
+                    doc.CompletedOn = DateTime.Now;
                     await _repo.UpdateDocumentAsync(doc);
 
                     await _repo.LogAuditAsync(new EsignAuditLog
                     {
                         DocumentId = doc.Id,
                         Action = "Completed",
-                        Timestamp = DateTime.UtcNow
+                        Timestamp = DateTime.Now
                     });
 
                     await _notifier.NotifyDocumentCompletedAsync(doc);
@@ -398,7 +488,7 @@ namespace ALHMobileAppAPI.Esign.Services
                         {
                             await _notifier.NotifyRecipientAsync(next, doc, _signingBaseUrl + next.AccessToken);
                             next.Status = RecipientStatus.Sent;
-                            next.SentOn = DateTime.UtcNow;
+                            next.SentOn = DateTime.Now;
                             await _repo.UpdateRecipientAsync(next);
                         }
                     }
@@ -428,7 +518,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 DocumentId = doc.Id,
                 RecipientId = recipient.Id,
                 Action = "Rejected",
-                Timestamp = DateTime.UtcNow,
+                Timestamp = DateTime.Now,
                 IpAddress = ipAddress,
                 Details = request.Reason
             });
@@ -443,7 +533,7 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 DocumentId = documentId,
                 Action = "Deleted",
-                Timestamp = DateTime.UtcNow,
+                Timestamp = DateTime.Now,
                 Details = $"Deleted by {requestedBy}"
             });
         }

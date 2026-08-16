@@ -150,35 +150,63 @@ namespace ALHMobileAppAPI.Services
             // Extract recipients
             // -----------------------------------------------------
 
-            var targets =
-                recips
-                    .Select(r => new RecipientEmailTarget
-                    {
-                        Email = GetProp(
-                            r,
-                            "Email",
-                            "EmailId",
-                            "EmailAddress"),
+            //var targets =
+            //    recips
+            //        .Select(r => new RecipientEmailTarget
+            //        {
+            //            Email = GetProp(
+            //                r,
+            //                "Email",
+            //                "EmailId",
+            //                "EmailAddress"),
 
-                        Name = GetProp(
-                            r,
-                            "ReciepientName",
-                            "RecipientName",
-                            "Name",
-                            "FullName"),
+            //            Name = GetProp(
+            //                r,
+            //                "ReciepientName",
+            //                "RecipientName",
+            //                "Name",
+            //                "FullName"),
 
-                        Order = ParseInt(
-                            GetProp(
-                                r,
-                                "SigningOrder",
-                                "SendingOrder",
-                                "Order",
-                                "SigningorderId"))
-                    })
-                    .Where(x =>
-                        !string.IsNullOrWhiteSpace(
-                            x.Email))
-                    .ToList();
+            //            Order = ParseInt(
+            //                GetProp(
+            //                    r,
+            //                    "SigningOrder",
+            //                    "SendingOrder",
+            //                    "Order",
+            //                    "SigningorderId"))
+            //        })
+            //        .Where(x =>
+            //            !string.IsNullOrWhiteSpace(
+            //                x.Email))
+            //        .ToList();
+            var targets = recips
+    .Select(r => new RecipientEmailTarget
+    {
+        Email = GetProp(
+            r,
+            "EMAIL",
+            "Email",
+            "EmailId",
+            "EmailAddress"),
+
+        Name = GetProp(
+            r,
+            "NAME",
+            "Name",
+            "ReciepientName",
+            "RecipientName",
+            "FullName"),
+
+        Order = ParseInt(
+            GetProp(
+                r,
+                "SigningOrder",
+                "SendingOrder",
+                "Order",
+                "SigningorderId"))
+    })
+    .Where(x => !string.IsNullOrWhiteSpace(x.Email))
+    .ToList();
 
             if (targets.Count == 0)
                 return;

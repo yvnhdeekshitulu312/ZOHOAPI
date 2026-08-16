@@ -216,7 +216,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 var field = all.FirstOrDefault(f => f.Id == fieldId);
                 if (field == null) throw new InvalidOperationException($"Field {fieldId} not found.");
                 field.Value = value;
-                field.FilledOn = DateTime.UtcNow;
+                field.FilledOn = DateTime.Now;
                 SaveList(FieldsPath, all);
             }
             finally { _lock.Release(); }

@@ -279,7 +279,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 using (var cmd = new SqlCommand("UPDATE EsignFields SET Value=@value, FilledOn=@filledOn WHERE Id=@id", c))
                 {
                     cmd.Parameters.AddWithValue("@value", (object)value ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@filledOn", DateTime.UtcNow);
+                    cmd.Parameters.AddWithValue("@filledOn", DateTime.Now);
                     cmd.Parameters.AddWithValue("@id", fieldId);
                     await cmd.ExecuteNonQueryAsync();
                 }

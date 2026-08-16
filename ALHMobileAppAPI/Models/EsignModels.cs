@@ -70,6 +70,9 @@ namespace ALHMobileAppAPI.Esign.Models
         public int DocumentId { get; set; }
         public string Email { get; set; }
         public string Name { get; set; }
+        public string CreatedOn { get; set; }
+        public string CreatedBy { get; set; }
+
         public RecipientRole Role { get; set; }
         public int? SigningOrder { get; set; }
         public RecipientStatus Status { get; set; }

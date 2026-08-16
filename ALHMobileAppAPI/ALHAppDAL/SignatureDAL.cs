@@ -196,6 +196,7 @@ namespace ALHMobileAppAPI.ALHAppDAL
                 objIDbDataParameters.Add(CreateParam(objDataHelper, "@HTMLDocumentName", SigParams.HTMLDocumentName, DbType.String, ParameterDirection.Input));
                 objIDbDataParameters.Add(CreateParam(objDataHelper, "@HTMLStringForSignature", SigParams.HTMLStringForSignature, DbType.String, ParameterDirection.Input));
                 objIDbDataParameters.Add(CreateParam(objDataHelper, "@ReciepientsXML", strReciepientsXML, DbType.String, ParameterDirection.Input));
+                objIDbDataParameters.Add(CreateParam(objDataHelper, "@SenderEmail", SigParams.SenderEmail, DbType.String, ParameterDirection.Input));
                 objIDbDataParameters.Add(CreateParam(objDataHelper, "@UserId", SigParams.UserId, DbType.Int32, ParameterDirection.Input));
                 objIDbDataParameters.Add(CreateParam(objDataHelper, "@WorkStationID", SigParams.WorkStationID, DbType.Int32, ParameterDirection.Input));
 
