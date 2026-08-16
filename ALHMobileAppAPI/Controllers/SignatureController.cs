@@ -28,7 +28,7 @@ namespace ALHMobileAppAPI.Controllers
         // GET: Signature
 
         [HttpGet]
-        [Route("API/ValidateLogin/{username}/{password}")]
+        [Route("API/Esign/ValidateLogin/{username}/{password}")]
         public IHttpActionResult ValidateLogin(string username, string password)
         {
             try
@@ -51,7 +51,7 @@ namespace ALHMobileAppAPI.Controllers
 
 
         [HttpPost]
-        [Route("API/SaveSignatureRequests")]
+        [Route("API/Esign/SaveSignatureRequests")]
         public async Task<IHttpActionResult> Post([FromBody] SignatureModel DocParams)
         {
             try
@@ -73,7 +73,7 @@ namespace ALHMobileAppAPI.Controllers
         }
 
         [HttpGet]
-        [Route("API/FetchSignatureRequests")]
+        [Route("API/Esign/FetchSignatureRequests")]
         public IHttpActionResult FetchSignatureRequests(string RequestId)
         {
             try
@@ -95,7 +95,7 @@ namespace ALHMobileAppAPI.Controllers
             return OkOrNotFound(objBase);
         }
         [HttpGet]
-        [Route("API/FetchSSSignatureReciepientUsers")]
+        [Route("API/Esign/FetchSSSignatureReciepientUsers")]
         public IHttpActionResult FetchSSSignatureReciepientUsers(string name)
         {
             try
@@ -118,7 +118,7 @@ namespace ALHMobileAppAPI.Controllers
         }
 
         [HttpPost]
-        [Route("API/PdfToImage")]
+        [Route("API/Esign/PdfToImage")]
         public async Task<HttpResponseMessage> PdfToImage()
         {
             List<string> base64String = new List<string>();
