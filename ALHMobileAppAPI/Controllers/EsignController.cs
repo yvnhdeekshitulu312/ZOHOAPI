@@ -2,6 +2,7 @@ using ALHMobileAppAPI.Esign.DTOs;
 using ALHMobileAppAPI.Esign.Services;
 using System;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
@@ -33,6 +34,63 @@ namespace ALHMobileAppAPI.Controllers
             return ip;
         }
 
+        //[HttpPost]
+        //[Route("API/Esign/UploadDocument")]
+        //public async Task<IHttpActionResult> UploadDocument()
+        //{
+        //    try
+        //    {
+        //        if (!Request.Content.IsMimeMultipartContent())
+        //        {
+        //            objBase.Message = "Expected multipart/form-data content.";
+        //            objBase.Code = CommanUtilities.Models.ProcessStatus.Fail;
+        //            objBase.Status = CommanUtilities.Models.ProcessStatus.Fail.ToString();
+        //            return OkOrNotFound(objBase);
+        //        }
+
+        //        var provider = await Request.Content.ReadAsMultipartAsync();
+
+
+        //        var file = provider.Contents[0];
+        //        var fileName = file.Headers.ContentDisposition.FileName?.Trim('"');
+        //        var contentType = file.Headers.ContentType?.MediaType ?? "application/pdf";
+
+        //        byte[] fileBytes;
+        //        using (var sourceStream = await file.ReadAsStreamAsync())
+        //        using (var buffer = new MemoryStream())
+        //        {
+        //            await sourceStream.CopyToAsync(buffer);
+        //            fileBytes = buffer.ToArray();
+        //        }
+
+        //        var esignService = BuildEsignService();
+        //        //var uploadedBy = User?.Identity?.Name ?? "unknown";
+
+        //        UploadDocumentResponse uploadResult;
+        //        using (var uploadStream = new MemoryStream(fileBytes))
+        //        {
+        //            uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy);
+        //        }
+
+        //        // Re-fetch to return the cached page images generated during upload
+        //        var doc = await esignService.GetDocumentAsync(uploadResult.DocumentId);
+
+        //        var response = new
+        //        {
+        //            uploadResult.DocumentId,
+        //            uploadResult.Name,
+        //            uploadResult.OriginalGcsPath,
+        //            PageImages = doc.PageImages
+        //        };
+
+        //        return OkOrNotFound(response);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        SetErrorObject(objBase, ex, "Error in UploadDocument");
+        //    }
+        //    return OkOrNotFound(objBase);
+        //}
         [HttpPost]
         [Route("API/Esign/UploadDocument")]
         public async Task<IHttpActionResult> UploadDocument()
@@ -48,7 +106,35 @@ namespace ALHMobileAppAPI.Controllers
                 }
 
                 var provider = await Request.Content.ReadAsMultipartAsync();
-                var file = provider.Contents[0];
+
+                // 1. Extract uploadedBy form field safely
+                string uploadedBy = null;
+                var uploadedByContent = provider.Contents
+                    .FirstOrDefault(c => c.Headers.ContentDisposition?.Name?.Trim('"') == "uploadedBy");
+
+                if (uploadedByContent != null)
+                {
+                    uploadedBy = await uploadedByContent.ReadAsStringAsync();
+                }
+
+                // Fallback to logged-in user or "unknown" if empty/null
+                if (string.IsNullOrWhiteSpace(uploadedBy))
+                {
+                    uploadedBy = User?.Identity?.Name ?? "unknown";
+                }
+
+                // 2. Find the file content item (instead of assuming provider.Contents[0])
+                var file = provider.Contents
+                    .FirstOrDefault(c => !string.IsNullOrEmpty(c.Headers.ContentDisposition?.FileName));
+
+                if (file == null)
+                {
+                    objBase.Message = "No file was provided in the upload request.";
+                    objBase.Code = CommanUtilities.Models.ProcessStatus.Fail;
+                    objBase.Status = CommanUtilities.Models.ProcessStatus.Fail.ToString();
+                    return OkOrNotFound(objBase);
+                }
+
                 var fileName = file.Headers.ContentDisposition.FileName?.Trim('"');
                 var contentType = file.Headers.ContentType?.MediaType ?? "application/pdf";
 
@@ -61,7 +147,6 @@ namespace ALHMobileAppAPI.Controllers
                 }
 
                 var esignService = BuildEsignService();
-                var uploadedBy = User?.Identity?.Name ?? "unknown";
 
                 UploadDocumentResponse uploadResult;
                 using (var uploadStream = new MemoryStream(fileBytes))
@@ -224,11 +309,11 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpGet]
         [Route("API/Esign/MyDocuments")]
-        public async Task<IHttpActionResult> MyDocuments()
+        public async Task<IHttpActionResult> MyDocuments(string email)
         {
             try
             {
-                var result = await BuildEsignService().GetMyDocumentsAsync(User?.Identity?.Name);
+                var result = await BuildEsignService().GetMyDocumentsAsync(email);
                 return OkOrNotFound(result);
             }
             catch (Exception ex) { SetErrorObject(objBase, ex, "Error in MyDocuments"); }
