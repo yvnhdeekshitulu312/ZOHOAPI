@@ -210,11 +210,11 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpGet]
         [Route("API/Esign/MyPending")]
-        public async Task<IHttpActionResult> MyPending()
+        public async Task<IHttpActionResult> MyPending(string email)
         {
             try
             {
-                var email = User?.Identity?.Name;
+                var emaild = User?.Identity?.Name;
                 var result = await BuildEsignService().GetMyPendingDocumentsAsync(email);
                 return OkOrNotFound(result);
             }
@@ -236,12 +236,12 @@ namespace ALHMobileAppAPI.Controllers
         }
 
         [HttpGet]
-        [Route("API/Esign/GetForLoggedInSigner/{documentId}")]
-        public async Task<IHttpActionResult> GetForLoggedInSigner(int documentId)
+        [Route("API/Esign/GetForLoggedInSigner")]
+        public async Task<IHttpActionResult> GetForLoggedInSigner(int documentId, string email)
         {
             try
             {
-                var result = await BuildEsignService().GetDocumentForLoggedInSignerAsync(documentId, User?.Identity?.Name);
+                var result = await BuildEsignService().GetDocumentForLoggedInSignerAsync(documentId, email);
                 return OkOrNotFound(result);
             }
             catch (InvalidOperationException ex)
@@ -260,7 +260,7 @@ namespace ALHMobileAppAPI.Controllers
         {
             try
             {
-                await BuildEsignService().SignAsLoggedInUserAsync(request.DocumentId, User?.Identity?.Name, request.FieldValues, GetClientIp());
+                await BuildEsignService().SignAsLoggedInUserAsync(request.DocumentId, request.email, request.FieldValues, GetClientIp());
                 return OkWithBoolSuccessStatus(true, "Document signed.");
             }
             catch (InvalidOperationException ex)

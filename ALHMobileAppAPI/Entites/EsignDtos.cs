@@ -113,6 +113,7 @@ namespace ALHMobileAppAPI.Esign.DTOs
     public class SignAsUserRequest
     {
         public int DocumentId { get; set; }
+        public string email { get; set; }
         public List<FieldValueDto> FieldValues { get; set; }
     }
 }

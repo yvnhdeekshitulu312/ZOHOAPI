@@ -36,7 +36,7 @@ namespace ALHMobileAppAPI.Esign.Services
             _storageClient = StorageClient.Create(credential);
         }
 
-        private static string GetDateFolderPrefix() => $"{BaseFolder}/{DateTime.UtcNow:yyyy-MM-dd}/";
+        private static string GetDateFolderPrefix() => $"{BaseFolder}/{DateTime.Now:yyyy-MM-dd}/";
 
         private string NormalizeObjectKey(string url)
         {
