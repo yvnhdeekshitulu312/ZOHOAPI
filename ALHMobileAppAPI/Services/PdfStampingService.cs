@@ -55,7 +55,7 @@ namespace ALHMobileAppAPI.Esign.Services
                                 break;
 
                             case FieldType.Text:
-                            case FieldType.Date:
+                            case FieldType.DateTime: 
                                 DrawTextField(gfx, input.Value, xPt, yPt, hPt, pageHeight);
                                 break;
 

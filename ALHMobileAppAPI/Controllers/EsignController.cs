@@ -299,7 +299,7 @@ namespace ALHMobileAppAPI.Controllers
         {
             try
             {
-                var emaild = User?.Identity?.Name;
+                var emaild = email ?? User?.Identity?.Name;
                 var result = await BuildEsignService().GetMyPendingDocumentsAsync(email);
                 return OkOrNotFound(result);
             }

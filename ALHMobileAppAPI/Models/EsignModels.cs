@@ -31,15 +31,17 @@ namespace ALHMobileAppAPI.Esign.Models
         Declined
     }
 
-    public enum FieldType
-    {
-        Signature,
-        Stamp,
-        Text,
-        Date,
-        Initial,
-        Checkbox
-    }
+    //public enum FieldType
+    //{
+    //    Signature,
+    //    Stamp,
+    //    Text,
+    //    Date,
+    //    Initial,
+    //    Checkbox
+    //}
+
+    public enum FieldType { Signature, Stamp, Text, DateTime, Initial, Checkbox }
 
     public class EsignDocument
     {
