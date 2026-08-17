@@ -188,7 +188,7 @@ namespace ALHMobileAppAPI.Controllers
                     return OkOrNotFound(objBase);
                 }
 
-                var sentBy = User?.Identity?.Name ?? "unknown";
+                var sentBy = request.email;// User?.Identity?.Name ?? "unknown";
                 await BuildEsignService().SendDocumentAsync(request, sentBy);
                 return OkWithBoolSuccessStatus(true, "Document sent for signature.");
             }
@@ -299,7 +299,7 @@ namespace ALHMobileAppAPI.Controllers
         {
             try
             {
-                var emaild = email ?? User?.Identity?.Name;
+                //var emaild = email ?? User?.Identity?.Name;
                 var result = await BuildEsignService().GetMyPendingDocumentsAsync(email);
                 return OkOrNotFound(result);
             }

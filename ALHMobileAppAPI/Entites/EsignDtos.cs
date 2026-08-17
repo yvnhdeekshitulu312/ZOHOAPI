@@ -16,6 +16,7 @@ namespace ALHMobileAppAPI.Esign.DTOs
     {
         public int DocumentId { get; set; }
         public string DocumentName { get; set; }
+        public string email { get; set; }
         public bool IsOrdered { get; set; }
         public int? DaysToComplete { get; set; }
         public int? ReminderDays { get; set; }
