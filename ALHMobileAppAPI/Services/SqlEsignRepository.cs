@@ -114,32 +114,83 @@ namespace ALHMobileAppAPI.Esign.Services
             }
         }
 
-        public async Task<List<EsignRecipient>> AddRecipientsAsync(int documentId, List<EsignRecipient> recipients)
+        public async Task<List<EsignRecipient>> AddRecipientsAsync(
+        int documentId,
+        List<EsignRecipient> recipients)
         {
-            using (var c = Conn())
+            try
             {
-                await c.OpenAsync();
-                foreach (var r in recipients)
+                using (var c = Conn())
                 {
-                    using (var cmd = new SqlCommand(@"
-                        INSERT INTO EsignRecipients (DocumentId, Email, Name, Role, SigningOrder, Status, DeliveryMethod, AccessToken,signRecipientEmpID)
-                        OUTPUT INSERTED.Id
-                        VALUES (@DocumentId, @Email, @Name, @Role, @SigningOrder, @Status, @DeliveryMethod, @AccessToken,@signRecipientEmpID)", c))
+                    await c.OpenAsync();
+
+                    foreach (var r in recipients)
                     {
-                        cmd.Parameters.AddWithValue("@DocumentId", documentId);
-                        cmd.Parameters.AddWithValue("@Email", r.Email);
-                        cmd.Parameters.AddWithValue("@Name", r.Name);
-                        cmd.Parameters.AddWithValue("@Role", r.Role.ToString());
-                        cmd.Parameters.AddWithValue("@SigningOrder", (object)r.SigningOrder ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@Status", r.Status.ToString());
-                        cmd.Parameters.AddWithValue("@DeliveryMethod", (object)r.DeliveryMethod ?? DBNull.Value);
-                        cmd.Parameters.AddWithValue("@AccessToken", r.AccessToken);
-                        cmd.Parameters.AddWithValue("@signRecipientEmpID", r.signRecipientEmpID);
-                        r.Id = (int)await cmd.ExecuteScalarAsync();
-                        r.DocumentId = documentId;
+                        using (var cmd = new SqlCommand(@"
+                    INSERT INTO EsignRecipients
+                    (
+                        DocumentId,
+                        Email,
+                        Name,
+                        Role,
+                        SigningOrder,
+                        Status,
+                        DeliveryMethod,
+                        AccessToken,
+                        signRecipientEmpID
+                    )
+                    OUTPUT INSERTED.Id
+                    VALUES
+                    (
+                        @DocumentId,
+                        @Email,
+                        @Name,
+                        @Role,
+                        @SigningOrder,
+                        @Status,
+                        @DeliveryMethod,
+                        @AccessToken,
+                        @signRecipientEmpID
+                    )", c))
+                        {
+                            cmd.Parameters.AddWithValue("@DocumentId", documentId);
+                            cmd.Parameters.AddWithValue("@Email", r.Email);
+                            cmd.Parameters.AddWithValue("@Name", r.Name);
+                            cmd.Parameters.AddWithValue("@Role", r.Role.ToString());
+
+                            cmd.Parameters.AddWithValue(
+                                "@SigningOrder",
+                                (object)r.SigningOrder ?? DBNull.Value
+                            );
+
+                            cmd.Parameters.AddWithValue("@Status", r.Status.ToString());
+
+                            cmd.Parameters.AddWithValue(
+                                "@DeliveryMethod",
+                                (object)r.DeliveryMethod ?? DBNull.Value
+                            );
+
+                            cmd.Parameters.AddWithValue(
+                                "@AccessToken",
+                                (object)r.AccessToken ?? DBNull.Value
+                            );
+
+                            cmd.Parameters.AddWithValue(
+                                "@signRecipientEmpID",
+                                (object)r.signRecipientEmpID ?? DBNull.Value
+                            );
+
+                            r.Id = (int)await cmd.ExecuteScalarAsync();
+                            r.DocumentId = documentId;
+                        }
                     }
+
+                    return recipients;
                 }
-                return recipients; // preserves insertion order -- required by EsignService
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
         }
 
