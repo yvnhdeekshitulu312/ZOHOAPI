@@ -21,9 +21,9 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 await c.OpenAsync();
                 using (var cmd = new SqlCommand(@"
-                    INSERT INTO EsignDocuments (Name, OriginalGcsPath, WorkingGcsPath, Status, CreatedBy, CreatedOn, IsOrdered, CachedPageImagesJson)
+                    INSERT INTO EsignDocuments (Name, OriginalGcsPath, WorkingGcsPath, Status, CreatedBy, CreatedOn, IsOrdered, CachedPageImagesJson,SavedEmpID)
                     OUTPUT INSERTED.Id
-                    VALUES (@Name, @OriginalGcsPath, @WorkingGcsPath, @Status, @CreatedBy, @CreatedOn, @IsOrdered, @CachedPageImagesJson)", c))
+                    VALUES (@Name, @OriginalGcsPath, @WorkingGcsPath, @Status, @CreatedBy, @CreatedOn, @IsOrdered, @CachedPageImagesJson,@EmpID)", c))
                 {
                     cmd.Parameters.AddWithValue("@Name", d.Name);
                     cmd.Parameters.AddWithValue("@OriginalGcsPath", d.OriginalGcsPath);
@@ -36,6 +36,7 @@ namespace ALHMobileAppAPI.Esign.Services
                         d.CachedPageImages != null && d.CachedPageImages.Count > 0
                             ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
                             : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@EmpID", d.EmpID);
 
                     var id = (int)await cmd.ExecuteScalarAsync();
                     d.Id = id;
@@ -121,9 +122,9 @@ namespace ALHMobileAppAPI.Esign.Services
                 foreach (var r in recipients)
                 {
                     using (var cmd = new SqlCommand(@"
-                        INSERT INTO EsignRecipients (DocumentId, Email, Name, Role, SigningOrder, Status, DeliveryMethod, AccessToken)
+                        INSERT INTO EsignRecipients (DocumentId, Email, Name, Role, SigningOrder, Status, DeliveryMethod, AccessToken,signRecipientEmpID)
                         OUTPUT INSERTED.Id
-                        VALUES (@DocumentId, @Email, @Name, @Role, @SigningOrder, @Status, @DeliveryMethod, @AccessToken)", c))
+                        VALUES (@DocumentId, @Email, @Name, @Role, @SigningOrder, @Status, @DeliveryMethod, @AccessToken,@signRecipientEmpID)", c))
                     {
                         cmd.Parameters.AddWithValue("@DocumentId", documentId);
                         cmd.Parameters.AddWithValue("@Email", r.Email);
@@ -133,7 +134,7 @@ namespace ALHMobileAppAPI.Esign.Services
                         cmd.Parameters.AddWithValue("@Status", r.Status.ToString());
                         cmd.Parameters.AddWithValue("@DeliveryMethod", (object)r.DeliveryMethod ?? DBNull.Value);
                         cmd.Parameters.AddWithValue("@AccessToken", r.AccessToken);
-
+                        cmd.Parameters.AddWithValue("@signRecipientEmpID", r.signRecipientEmpID);
                         r.Id = (int)await cmd.ExecuteScalarAsync();
                         r.DocumentId = documentId;
                     }
@@ -308,39 +309,86 @@ namespace ALHMobileAppAPI.Esign.Services
             }
         }
 
-        public async Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email)
+        public async Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email,string EmpID)
         {
             var result = new List<EsignDocument>();
+            //using (var c = Conn())
+            //{
+            //    await c.OpenAsync();
+            //    using (var cmd = new SqlCommand(@"
+            //        SELECT DISTINCT d.* FROM EsignDocuments d
+            //        JOIN EsignRecipients r ON r.DocumentId = d.Id
+            //        WHERE d.IsDeleted=0 AND r.Email=@email AND r.Status IN ('Sent','Viewed')", c))
+            //    {
+            //        cmd.Parameters.AddWithValue("@email", email);
+            //        using (var reader = await cmd.ExecuteReaderAsync())
+            //            while (await reader.ReadAsync())
+            //                result.Add(MapDocument(reader));
+            //    }
+            //}
             using (var c = Conn())
             {
                 await c.OpenAsync();
                 using (var cmd = new SqlCommand(@"
-                    SELECT DISTINCT d.* FROM EsignDocuments d
-                    JOIN EsignRecipients r ON r.DocumentId = d.Id
-                    WHERE d.IsDeleted=0 AND r.Email=@email AND r.Status IN ('Sent','Viewed')", c))
+        SELECT DISTINCT 
+d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath, 
+                        d.Status, d.CreatedBy, d.CreatedOn, d.SentOn, d.CompletedOn, 
+                        d.DaysToComplete, d.ReminderDays, d.Note, d.IsOrdered, d.IsDeleted, d.SavedEmpID 
+        FROM EsignDocuments d
+        JOIN EsignRecipients r ON r.DocumentId = d.Id
+        WHERE d.IsDeleted = 0 
+          AND r.signRecipientEmpID = @empId 
+          AND r.Status IN ('Sent', 'Viewed')", c))
                 {
-                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.Add("@empId", SqlDbType.VarChar, 18).Value = (object)EmpID ?? DBNull.Value;
+
                     using (var reader = await cmd.ExecuteReaderAsync())
+                    {
                         while (await reader.ReadAsync())
+                        {
                             result.Add(MapDocument(reader));
+                        }
+                    }
                 }
             }
+
             return result;
         }
 
-        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail)
+        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID)
         {
             var result = new List<EsignDocument>();
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignDocuments WHERE IsDeleted=0 AND CreatedBy=@email", c))
+                //using (var cmd = new SqlCommand("SELECT * FROM EsignDocuments WHERE IsDeleted=0 AND CreatedBy=@email", c))
+                //{
+                //    cmd.Parameters.AddWithValue("@email", userEmail);
+                //    using (var reader = await cmd.ExecuteReaderAsync())
+                //        while (await reader.ReadAsync())
+                //            result.Add(MapDocument(reader));
+                //}
+
+                string query = @"SELECT Id, Name, OriginalGcsPath, WorkingGcsPath, FinalGcsPath, 
+                        Status, CreatedBy, CreatedOn, SentOn, CompletedOn, 
+                        DaysToComplete, ReminderDays, Note, IsOrdered, IsDeleted, SavedEmpID 
+                 FROM EsignDocuments 
+                 WHERE IsDeleted = 0 AND SavedEmpID = @EmpID";
+
+                using (var cmd = new SqlCommand(query, c))
                 {
-                    cmd.Parameters.AddWithValue("@email", userEmail);
+                    // Use explicit type definition instead of AddWithValue for proper SQL parameter typing
+                    cmd.Parameters.Add("@EmpID", SqlDbType.VarChar, 18).Value = EmpID;
+
                     using (var reader = await cmd.ExecuteReaderAsync())
+                    {
                         while (await reader.ReadAsync())
+                        {
                             result.Add(MapDocument(reader));
+                        }
+                    }
                 }
+
             }
             return result;
         }
@@ -349,7 +397,7 @@ namespace ALHMobileAppAPI.Esign.Services
 
         private static EsignDocument MapDocument(SqlDataReader r)
         {
-            var cachedJson = r["CachedPageImagesJson"] as string;
+            //var cachedJson = r["CachedPageImagesJson"] as string;
             return new EsignDocument
             {
                 Id = (int)r["Id"],
@@ -366,10 +414,10 @@ namespace ALHMobileAppAPI.Esign.Services
                 ReminderDays = r["ReminderDays"] as int?,
                 Note = r["Note"] as string,
                 IsOrdered = (bool)r["IsOrdered"],
-                IsDeleted = (bool)r["IsDeleted"],
-                CachedPageImages = string.IsNullOrEmpty(cachedJson)
-                    ? new List<string>()
-                    : JsonConvert.DeserializeObject<List<string>>(cachedJson)
+                IsDeleted = (bool)r["IsDeleted"]
+                //CachedPageImages = string.IsNullOrEmpty(cachedJson)
+                //    ? new List<string>()
+                //    : JsonConvert.DeserializeObject<List<string>>(cachedJson)
             };
         }
 

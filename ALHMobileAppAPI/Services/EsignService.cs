@@ -17,14 +17,14 @@ namespace ALHMobileAppAPI.Esign.Services
     {
         Task SignAsLoggedInUserAsync(int documentId, string email, List<FieldValueDto> fieldValues, string ipAddress);
         Task<DocumentDetailResponse> GetDocumentForLoggedInSignerAsync(int documentId, string email);
-        Task<UploadDocumentResponse> UploadDocumentAsync(Stream fileStream, string fileName, string contentType, string uploadedBy);
-        Task SendDocumentAsync(SendDocumentRequest request, string sentBy);
+        Task<UploadDocumentResponse> UploadDocumentAsync(Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID);
+        Task SendDocumentAsync(SendDocumentRequest request, string sentBy,string EmpID);
         Task<DocumentDetailResponse> GetDocumentAsync(int documentId);
         Task<DocumentDetailResponse> GetDocumentForSignerAsync(Guid accessToken);
         Task SignAsync(SignDocumentRequest request, string ipAddress);
         Task RejectAsync(RejectDocumentRequest request, string ipAddress);
-        Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail);
-        Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail);
+        Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail,string EmpID);
+        Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID);
         Task DeleteDocumentAsync(int documentId, string requestedBy);
     }
 
@@ -133,9 +133,9 @@ namespace ALHMobileAppAPI.Esign.Services
             }
         }
 
-        public async Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail)
+        public async Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail,string EmpID)
         {
-            var docs = await _repo.GetPendingDocumentsForRecipientAsync(userEmail);
+            var docs = await _repo.GetPendingDocumentsForRecipientAsync(userEmail, EmpID);
             var result = new List<DocumentDetailResponse>();
             foreach (var doc in docs)
             {
@@ -147,9 +147,9 @@ namespace ALHMobileAppAPI.Esign.Services
             return result;
         }
 
-        public async Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail)
+        public async Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID)
         {
-            var docs = await _repo.GetDocumentsCreatedByAsync(userEmail);
+            var docs = await _repo.GetDocumentsCreatedByAsync(userEmail, EmpID);
             var result = new List<DocumentDetailResponse>();
             foreach (var doc in docs)
                 result.Add(await BuildDetailResponseAsync(doc, includePageImages: false));
@@ -157,7 +157,7 @@ namespace ALHMobileAppAPI.Esign.Services
         }
 
         public async Task<UploadDocumentResponse> UploadDocumentAsync(
-            Stream fileStream, string fileName, string contentType, string uploadedBy)
+            Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID)
         {
             var fileBytes = await ReadAllBytesAsync(fileStream);
             var gcsPath = await _storage.UploadAsync(new MemoryStream(fileBytes), fileName, contentType);
@@ -174,6 +174,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 CachedPageImages = pageImages,
                 Status = DocumentStatus.Draft,
                 CreatedBy = uploadedBy,
+                EmpID = EmpID,
                 CreatedOn = DateTime.Now
             };
 
@@ -195,7 +196,7 @@ namespace ALHMobileAppAPI.Esign.Services
             };
         }
 
-        public async Task SendDocumentAsync(SendDocumentRequest request, string sentBy)
+        public async Task SendDocumentAsync(SendDocumentRequest request, string sentBy,string EmpID)
         {
             var doc = await _repo.GetDocumentAsync(request.DocumentId);
             if (doc == null) throw new InvalidOperationException("Document not found.");
@@ -213,6 +214,7 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 DocumentId = doc.Id,
                 Email = r.Email,
+                EmpID = r.EmpID,
                 Name = r.Name,
                 Role = (RecipientRole)Enum.Parse(typeof(RecipientRole), r.Role),
                 SigningOrder = request.IsOrdered ? (r.SigningOrder ?? idx + 1) : (int?)null,

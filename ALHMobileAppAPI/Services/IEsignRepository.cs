@@ -20,8 +20,8 @@ namespace ALHMobileAppAPI.Esign.Services
         Task<List<EsignField>> GetFieldsForRecipientAsync(int recipientId);
         Task UpdateFieldValueAsync(int fieldId, string value);
         Task LogAuditAsync(EsignAuditLog entry);
-        Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email);
-        Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail);
+        Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email, string EmpID);
+        Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID);
         Task<EsignRecipient> GetRecipientByDocumentAndEmailAsync(int documentId, string email);
     }
 }

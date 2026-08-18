@@ -17,6 +17,8 @@ namespace ALHMobileAppAPI.Esign.DTOs
         public int DocumentId { get; set; }
         public string DocumentName { get; set; }
         public string email { get; set; }
+        public string EmpID { get; set; }
+
         public bool IsOrdered { get; set; }
         public int? DaysToComplete { get; set; }
         public int? ReminderDays { get; set; }
@@ -31,6 +33,7 @@ namespace ALHMobileAppAPI.Esign.DTOs
         // in the same payload before the server assigns real DB ids.
         public string ClientId { get; set; }
         public string Email { get; set; }
+        public string EmpID { get; set; }
         public string Name { get; set; }
         public string Role { get; set; } // Sign / Approve / View / CC
         public int? SigningOrder { get; set; }

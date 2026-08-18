@@ -60,7 +60,7 @@ namespace ALHMobileAppAPI.Esign.Models
         public string Note { get; set; }
         public bool IsOrdered { get; set; }
         public bool IsDeleted { get; set; }
-
+        public string EmpID { get; set; }
         public List<EsignRecipient> Recipients { get; set; } = new List<EsignRecipient>();
         public List<EsignField> Fields { get; set; } = new List<EsignField>();
         public List<string> CachedPageImages { get; set; } = new List<string>();
@@ -71,6 +71,7 @@ namespace ALHMobileAppAPI.Esign.Models
         public int Id { get; set; }
         public int DocumentId { get; set; }
         public string Email { get; set; }
+        public string EmpID { get; set; }
         public string Name { get; set; }
         public string CreatedOn { get; set; }
         public string CreatedBy { get; set; }
@@ -84,6 +85,8 @@ namespace ALHMobileAppAPI.Esign.Models
         public DateTime? ViewedOn { get; set; }
         public DateTime? SignedOn { get; set; }
         public string RejectReason { get; set; }
+        public string signRecipientEmpID { get; set; }
+
     }
 
     public class EsignField

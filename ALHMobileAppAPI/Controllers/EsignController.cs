@@ -123,6 +123,17 @@ namespace ALHMobileAppAPI.Controllers
                     uploadedBy = User?.Identity?.Name ?? "unknown";
                 }
 
+                string EmpID = null;
+                var empIdContent = provider.Contents
+                    .FirstOrDefault(c => string.Equals(c.Headers.ContentDisposition?.Name?.Trim('"'), "EmpID", StringComparison.OrdinalIgnoreCase));
+
+                if (empIdContent != null)
+                {
+                    EmpID = await empIdContent.ReadAsStringAsync();
+                }
+
+
+
                 // 2. Find the file content item (instead of assuming provider.Contents[0])
                 var file = provider.Contents
                     .FirstOrDefault(c => !string.IsNullOrEmpty(c.Headers.ContentDisposition?.FileName));
@@ -151,7 +162,7 @@ namespace ALHMobileAppAPI.Controllers
                 UploadDocumentResponse uploadResult;
                 using (var uploadStream = new MemoryStream(fileBytes))
                 {
-                    uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy);
+                    uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy, EmpID);
                 }
 
                 // Re-fetch to return the cached page images generated during upload
@@ -189,7 +200,8 @@ namespace ALHMobileAppAPI.Controllers
                 }
 
                 var sentBy = request.email;// User?.Identity?.Name ?? "unknown";
-                await BuildEsignService().SendDocumentAsync(request, sentBy);
+                var EmpID = request.EmpID;
+                await BuildEsignService().SendDocumentAsync(request, sentBy, EmpID);
                 return OkWithBoolSuccessStatus(true, "Document sent for signature.");
             }
             catch (InvalidOperationException ex)
@@ -295,12 +307,12 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpGet]
         [Route("API/Esign/MyPending")]
-        public async Task<IHttpActionResult> MyPending(string email)
+        public async Task<IHttpActionResult> MyPending(string email, string EmpID)
         {
             try
             {
                 //var emaild = email ?? User?.Identity?.Name;
-                var result = await BuildEsignService().GetMyPendingDocumentsAsync(email);
+                var result = await BuildEsignService().GetMyPendingDocumentsAsync(email, EmpID);
                 return OkOrNotFound(result);
             }
             catch (Exception ex) { SetErrorObject(objBase, ex, "Error in MyPending"); }
@@ -309,11 +321,11 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpGet]
         [Route("API/Esign/MyDocuments")]
-        public async Task<IHttpActionResult> MyDocuments(string email)
+        public async Task<IHttpActionResult> MyDocuments(string email,string EmpID)
         {
             try
             {
-                var result = await BuildEsignService().GetMyDocumentsAsync(email);
+                var result = await BuildEsignService().GetMyDocumentsAsync(email, EmpID);
                 return OkOrNotFound(result);
             }
             catch (Exception ex) { SetErrorObject(objBase, ex, "Error in MyDocuments"); }

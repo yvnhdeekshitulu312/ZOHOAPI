@@ -237,7 +237,7 @@ namespace ALHMobileAppAPI.Esign.Services
             finally { _lock.Release(); }
         }
 
-        public async Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email)
+        public async Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email, string EmpID)
         {
             List<EsignDocument> docs;
             List<EsignRecipient> recipients;
@@ -257,7 +257,7 @@ namespace ALHMobileAppAPI.Esign.Services
             return docs.Where(d => myPendingDocIds.Contains(d.Id)).ToList();
         }
 
-        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string email)
+        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string email,string EmpID)
         {
             await _lock.WaitAsync();
             try
