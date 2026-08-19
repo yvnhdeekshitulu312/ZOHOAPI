@@ -23,5 +23,9 @@ namespace ALHMobileAppAPI.Esign.Services
         Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email, string EmpID);
         Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID);
         Task<EsignRecipient> GetRecipientByDocumentAndEmailAsync(int documentId, string email);
+
+        Task DraftdeleteDocument(int documentId);
+
+
     }
 }

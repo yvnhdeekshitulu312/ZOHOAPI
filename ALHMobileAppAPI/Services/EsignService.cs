@@ -26,6 +26,8 @@ namespace ALHMobileAppAPI.Esign.Services
         Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail,string EmpID);
         Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID);
         Task DeleteDocumentAsync(int documentId, string requestedBy);
+
+        Task DraftdeleteDocument(int documentId, string deletedBy);
     }
 
     public class EsignService : IEsignService
@@ -645,6 +647,26 @@ namespace ALHMobileAppAPI.Esign.Services
                 Details = $"Deleted by {requestedBy}"
             });
         }
+
+        public async Task DraftdeleteDocument(int documentId, string requestedBy)
+        {
+            var doc = await _repo.GetDocumentAsync(documentId);
+            if (doc == null)
+                throw new InvalidOperationException($"Document {documentId} was not found (or already deleted).");
+
+            if (doc.Status != DocumentStatus.Draft)
+                throw new InvalidOperationException(
+                    $"Document {documentId} is '{doc.Status}', not Draft. Use DeleteDocumentAsync (soft delete) " +
+                    "for documents that have already been sent, so their audit trail is preserved.");
+
+            await _repo.DraftdeleteDocument(documentId);
+
+            HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                null, "EsignService", $"Draft document {documentId} permanently deleted by {requestedBy}", "");
+        }
+
+
+
 
         private static async Task<byte[]> ReadAllBytesAsync(Stream stream)
         {

@@ -382,5 +382,30 @@ namespace ALHMobileAppAPI.Controllers
             catch (Exception ex) { SetErrorObject(objBase, ex, "Error in DeleteDocument"); }
             return OkOrNotFound(objBase);
         }
+
+        // FIXED: route previously had no {id} segment (just "API/Esign/DraftdeleteDocument"),
+        // so a call like DELETE .../DraftdeleteDocument/5 -- matching the DeleteDocument/{id}
+        // convention right above -- would 404 before this action ever ran. id now binds from
+        // the path like every other by-id route in this controller; requestedBy stays a query
+        // parameter and is now optional so a call that omits it doesn't fail model binding.
+        [HttpDelete]
+        [Route("API/Esign/DraftdeleteDocument/{id}")]
+        public async Task<IHttpActionResult> DraftdeleteDocument(int id, string requestedBy = null)
+        {
+            try
+            {
+                var deletedBy = string.IsNullOrWhiteSpace(requestedBy) ? (User?.Identity?.Name ?? "unknown") : requestedBy;
+                await BuildEsignService().DraftdeleteDocument(id, deletedBy);
+                return OkWithBoolSuccessStatus(true, "Draft document deleted.");
+            }
+            catch (InvalidOperationException ex)
+            {
+                objBase.Message = ex.Message;
+                objBase.Code = CommanUtilities.Models.ProcessStatus.Fail;
+                objBase.Status = CommanUtilities.Models.ProcessStatus.Fail.ToString();
+            }
+            catch (Exception ex) { SetErrorObject(objBase, ex, "Error in DraftdeleteDocument"); }
+            return OkOrNotFound(objBase);
+        }
     }
 }

@@ -294,5 +294,33 @@ namespace ALHMobileAppAPI.Esign.Services
             }
             finally { _lock.Release(); }
         }
+
+        // FIXED: previously just set IsDeleted = true (a soft delete) and never touched
+        // auditlog.json at all -- inconsistent with both (a) the "Draft" hard-delete this
+        // endpoint is meant to do, and (b) the SQL repository's fixed behaviour below, so
+        // the two IEsignRepository implementations no longer agreed on what this method
+        // does. Now removes the document row and its audit-log entries outright, matching
+        // SqlEsignRepository.DraftdeleteDocument.
+        public async Task DraftdeleteDocument(int documentId)
+        {
+            await _lock.WaitAsync();
+            try
+            {
+                var docs = LoadList<EsignDocument>(DocumentsPath);
+                var doc = docs.FirstOrDefault(d => d.Id == documentId);
+                if (doc == null) throw new InvalidOperationException($"Document {documentId} not found.");
+
+                docs.Remove(doc);
+                SaveList(DocumentsPath, docs);
+
+                var audit = LoadList<EsignAuditLog>(AuditLogPath);
+                var removed = audit.RemoveAll(a => a.DocumentId == documentId);
+                if (removed > 0)
+                {
+                    SaveList(AuditLogPath, audit);
+                }
+            }
+            finally { _lock.Release(); }
+        }
     }
 }

@@ -7,11 +7,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using ALHMobileAppAPI.Esign.Models;
+using HISDataAccess;
 
 namespace ALHMobileAppAPI.Esign.Services
 {
     public class SqlEsignRepository : IEsignRepository
     {
+        static string MODULE_NAME = "WebAPIDAL";
+        const int DEFAULTWORKSTATION = 0;
+        static String strConnString = ConfigurationManager.ConnectionStrings["DBConnectionStringMasters"].ConnectionString;
+        static String strDefWorkstationId = ConfigurationManager.AppSettings["DefaultWorkstationId"].ToString();
+        static String strDefaultUserId = ConfigurationManager.AppSettings["DefaultUserId"].ToString();
+        static String strDefaultHospitalId = ConfigurationManager.AppSettings["DefaultHospitalId"].ToString();
+
+        private IDbDataParameter CreateParam(DataHelper objDataHelper, string paramName, object paramVal, DbType paramType, ParameterDirection paramDirection)
+        {
+            IDbDataParameter objIDbDataParameter = objDataHelper.CreateDataParameter();
+            objIDbDataParameter.ParameterName = paramName;
+            objIDbDataParameter.Value = paramVal;
+            objIDbDataParameter.DbType = paramType;
+            objIDbDataParameter.Direction = paramDirection;
+
+            return objIDbDataParameter;
+        }
+
         private readonly string _connStr = ConfigurationManager.ConnectionStrings["DBConnectionStringMasters"].ConnectionString;
         private SqlConnection Conn() => new SqlConnection(_connStr);
 
@@ -177,7 +196,7 @@ namespace ALHMobileAppAPI.Esign.Services
 
                             cmd.Parameters.AddWithValue(
                                 "@signRecipientEmpID",
-                                (object)r.signRecipientEmpID ?? DBNull.Value
+                                (object)r.EmpID ?? DBNull.Value
                             );
 
                             r.Id = (int)await cmd.ExecuteScalarAsync();
@@ -412,19 +431,17 @@ d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath,
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                //using (var cmd = new SqlCommand("SELECT * FROM EsignDocuments WHERE IsDeleted=0 AND CreatedBy=@email", c))
-                //{
-                //    cmd.Parameters.AddWithValue("@email", userEmail);
-                //    using (var reader = await cmd.ExecuteReaderAsync())
-                //        while (await reader.ReadAsync())
-                //            result.Add(MapDocument(reader));
-                //}
+               
 
                 string query = @"SELECT Id, Name, OriginalGcsPath, WorkingGcsPath, FinalGcsPath, 
                         Status, CreatedBy, CreatedOn, SentOn, CompletedOn, 
                         DaysToComplete, ReminderDays, Note, IsOrdered, IsDeleted, SavedEmpID 
-                 FROM EsignDocuments 
-                 WHERE IsDeleted = 0 AND SavedEmpID = @EmpID";
+                        FROM EsignDocuments 
+                        WHERE IsDeleted = 0 
+                        AND SavedEmpID = @EmpID
+                        AND CreatedOn >= @FromDate 
+                        AND CreatedOn <= @ToDate";
+
 
                 using (var cmd = new SqlCommand(query, c))
                 {
@@ -504,5 +521,52 @@ d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath,
             IsRequired = (bool)r["IsRequired"],
             FilledOn = r["FilledOn"] as DateTime?
         };
+
+
+        public async Task DraftdeleteDocument(int documentId)
+        {
+            using (var c = Conn())
+            {
+                await c.OpenAsync();
+                using (var tx = c.BeginTransaction())
+                {
+                    try
+                    {
+                        using (var check = new SqlCommand("SELECT COUNT(1) FROM EsignDocuments WHERE Id=@id", c, tx))
+                        {
+                            check.Parameters.AddWithValue("@id", documentId);
+                            var exists = (int)await check.ExecuteScalarAsync();
+                            if (exists == 0)
+                            {
+                                tx.Rollback();
+                                throw new InvalidOperationException($"Document {documentId} was not found.");
+                            }
+                        }
+
+                        // Child rows first (FK dependency) ...
+                        using (var delAudit = new SqlCommand("DELETE FROM EsignAuditLog WHERE DocumentId=@id", c, tx))
+                        {
+                            delAudit.Parameters.AddWithValue("@id", documentId);
+                            await delAudit.ExecuteNonQueryAsync();
+                        }
+
+                        // ... then the parent row.
+                        using (var delDoc = new SqlCommand("DELETE FROM EsignDocuments WHERE Id=@id", c, tx))
+                        {
+                            delDoc.Parameters.AddWithValue("@id", documentId);
+                            await delDoc.ExecuteNonQueryAsync();
+                        }
+
+                        tx.Commit();
+                    }
+                    catch
+                    {
+                        try { tx.Rollback(); } catch { /* connection already broken -- nothing left to roll back */ }
+                        throw;
+                    }
+                }
+            }
+        }
+
     }
 }
