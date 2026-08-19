@@ -21,7 +21,7 @@ namespace ALHMobileAppAPI.Esign.Services
         Task UpdateFieldValueAsync(int fieldId, string value);
         Task LogAuditAsync(EsignAuditLog entry);
         Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email, string EmpID);
-        Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID);
+        Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID, string FromDate, string ToDate);
         Task<EsignRecipient> GetRecipientByDocumentAndEmailAsync(int documentId, string email);
 
         Task DraftdeleteDocument(int documentId);

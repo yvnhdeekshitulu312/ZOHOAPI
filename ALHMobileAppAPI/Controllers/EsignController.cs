@@ -321,11 +321,11 @@ namespace ALHMobileAppAPI.Controllers
 
         [HttpGet]
         [Route("API/Esign/MyDocuments")]
-        public async Task<IHttpActionResult> MyDocuments(string email,string EmpID)
+        public async Task<IHttpActionResult> MyDocuments(string email,string EmpID, string FromDate, string ToDate)
         {
             try
             {
-                var result = await BuildEsignService().GetMyDocumentsAsync(email, EmpID);
+                var result = await BuildEsignService().GetMyDocumentsAsync(email, EmpID, FromDate, ToDate);
                 return OkOrNotFound(result);
             }
             catch (Exception ex) { SetErrorObject(objBase, ex, "Error in MyDocuments"); }

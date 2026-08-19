@@ -64,7 +64,7 @@ namespace ALHMobileAppAPI.Esign.Services
             }
         }
 
-        public async Task<EsignDocument> GetDocumentAsync(int documentId)
+        public async Task<EsignDocument> GetDocumentAsyncOld(int documentId)
         {
             using (var c = Conn())
             {
@@ -79,6 +79,41 @@ namespace ALHMobileAppAPI.Esign.Services
                             doc = MapDocument(reader);
                     }
                 }
+                if (doc == null) return null;
+
+                doc.Recipients = await GetRecipientsAsync(documentId);
+                doc.Fields = await GetFieldsAsync(documentId);
+                return doc;
+            }
+        }
+
+        public async Task<EsignDocument> GetDocumentAsync(int documentId)
+        {
+            using (var c = Conn())
+            {
+                await c.OpenAsync();
+                EsignDocument doc = null;
+
+                string query = @"
+            SELECT 
+                ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
+                ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
+                ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID,
+                VD.FullName, VD.EmpNo, VD.DepartmentName
+            FROM EsignDocuments ED
+            INNER JOIN V_EmployeesDetails VD ON VD.EmpID = ED.SavedEmpID
+            WHERE ED.Id = @id AND ED.IsDeleted = 0";
+
+                using (var cmd = new SqlCommand(query, c))
+                {
+                    cmd.Parameters.AddWithValue("@id", documentId);
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                            doc = MapDocument(reader);
+                    }
+                }
+
                 if (doc == null) return null;
 
                 doc.Recipients = await GetRecipientsAsync(documentId);
@@ -403,9 +438,11 @@ namespace ALHMobileAppAPI.Esign.Services
         SELECT DISTINCT 
 d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath, 
                         d.Status, d.CreatedBy, d.CreatedOn, d.SentOn, d.CompletedOn, 
-                        d.DaysToComplete, d.ReminderDays, d.Note, d.IsOrdered, d.IsDeleted, d.SavedEmpID 
+                        d.DaysToComplete, d.ReminderDays, d.Note, d.IsOrdered, d.IsDeleted, d.SavedEmpID ,
+VD.FullName, VD.EmpNo, VD.DepartmentName
         FROM EsignDocuments d
         JOIN EsignRecipients r ON r.DocumentId = d.Id
+        INNER JOIN V_EmployeesDetails VD ON VD.EmpID = d.SavedEmpID
         WHERE d.IsDeleted = 0 
           AND r.signRecipientEmpID = @empId 
           AND r.Status IN ('Sent', 'Viewed')", c))
@@ -425,28 +462,61 @@ d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath,
             return result;
         }
 
-        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID)
+        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string userEmail,string EmpID,string FromDate,string ToDate)
         {
             var result = new List<EsignDocument>();
+
+            if (!DateTime.TryParse(FromDate, out DateTime parsedFromDate))
+            {
+                throw new ArgumentException("Invalid FromDate format.", nameof(FromDate));
+            }
+
+            if (!DateTime.TryParse(ToDate, out DateTime parsedToDate))
+            {
+                throw new ArgumentException("Invalid ToDate format.", nameof(ToDate));
+            }
+
+            DateTime startDate = parsedFromDate.Date;
+            DateTime endDate = parsedToDate.Date.AddDays(1).AddTicks(-1);
+
+
             using (var c = Conn())
             {
                 await c.OpenAsync();
-               
 
-                string query = @"SELECT Id, Name, OriginalGcsPath, WorkingGcsPath, FinalGcsPath, 
-                        Status, CreatedBy, CreatedOn, SentOn, CompletedOn, 
-                        DaysToComplete, ReminderDays, Note, IsOrdered, IsDeleted, SavedEmpID 
-                        FROM EsignDocuments 
-                        WHERE IsDeleted = 0 
-                        AND SavedEmpID = @EmpID
-                        AND CreatedOn >= @FromDate 
-                        AND CreatedOn <= @ToDate";
+
+                //string query = @"SELECT ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
+                //        ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
+                //        ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID ,
+                //        VD.FullName,VD.EmpNo,VD.DepartmentName	
+                //        FROM EsignDocuments ED
+                //        Inner join V_EmployeesDetails VD on VD.EmpID=ED.SavedEmpID
+                //        WHERE IsDeleted = 0 
+                //        AND SavedEmpID = @EmpID
+                //        AND CreatedOn >= @FromDate 
+                //        AND CreatedOn <= @ToDate";
+
+                string query = @"
+                                SELECT 
+                                    ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
+                                    ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
+                                    ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID,
+                                    VD.FullName, VD.EmpNo, VD.DepartmentName	
+                                FROM EsignDocuments ED
+                                INNER JOIN V_EmployeesDetails VD ON VD.EmpID = ED.SavedEmpID
+                                WHERE ED.IsDeleted = 0 
+                                  AND (@EmpID IS NULL OR @EmpID = '0' OR @EmpID = '' OR ED.SavedEmpID = @EmpID)
+                                  AND (@FromDate IS NULL OR ED.CreatedOn >= @FromDate)
+                                  AND (@ToDate IS NULL OR ED.CreatedOn <= @ToDate)";
 
 
                 using (var cmd = new SqlCommand(query, c))
                 {
                     // Use explicit type definition instead of AddWithValue for proper SQL parameter typing
                     cmd.Parameters.Add("@EmpID", SqlDbType.VarChar, 18).Value = EmpID;
+                    cmd.Parameters.Add("@FromDate", SqlDbType.DateTime).Value = startDate;
+                    cmd.Parameters.Add("@ToDate", SqlDbType.DateTime).Value = endDate;
+
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -482,7 +552,13 @@ d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath,
                 ReminderDays = r["ReminderDays"] as int?,
                 Note = r["Note"] as string,
                 IsOrdered = (bool)r["IsOrdered"],
-                IsDeleted = (bool)r["IsDeleted"]
+                IsDeleted = (bool)r["IsDeleted"],
+
+                EmpNo = r["EmpNo"] as string,
+                FullName = r["FullName"] as string,
+                DepartmentName = r["DepartmentName"] as string,
+
+
                 //CachedPageImages = string.IsNullOrEmpty(cachedJson)
                 //    ? new List<string>()
                 //    : JsonConvert.DeserializeObject<List<string>>(cachedJson)

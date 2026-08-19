@@ -24,7 +24,7 @@ namespace ALHMobileAppAPI.Esign.Services
         Task SignAsync(SignDocumentRequest request, string ipAddress);
         Task RejectAsync(RejectDocumentRequest request, string ipAddress);
         Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail,string EmpID);
-        Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID);
+        Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID, string FromDate, string ToDate);
         Task DeleteDocumentAsync(int documentId, string requestedBy);
 
         Task DraftdeleteDocument(int documentId, string deletedBy);
@@ -96,6 +96,11 @@ namespace ALHMobileAppAPI.Esign.Services
                 IsOrdered = doc.IsOrdered,
                 ViewerGcsUrl = viewerUrl,
                 PageImages = pageImages,
+                EmpNo = doc.EmpNo,
+                FullName = doc.FullName,
+                DepartmentName = doc.DepartmentName,
+
+
                 Recipients = recipients.Select(r => new RecipientSummaryDto
                 {
                     Id = r.Id,
@@ -149,9 +154,9 @@ namespace ALHMobileAppAPI.Esign.Services
             return result;
         }
 
-        public async Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID)
+        public async Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID, string FromDate, string ToDate)
         {
-            var docs = await _repo.GetDocumentsCreatedByAsync(userEmail, EmpID);
+            var docs = await _repo.GetDocumentsCreatedByAsync(userEmail, EmpID, FromDate, ToDate);
             var result = new List<DocumentDetailResponse>();
             foreach (var doc in docs)
                 result.Add(await BuildDetailResponseAsync(doc, includePageImages: false));

@@ -62,6 +62,12 @@ namespace ALHMobileAppAPI.Esign.DTOs
         public string Status { get; set; }
         public string ViewerGcsUrl { get; set; } // blob URL to render, same pattern as your scanned-docs viewer
         public bool IsOrdered { get; set; }
+        public string EmpNo { get; set; }
+        public string FullName { get; set; }
+        public string DepartmentName { get; set; }
+
+
+
         public List<RecipientSummaryDto> Recipients { get; set; }
         public List<FieldSummaryDto> Fields { get; set; }
         public List<string> PageImages { get; set; } = new List<string>();

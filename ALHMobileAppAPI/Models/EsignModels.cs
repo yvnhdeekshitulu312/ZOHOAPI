@@ -52,6 +52,11 @@ namespace ALHMobileAppAPI.Esign.Models
         public string FinalGcsPath { get; set; }
         public DocumentStatus Status { get; set; }
         public string CreatedBy { get; set; }
+        public string EmpNo { get; set; }
+        public string FullName { get; set; }
+        public string DepartmentName { get; set; }
+
+
         public DateTime CreatedOn { get; set; }
         public DateTime? SentOn { get; set; }
         public DateTime? CompletedOn { get; set; }

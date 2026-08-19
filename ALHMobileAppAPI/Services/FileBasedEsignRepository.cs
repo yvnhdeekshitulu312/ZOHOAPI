@@ -257,7 +257,7 @@ namespace ALHMobileAppAPI.Esign.Services
             return docs.Where(d => myPendingDocIds.Contains(d.Id)).ToList();
         }
 
-        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string email,string EmpID)
+        public async Task<List<EsignDocument>> GetDocumentsCreatedByAsync(string email,string EmpID, string FromDate, string ToDate)
         {
             await _lock.WaitAsync();
             try
