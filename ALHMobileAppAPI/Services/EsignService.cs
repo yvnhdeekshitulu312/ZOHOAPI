@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -330,7 +331,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 };
             }).ToList();
 
-           
+
 
 
 
@@ -382,6 +383,15 @@ namespace ALHMobileAppAPI.Esign.Services
         // Send branded signature-request emails
         // Ported from SignatureService.SendSignatureEmailsAsync, adapted to the typed
         // EsignRecipient model (no reflection GetProp/ParseInt needed here).
+        //
+        // Requester       -> doc.CreatedBy (the original uploader of the document).
+        // Expires on      -> doc.SentOn + doc.DaysToComplete, when both are set
+        //                    (both are nullable, so the row/line is simply omitted
+        //                    when either is missing).
+        // Message to all  -> doc.Note (shown as an em dash when blank).
+        // Private message -> not modeled on EsignDocument/EsignRecipient yet, so this
+        //                    always shows as an em dash until a field is added -- see
+        //                    the TODO below.
         // =========================================================
         private async Task SendSignatureEmailsAsync(
             EsignDocument doc,
@@ -396,14 +406,47 @@ namespace ALHMobileAppAPI.Esign.Services
             if (targets.Count == 0) return;
 
             string baseUrl = ConfigurationManager.AppSettings["EsignAppBaseUrl"] ?? string.Empty;
+            string contactEmail = ConfigurationManager.AppSettings["EsignContactEmail"] ?? string.Empty;
+            string organizationName = ConfigurationManager.AppSettings["EsignOrganizationName"] ?? "Al Hammadi Hospitals";
             string docName = string.IsNullOrWhiteSpace(doc.Name) ? "a document" : doc.Name;
+
+            string requestedBy =
+                string.IsNullOrWhiteSpace(doc.CreatedBy)
+                    ? "A colleague at " + organizationName
+                    : doc.CreatedBy;
+
+            string expiresOnText = null;
+
+            if (doc.SentOn.HasValue && doc.DaysToComplete.HasValue)
+            {
+                expiresOnText =
+                    doc.SentOn.Value
+                        .AddDays(doc.DaysToComplete.Value)
+                        .ToString("MMM dd, yyyy", CultureInfo.InvariantCulture);
+            }
+
+            string messageToAll = doc.Note;
+
+            // TODO: once a per-document "private message" field exists (e.g. on
+            // EsignDocument or per-recipient on EsignRecipient), read it here.
+            // Until then this always renders as an em dash.
+            string privateMessage = null;
 
             foreach (var target in targets)
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
                 string subject = "Signature requested: " + docName;
-                string body = BuildEmailBody(target.Name, docName, baseUrl);
+                string body = BuildEmailBody(
+                    target.Name,
+                    docName,
+                    baseUrl,
+                    requestedBy,
+                    organizationName,
+                    expiresOnText,
+                    contactEmail,
+                    messageToAll,
+                    privateMessage);
 
                 try
                 {
@@ -433,33 +476,209 @@ namespace ALHMobileAppAPI.Esign.Services
         }
 
         // =========================================================
-        // Email body (approved palette + Noto Kufi Arabic)
+        // Email body -- "Brand Card" design
+        //
+        // Table-based HTML (works in Outlook desktop, Outlook Web,
+        // Gmail, Apple Mail) matching the approved mockup's
+        // "S · Brand Card" variation. Kept identical to
+        // SignatureService.BuildEmailBody so both send paths
+        // produce the same branded email. Uses only approved brand
+        // colors and Noto Kufi Arabic (falls back to Arial where
+        // the font isn't available on the recipient's device, since
+        // custom fonts are not reliably loaded by all email
+        // clients). The header-band gradient degrades gracefully to
+        // a flat Brand Blue background on clients (e.g. Outlook
+        // desktop) that ignore CSS background-image.
+        //
+        // The logo is referenced as cid:{EmailHelper.LogoContentId}
+        // -- EmailHelper.SendEmailAsync attaches the actual image
+        // file as an inline resource with that Content-Id.
         // =========================================================
-        private static string BuildEmailBody(string name, string docName, string baseUrl)
-        {
-            string greeting = string.IsNullOrWhiteSpace(name) ? "Hello," : "Dear " + name + ",";
 
-            string link = string.IsNullOrEmpty(baseUrl)
-                ? string.Empty
-                : "<p style=\"margin:22px 0;\">" +
-                  "<a href=\"" +
-                  HttpUtility.HtmlAttributeEncode(baseUrl + "/dashboard/pendingdocuments") +
-                  "\" style=\"" +
-                  "background:#1855A4;color:#FFFFFF;text-decoration:none;" +
-                  "padding:11px 20px;border-radius:8px;" +
-                  "font-family:'Noto Kufi Arabic',sans-serif;font-weight:700;" +
-                  "display:inline-block;\">Open the document</a></p>";
+        private static string BuildEmailBody(
+            string name,
+            string docName,
+            string baseUrl,
+            string requestedBy,
+            string organizationName,
+            string expiresOnText,
+            string contactEmail,
+            string messageToAll,
+            string privateMessage)
+        {
+            string safeDocName =
+                HttpUtility.HtmlEncode(docName);
+
+            string safeRequestedBy =
+                HttpUtility.HtmlEncode(requestedBy);
+
+            string safeOrganization =
+                HttpUtility.HtmlEncode(organizationName);
+
+            string signLink =
+                string.IsNullOrEmpty(baseUrl)
+                    ? "#"
+                    : HttpUtility.HtmlAttributeEncode(baseUrl);
+
+            // -----------------------------------------------------
+            // EXPIRES ON row (only rendered when we have a value --
+            // unlike Message to all / Private message, which always
+            // render with an em dash when empty, this one is a
+            // genuinely-not-always-set field)
+            // -----------------------------------------------------
+
+            string expiresRow =
+                string.IsNullOrWhiteSpace(expiresOnText)
+                    ? string.Empty
+                    : DetailRow("&#9201;", "EXPIRES ON", HttpUtility.HtmlEncode(expiresOnText), false);
+
+            string expiresFooterLine =
+                string.IsNullOrWhiteSpace(expiresOnText)
+                    ? string.Empty
+                    :
+                    "<div style=\"font-size:12px;color:#969696;margin-top:10px;\">" +
+                    "This link expires on " +
+                    HttpUtility.HtmlEncode(expiresOnText) +
+                    "</div>";
+
+            // -----------------------------------------------------
+            // Footer contact line
+            // -----------------------------------------------------
+
+            string contactLine =
+                string.IsNullOrWhiteSpace(contactEmail)
+                    ?
+                    "This is an automated email from the " +
+                    safeOrganization +
+                    " Signature Portal."
+                    :
+                    "This is an automated email from the " +
+                    safeOrganization +
+                    " Signature Portal. For queries, contact " +
+                    "<a href=\"mailto:" +
+                    HttpUtility.HtmlAttributeEncode(contactEmail) +
+                    "\" style=\"color:#1855A4;text-decoration:none;\">" +
+                    HttpUtility.HtmlEncode(contactEmail) +
+                    "</a> directly.";
 
             return
-                "<div style=\"font-family:'Noto Kufi Arabic',Arial,sans-serif;" +
-                "color:#002654;font-size:14px;line-height:1.7;\">" +
-                "<p>" + HttpUtility.HtmlEncode(greeting) + "</p>" +
-                "<p>You have a document waiting for your signature: <b>" +
-                HttpUtility.HtmlEncode(docName) + "</b>.</p>" +
-                link +
-                "<p style=\"color:#969696;font-size:12px;\">" +
-                "Al Hammadi Hospitals \u2014 Document Signing Portal</p>" +
-                "</div>";
+$@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0"" style=""background:#E5E5E5;padding:24px 0;"">
+  <tr>
+    <td align=""center"">
+      <table role=""presentation"" width=""560"" cellpadding=""0"" cellspacing=""0"" style=""background:#FFFFFF;border-radius:16px;overflow:hidden;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">
+
+        <!-- Header / logo -->
+        <tr>
+          <td style=""padding:26px 32px;border-bottom:1px solid #E5E5E5;"">
+            <table role=""presentation"" cellpadding=""0"" cellspacing=""0"">
+              <tr>
+                <td style=""width:40px;height:40px;background:#1855A4;border-radius:10px;text-align:center;vertical-align:middle;"">
+                  <img src=""cid:{EmailHelper.LogoContentId}"" width=""40"" height=""40"" alt=""{safeOrganization}"" style=""display:block;border-radius:10px;border:0;"" />
+                </td>
+                <td style=""padding-left:12px;"">
+                  <div style=""font-weight:800;font-size:15px;color:#002654;"">{safeOrganization}</div>
+                  <div style=""font-size:10.5px;color:#969696;font-weight:600;"">Internal Signature Portal</div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Banner (gradient with flat-color fallback for clients that ignore background-image) -->
+        <tr>
+          <td style=""background-color:#1855A4;background-image:linear-gradient(135deg,#002654,#1855A4);padding:30px 32px;"">
+            <span style=""display:inline-block;background:#CDFCFB;color:#002654;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;"">Action required</span>
+            <div style=""color:#FFFFFF;font-size:23px;font-weight:800;margin-top:12px;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">Digital Signature Request</div>
+          </td>
+        </tr>
+
+        <!-- Request line + detail rows -->
+        <tr>
+          <td style=""padding:30px 32px 6px 32px;"">
+            <div style=""font-size:14px;color:#002654;line-height:1.7;font-family:'Noto Kufi Arabic',Arial,sans-serif;margin-bottom:10px;"">
+              {(string.IsNullOrWhiteSpace(name) ? "Hello," : "Dear " + HttpUtility.HtmlEncode(name) + ",")}<br/>
+              <b style=""color:#1855A4;"">{safeRequestedBy}</b> has requested you to review and sign <b style=""color:#1855A4;"">{safeDocName}</b>.
+            </div>
+
+            <table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0"">
+              {DetailRow("&#9998;", "SENDER", safeRequestedBy, false)}
+              {DetailRow("&#127970;", "ORGANIZATION", safeOrganization, false)}
+              {expiresRow}
+              {DetailRow("&#128172;", "MESSAGE TO ALL", EmptyOrDash(messageToAll), false)}
+              {DetailRow("&#128274;", "PRIVATE MESSAGE", EmptyOrDash(privateMessage), true)}
+            </table>
+          </td>
+        </tr>
+
+        <!-- Start Signing button -->
+        <tr>
+          <td align=""center"" style=""padding:8px 32px 30px 32px;"">
+            <a href=""{signLink}"" style=""background:#1855A4;color:#FFFFFF;text-decoration:none;padding:15px 38px;border-radius:11px;font-weight:800;font-size:14.5px;font-family:'Noto Kufi Arabic',Arial,sans-serif;display:inline-block;"">Start Signing</a>
+            {expiresFooterLine}
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style=""background:#E5E5E5;padding:22px 32px;font-size:11px;color:#969696;line-height:1.7;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">
+            {contactLine}
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>";
+        }
+
+        // =========================================================
+        // Single detail row (icon + label + value), matching the
+        // Sender / Organization / Expires on / Message to all /
+        // Private message rows in the approved mockup. `noBorder`
+        // is set for the last row in the stack.
+        // =========================================================
+
+        private static string DetailRow(
+            string iconHtmlEntity,
+            string label,
+            string value,
+            bool noBorder)
+        {
+            string borderStyle =
+                noBorder
+                    ? string.Empty
+                    : "border-bottom:1px solid #E5E5E5;";
+
+            return
+                "<tr><td style=\"padding:13px 0;" + borderStyle + "\">" +
+                "<table role=\"presentation\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\"><tr>" +
+                "<td style=\"width:32px;height:32px;background:#CDFCFB;color:#002654;border-radius:9px;text-align:center;vertical-align:middle;font-size:14px;line-height:32px;\">" +
+                iconHtmlEntity +
+                "</td>" +
+                "<td style=\"padding-left:14px;\">" +
+                "<div style=\"font-size:11px;font-weight:700;color:#969696;text-transform:uppercase;letter-spacing:.04em;font-family:'Noto Kufi Arabic',Arial,sans-serif;\">" +
+                HttpUtility.HtmlEncode(label) +
+                "</div>" +
+                "<div style=\"font-size:13.5px;font-weight:600;color:#002654;font-family:'Noto Kufi Arabic',Arial,sans-serif;\">" +
+                value +
+                "</div>" +
+                "</td>" +
+                "</tr></table>" +
+                "</td></tr>";
+        }
+
+        // =========================================================
+        // Renders an em dash for a missing value, HTML-encodes a
+        // real one. Used for Message to all / Private message,
+        // which the design always shows (never omits the row).
+        // =========================================================
+
+        private static string EmptyOrDash(string value)
+        {
+            return
+                string.IsNullOrWhiteSpace(value)
+                    ? "&mdash;"
+                    : HttpUtility.HtmlEncode(value);
         }
 
         public async Task<DocumentDetailResponse> GetDocumentAsync(int documentId)

@@ -1,5 +1,6 @@
 using System;
 using System.Configuration;
+using System.IO;
 using System.Security.Authentication;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,6 +23,29 @@ namespace ALHMobileAppAPI.CommonUtilities
         {
             return ConfigurationManager.AppSettings[key];
         }
+
+        // =========================================================
+        // Inline logo
+        //
+        // Content-Id referenced by the branded email templates as
+        // <img src="cid:ahhlogo" .../> (see SignatureService.cs and
+        // EsignService.cs BuildEmailBody). Email clients cannot
+        // reach a Windows file path directly, so the logo is read
+        // from disk once and attached to every outgoing message as
+        // an inline (CID) resource instead of linked by URL.
+        //
+        // Override the path via the "EsignLogoPath" appSetting if
+        // it ever needs to point somewhere other than the default
+        // below.
+        // =========================================================
+
+        public const string LogoContentId = "ahhlogo";
+
+        private const string DefaultLogoPath =
+            @"D:\GIT\ZOHOAPI\ALHMobileAppAPI\Images\AHH-Logo.png";
+
+        private static string LogoPath =>
+            Cfg("EsignLogoPath") ?? DefaultLogoPath;
 
         // =========================================================
         // MSAL Application
@@ -146,10 +170,41 @@ namespace ALHMobileAppAPI.CommonUtilities
 
             message.Subject = subject;
 
-            message.Body = new BodyBuilder
+            var bodyBuilder = new BodyBuilder
             {
                 HtmlBody = htmlBody
-            }.ToMessageBody();
+            };
+
+            // -----------------------------------------------------
+            // Inline logo attachment (best-effort -- a missing or
+            // unreadable logo file must never block the email from
+            // sending; the template's <img> just renders broken/
+            // shows its alt text in that case).
+            // -----------------------------------------------------
+
+            try
+            {
+                string logoPath = LogoPath;
+
+                if (!string.IsNullOrWhiteSpace(logoPath) &&
+                    File.Exists(logoPath))
+                {
+                    var logo =
+                        bodyBuilder.LinkedResources.Add(logoPath);
+
+                    logo.ContentId = LogoContentId;
+                }
+            }
+            catch (Exception ex)
+            {
+                HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                    ex,
+                    "EmailHelper",
+                    "Could not attach inline logo",
+                    "");
+            }
+
+            message.Body = bodyBuilder.ToMessageBody();
 
             // -----------------------------------------------------
             // Get OAuth token
