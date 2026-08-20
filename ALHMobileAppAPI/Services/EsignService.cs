@@ -569,15 +569,11 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
 
         <!-- Header / logo -->
         <tr>
-          <td style=""padding:26px 32px;border-bottom:1px solid #E5E5E5;"">
+          <td style=""padding:10px 13px;border-bottom:1px solid #E5E5E5;"">
             <table role=""presentation"" cellpadding=""0"" cellspacing=""0"">
               <tr>
-                <td style=""width:40px;height:40px;background:#1855A4;border-radius:10px;text-align:center;vertical-align:middle;"">
-                  <img src=""cid:{EmailHelper.LogoContentId}"" width=""40"" height=""40"" alt=""{safeOrganization}"" style=""display:block;border-radius:10px;border:0;"" />
-                </td>
-                <td style=""padding-left:12px;"">
-                  <div style=""font-weight:800;font-size:15px;color:#002654;"">{safeOrganization}</div>
-                  <div style=""font-size:10.5px;color:#969696;font-weight:600;"">Internal Signature Portal</div>
+                <td style=""width:300px;border-radius:10px;text-align:center;vertical-align:middle;"">
+                  <img src=""cid:{EmailHelper.LogoContentId}"" width=""250"" height=""40"" alt=""{safeOrganization}"" style=""display:block;border-radius:10px;border:0;"" />
                 </td>
               </tr>
             </table>
@@ -586,9 +582,9 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
 
         <!-- Banner (gradient with flat-color fallback for clients that ignore background-image) -->
         <tr>
-          <td style=""background-color:#1855A4;background-image:linear-gradient(135deg,#002654,#1855A4);padding:30px 32px;"">
-            <span style=""display:inline-block;background:#CDFCFB;color:#002654;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;"">Action required</span>
-            <div style=""color:#FFFFFF;font-size:23px;font-weight:800;margin-top:12px;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">Digital Signature Request</div>
+          <td style=""background-color:#1855A4;background-image:linear-gradient(135deg,#002654,#1855A4);padding:11px 17px;"">
+            <span style=""display:inline-block;background:#CDFCFB;color:#002654;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;"">Action required</span>
+            <div style=""color:#FFFFFF;font-size:21px;font-weight:600;margin-top:12px;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">Digital Signature Request</div>
           </td>
         </tr>
 
@@ -603,7 +599,6 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
             <table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0"">
               {DetailRow("&#9998;", "SENDER", safeRequestedBy, false)}
               {DetailRow("&#127970;", "ORGANIZATION", safeOrganization, false)}
-              {expiresRow}
               {DetailRow("&#128172;", "MESSAGE TO ALL", EmptyOrDash(messageToAll), false)}
               {DetailRow("&#128274;", "PRIVATE MESSAGE", EmptyOrDash(privateMessage), true)}
             </table>
@@ -613,15 +608,14 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
         <!-- Start Signing button -->
         <tr>
           <td align=""center"" style=""padding:8px 32px 30px 32px;"">
-            <a href=""{signLink}"" style=""background:#1855A4;color:#FFFFFF;text-decoration:none;padding:15px 38px;border-radius:11px;font-weight:800;font-size:14.5px;font-family:'Noto Kufi Arabic',Arial,sans-serif;display:inline-block;"">Start Signing</a>
-            {expiresFooterLine}
+            <a href=""{signLink}"" style=""background:#1855A4;color:#FFFFFF;text-decoration:none;padding:15px 38px;border-radius:11px;font-weight:600;font-size:14px;font-family:'Noto Kufi Arabic',Arial,sans-serif;display:inline-block;"">Start Signing</a>
           </td>
         </tr>
 
         <!-- Footer -->
         <tr>
           <td style=""background:#E5E5E5;padding:22px 32px;font-size:11px;color:#969696;line-height:1.7;font-family:'Noto Kufi Arabic',Arial,sans-serif;"">
-            {contactLine}
+            This is an automated email from the {safeOrganization} Signature Portal.
           </td>
         </tr>
 
@@ -656,10 +650,10 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
                 iconHtmlEntity +
                 "</td>" +
                 "<td style=\"padding-left:14px;\">" +
-                "<div style=\"font-size:11px;font-weight:700;color:#969696;text-transform:uppercase;letter-spacing:.04em;font-family:'Noto Kufi Arabic',Arial,sans-serif;\">" +
+                "<div style=\"font-size:13px;font-weight:700;color:#969696;text-transform:uppercase;letter-spacing:.04em;font-family:'Noto Kufi Arabic',Arial,sans-serif;margin-bottom:8px;\">" +
                 HttpUtility.HtmlEncode(label) +
                 "</div>" +
-                "<div style=\"font-size:13.5px;font-weight:600;color:#002654;font-family:'Noto Kufi Arabic',Arial,sans-serif;\">" +
+                "<div style=\"font-size:14.5px;font-weight:600;color:#002654;font-family:'Noto Kufi Arabic',Arial,sans-serif;\">" +
                 value +
                 "</div>" +
                 "</td>" +
