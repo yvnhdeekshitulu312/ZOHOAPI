@@ -82,9 +82,37 @@ namespace ALHMobileAppAPI.Esign.Services
             List<string> pageImages = new List<string>();
             if (includePageImages)
             {
-                pageImages = (doc.CachedPageImages != null && doc.CachedPageImages.Count > 0)
+                // ROOT CAUSE of the "duplicate / misplaced signature" bug:
+                // these images are the BACKGROUND the client draws its field
+                // overlay on top of (doc-img-frame + .ro-field boxes,
+                // positioned by XPct/YPct from `fields` below). They must
+                // ALWAYS be rendered from the ORIGINAL unsigned PDF.
+                //
+                // RenderAndCacheFallbackAsync used to fall back to
+                // `doc.WorkingGcsPath ?? doc.OriginalGcsPath`. SignInternalAsync
+                // repoints WorkingGcsPath at the STAMPED/FINAL pdf the moment
+                // every recipient has signed (doc.FinalGcsPath = doc.WorkingGcsPath
+                // = ...). So any time that fallback ran for an already-Completed
+                // document (a legacy doc with no CachedPageImages yet, or any
+                // doc whose cache was empty for any reason) it baked the
+                // signature INTO the cached page image at the *stamper's*
+                // coordinates, then permanently cached that. From then on every
+                // view showed the signature twice: once baked into the image
+                // (no border -- it's just pixels) plus once again from the live
+                // field overlay (bordered, at the *frontend's* %-based
+                // coordinates) -- two different rendering pipelines drawing the
+                // same value at two different spots, matching both the
+                // "shows twice" and "wrong position" reports.
+                //
+                // Fix: for a Completed document, never trust a previously
+                // cached render (it may predate this fix and already be
+                // poisoned) -- always re-render fresh from the clean original
+                // and overwrite the cache, so every affected document
+                // self-heals the first time it's opened after this ships.
+                bool mustRefreshFromOriginal = doc.Status == DocumentStatus.Completed;
+                pageImages = (!mustRefreshFromOriginal && doc.CachedPageImages != null && doc.CachedPageImages.Count > 0)
                     ? doc.CachedPageImages
-                    : await RenderAndCacheFallbackAsync(doc); // only hit for pre-existing docs uploaded before caching existed
+                    : await RenderAndCacheFallbackAsync(doc);
             }
 
             return new DocumentDetailResponse
@@ -131,10 +159,17 @@ namespace ALHMobileAppAPI.Esign.Services
 
         private async Task<List<string>> RenderAndCacheFallbackAsync(EsignDocument doc)
         {
-            using (var pdfStream = await _storage.DownloadAsync(doc.WorkingGcsPath ?? doc.OriginalGcsPath))
+            // Always render from the ORIGINAL pdf -- never WorkingGcsPath. See
+            // the long comment in BuildDetailResponseAsync: WorkingGcsPath gets
+            // repointed at the STAMPED/FINAL pdf once a document is Completed,
+            // and rendering from it here is what baked signatures into the
+            // cached page image on top of the live field overlay (the
+            // duplicate/misplaced-signature bug). The field overlay is the
+            // ONLY place a signed value should ever be drawn for viewing.
+            using (var pdfStream = await _storage.DownloadAsync(doc.OriginalGcsPath))
             {
                 var images = await _renderer.RenderPagesAsync(pdfStream);
-                // backfill the cache so this document doesn't re-render every future request
+                // backfill/repair the cache so this document doesn't re-render every future request
                 doc.CachedPageImages = images;
                 await _repo.UpdateDocumentAsync(doc);
                 return images;
@@ -385,13 +420,15 @@ namespace ALHMobileAppAPI.Esign.Services
         // EsignRecipient model (no reflection GetProp/ParseInt needed here).
         //
         // Requester       -> doc.CreatedBy (the original uploader of the document).
-        // Expires on      -> doc.SentOn + doc.DaysToComplete, when both are set
-        //                    (both are nullable, so the row/line is simply omitted
-        //                    when either is missing).
         // Message to all  -> doc.Note (shown as an em dash when blank).
         // Private message -> not modeled on EsignDocument/EsignRecipient yet, so this
         //                    always shows as an em dash until a field is added -- see
         //                    the TODO below.
+        //
+        // NOTE: the "Expires on" row and the footer's contact-email line were removed
+        // to match the approved Mail.html template. doc.SentOn / doc.DaysToComplete are
+        // still saved on the document as before -- they're just no longer surfaced in
+        // this email. Ask if you want either of those brought back.
         // =========================================================
         private async Task SendSignatureEmailsAsync(
             EsignDocument doc,
