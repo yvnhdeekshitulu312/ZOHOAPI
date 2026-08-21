@@ -34,63 +34,6 @@ namespace ALHMobileAppAPI.Controllers
             return ip;
         }
 
-        //[HttpPost]
-        //[Route("API/Esign/UploadDocument")]
-        //public async Task<IHttpActionResult> UploadDocument()
-        //{
-        //    try
-        //    {
-        //        if (!Request.Content.IsMimeMultipartContent())
-        //        {
-        //            objBase.Message = "Expected multipart/form-data content.";
-        //            objBase.Code = CommanUtilities.Models.ProcessStatus.Fail;
-        //            objBase.Status = CommanUtilities.Models.ProcessStatus.Fail.ToString();
-        //            return OkOrNotFound(objBase);
-        //        }
-
-        //        var provider = await Request.Content.ReadAsMultipartAsync();
-
-
-        //        var file = provider.Contents[0];
-        //        var fileName = file.Headers.ContentDisposition.FileName?.Trim('"');
-        //        var contentType = file.Headers.ContentType?.MediaType ?? "application/pdf";
-
-        //        byte[] fileBytes;
-        //        using (var sourceStream = await file.ReadAsStreamAsync())
-        //        using (var buffer = new MemoryStream())
-        //        {
-        //            await sourceStream.CopyToAsync(buffer);
-        //            fileBytes = buffer.ToArray();
-        //        }
-
-        //        var esignService = BuildEsignService();
-        //        //var uploadedBy = User?.Identity?.Name ?? "unknown";
-
-        //        UploadDocumentResponse uploadResult;
-        //        using (var uploadStream = new MemoryStream(fileBytes))
-        //        {
-        //            uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy);
-        //        }
-
-        //        // Re-fetch to return the cached page images generated during upload
-        //        var doc = await esignService.GetDocumentAsync(uploadResult.DocumentId);
-
-        //        var response = new
-        //        {
-        //            uploadResult.DocumentId,
-        //            uploadResult.Name,
-        //            uploadResult.OriginalGcsPath,
-        //            PageImages = doc.PageImages
-        //        };
-
-        //        return OkOrNotFound(response);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        SetErrorObject(objBase, ex, "Error in UploadDocument");
-        //    }
-        //    return OkOrNotFound(objBase);
-        //}
         [HttpPost]
         [Route("API/Esign/UploadDocument")]
         public async Task<IHttpActionResult> UploadDocument()
@@ -171,6 +114,7 @@ namespace ALHMobileAppAPI.Controllers
                 var response = new
                 {
                     uploadResult.DocumentId,
+                    uploadResult.DocumentNumber,
                     uploadResult.Name,
                     uploadResult.OriginalGcsPath,
                     PageImages = doc.PageImages

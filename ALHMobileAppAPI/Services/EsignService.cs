@@ -62,10 +62,19 @@ namespace ALHMobileAppAPI.Esign.Services
         }
 
         private async Task<DocumentDetailResponse> BuildDetailResponseAsync(
-            EsignDocument doc, int? restrictToRecipientId = null, bool includePageImages = true)
+            EsignDocument doc,
+            int? restrictToRecipientId = null,
+            bool includePageImages = true,
+            List<EsignRecipient> preFetchedRecipients = null,
+            List<EsignField> preFetchedFields = null)
         {
-            var recipients = await _repo.GetRecipientsAsync(doc.Id);
-            var fields = await _repo.GetFieldsAsync(doc.Id);
+            // Callers that already have recipients/fields for a whole batch of documents
+            // (GetMyPendingDocumentsAsync / GetMyDocumentsAsync, via the batched
+            // GetRecipientsForDocumentsAsync/GetFieldsForDocumentsAsync calls below) pass
+            // them in here so this doesn't re-fetch per document. A single-document caller
+            // (GetDocumentAsync, GetDocumentForSignerAsync, ...) still just fetches its own.
+            var recipients = preFetchedRecipients ?? await _repo.GetRecipientsAsync(doc.Id);
+            var fields = preFetchedFields ?? await _repo.GetFieldsAsync(doc.Id);
 
             if (restrictToRecipientId.HasValue)
                 fields = fields.Where(f => f.RecipientId == restrictToRecipientId.Value).ToList();
@@ -118,6 +127,7 @@ namespace ALHMobileAppAPI.Esign.Services
             return new DocumentDetailResponse
             {
                 Id = doc.Id,
+                DocumentNumber = doc.DocumentNumber,
                 Name = doc.Name,
                 CreatedOn = Convert.ToDateTime(doc.CreatedOn).ToString(),
                 CreatedBy = doc.CreatedBy,
@@ -179,13 +189,26 @@ namespace ALHMobileAppAPI.Esign.Services
         public async Task<List<DocumentDetailResponse>> GetMyPendingDocumentsAsync(string userEmail,string EmpID)
         {
             var docs = await _repo.GetPendingDocumentsForRecipientAsync(userEmail, EmpID);
+            if (docs.Count == 0) return new List<DocumentDetailResponse>();
+
+            // Fetch recipients/fields for ALL of these documents in two round trips total,
+            // instead of BuildDetailResponseAsync hitting GetRecipientsAsync/GetFieldsAsync
+            // once per document (the N+1 pattern -- "usp_Esign_GetRecipientsByDocument
+            // @DocumentId=95 / =96 / =98 / ..." repeating once per row in the list).
+            var docIds = docs.Select(d => d.Id).ToList();
+            var recipientsByDoc = await _repo.GetRecipientsForDocumentsAsync(docIds);
+            var fieldsByDoc = await _repo.GetFieldsForDocumentsAsync(docIds);
+
             var result = new List<DocumentDetailResponse>();
             foreach (var doc in docs)
             {
-                var recipients = await _repo.GetRecipientsAsync(doc.Id);
+                var recipients = recipientsByDoc.TryGetValue(doc.Id, out var rl) ? rl : new List<EsignRecipient>();
+                var fields = fieldsByDoc.TryGetValue(doc.Id, out var fl) ? fl : new List<EsignField>();
                 var me = recipients.First(r => r.Email.Equals(userEmail, StringComparison.OrdinalIgnoreCase));
                 // includePageImages: false -- list view doesn't render pages, keeps payload small
-                result.Add(await BuildDetailResponseAsync(doc, restrictToRecipientId: me.Id, includePageImages: false));
+                result.Add(await BuildDetailResponseAsync(
+                    doc, restrictToRecipientId: me.Id, includePageImages: false,
+                    preFetchedRecipients: recipients, preFetchedFields: fields));
             }
             return result;
         }
@@ -193,9 +216,22 @@ namespace ALHMobileAppAPI.Esign.Services
         public async Task<List<DocumentDetailResponse>> GetMyDocumentsAsync(string userEmail,string EmpID, string FromDate, string ToDate)
         {
             var docs = await _repo.GetDocumentsCreatedByAsync(userEmail, EmpID, FromDate, ToDate);
+            if (docs.Count == 0) return new List<DocumentDetailResponse>();
+
+            // Same batching as GetMyPendingDocumentsAsync above.
+            var docIds = docs.Select(d => d.Id).ToList();
+            var recipientsByDoc = await _repo.GetRecipientsForDocumentsAsync(docIds);
+            var fieldsByDoc = await _repo.GetFieldsForDocumentsAsync(docIds);
+
             var result = new List<DocumentDetailResponse>();
             foreach (var doc in docs)
-                result.Add(await BuildDetailResponseAsync(doc, includePageImages: false));
+            {
+                var recipients = recipientsByDoc.TryGetValue(doc.Id, out var rl) ? rl : new List<EsignRecipient>();
+                var fields = fieldsByDoc.TryGetValue(doc.Id, out var fl) ? fl : new List<EsignField>();
+                result.Add(await BuildDetailResponseAsync(
+                    doc, includePageImages: false,
+                    preFetchedRecipients: recipients, preFetchedFields: fields));
+            }
             return result;
         }
 
@@ -222,6 +258,9 @@ namespace ALHMobileAppAPI.Esign.Services
             };
 
             doc.Id = await _repo.CreateDocumentAsync(doc);
+            // CreateDocumentAsync also sets doc.DocumentNumber (the HAMS-prefixed
+            // number generated server-side -- see usp_Esign_CreateDocument /
+            // FileBasedEsignRepository.NextDocumentNumber).
 
             await _repo.LogAuditAsync(new EsignAuditLog
             {
@@ -234,6 +273,7 @@ namespace ALHMobileAppAPI.Esign.Services
             return new UploadDocumentResponse
             {
                 DocumentId = doc.Id,
+                DocumentNumber = doc.DocumentNumber,
                 Name = doc.Name,
                 OriginalGcsPath = doc.OriginalGcsPath
             };

@@ -7,6 +7,7 @@ namespace ALHMobileAppAPI.Esign.DTOs
     public class UploadDocumentResponse
     {
         public int DocumentId { get; set; }
+        public string DocumentNumber { get; set; }
         public string Name { get; set; }
         public string OriginalGcsPath { get; set; }
     }
@@ -57,6 +58,7 @@ namespace ALHMobileAppAPI.Esign.DTOs
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string DocumentNumber { get; set; }
         public string CreatedOn { get; set; }
         public string CreatedBy { get; set; }
         public string Status { get; set; }

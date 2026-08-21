@@ -24,6 +24,12 @@ namespace ALHMobileAppAPI.Esign.Services
         private readonly string _dataFolder;
         private readonly SemaphoreSlim _lock = new SemaphoreSlim(1, 1);
 
+        // Same "HAMS001" format as usp_Esign_CreateDocument on the SQL side (see
+        // Esign_DocumentNumber_Migration.sql) -- kept in sync by hand since this
+        // store has no shared sequence object to draw from.
+        private const string DocumentNumberPrefix = "HAMS";
+        private const int DocumentNumberMinDigits = 3;
+
         public FileBasedEsignRepository()
         {
             // App_Data is the conventional "don't serve this over HTTP" folder in
@@ -60,6 +66,29 @@ namespace ALHMobileAppAPI.Esign.Services
         private static int NextId<T>(List<T> items, Func<T, int> idSelector) =>
             items.Count == 0 ? 1 : items.Max(idSelector) + 1;
 
+        // Mirrors the SQL side's number generation: next sequential integer,
+        // zero-padded to at least 3 digits, prefixed "HAMS" -- "HAMS001",
+        // "HAMS002", ..., growing past 3 digits instead of truncating once the
+        // count passes 999. Derives "next" from the highest existing suffix
+        // already on disk rather than a separate counter file, so it's correct
+        // even if documents were ever deleted or the store was seeded by hand.
+        private static string NextDocumentNumber(List<EsignDocument> existingDocs)
+        {
+            int maxExisting = 0;
+            foreach (var doc in existingDocs)
+            {
+                if (string.IsNullOrEmpty(doc.DocumentNumber)) continue;
+                if (!doc.DocumentNumber.StartsWith(DocumentNumberPrefix, StringComparison.OrdinalIgnoreCase)) continue;
+
+                var suffix = doc.DocumentNumber.Substring(DocumentNumberPrefix.Length);
+                if (int.TryParse(suffix, out var n) && n > maxExisting)
+                    maxExisting = n;
+            }
+
+            int next = maxExisting + 1;
+            return DocumentNumberPrefix + next.ToString().PadLeft(DocumentNumberMinDigits, '0');
+        }
+
         // ---------- Documents ----------
 
         public async Task<int> CreateDocumentAsync(EsignDocument document)
@@ -69,6 +98,7 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 var docs = LoadList<EsignDocument>(DocumentsPath);
                 document.Id = NextId(docs, d => d.Id);
+                document.DocumentNumber = NextDocumentNumber(docs);
                 docs.Add(document);
                 SaveList(DocumentsPath, docs);
                 return document.Id;
@@ -140,6 +170,21 @@ namespace ALHMobileAppAPI.Esign.Services
             finally { _lock.Release(); }
         }
 
+        // Batch counterpart to GetRecipientsAsync, matching the new
+        // IEsignRepository.GetRecipientsForDocumentsAsync member -- loads the file once
+        // and groups in memory instead of one lock/load per document.
+        public async Task<Dictionary<int, List<EsignRecipient>>> GetRecipientsForDocumentsAsync(IEnumerable<int> documentIds)
+        {
+            var ids = new HashSet<int>(documentIds ?? Enumerable.Empty<int>());
+            await _lock.WaitAsync();
+            try
+            {
+                var all = LoadList<EsignRecipient>(RecipientsPath);
+                return ids.ToDictionary(id => id, id => all.Where(r => r.DocumentId == id).ToList());
+            }
+            finally { _lock.Release(); }
+        }
+
         public async Task<EsignRecipient> GetRecipientByTokenAsync(Guid accessToken)
         {
             await _lock.WaitAsync();
@@ -203,6 +248,20 @@ namespace ALHMobileAppAPI.Esign.Services
             {
                 return LoadList<EsignField>(FieldsPath)
                     .Where(f => f.RecipientId == recipientId).ToList();
+            }
+            finally { _lock.Release(); }
+        }
+
+        // Batch counterpart to GetFieldsAsync, matching the new
+        // IEsignRepository.GetFieldsForDocumentsAsync member.
+        public async Task<Dictionary<int, List<EsignField>>> GetFieldsForDocumentsAsync(IEnumerable<int> documentIds)
+        {
+            var ids = new HashSet<int>(documentIds ?? Enumerable.Empty<int>());
+            await _lock.WaitAsync();
+            try
+            {
+                var all = LoadList<EsignField>(FieldsPath);
+                return ids.ToDictionary(id => id, id => all.Where(f => f.DocumentId == id).ToList());
             }
             finally { _lock.Release(); }
         }

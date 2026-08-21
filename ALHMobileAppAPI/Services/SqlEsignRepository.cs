@@ -34,15 +34,19 @@ namespace ALHMobileAppAPI.Esign.Services
         private readonly string _connStr = ConfigurationManager.ConnectionStrings["DBConnectionStringMasters"].ConnectionString;
         private SqlConnection Conn() => new SqlConnection(_connStr);
 
+        // Every data access method below now calls a stored procedure (see
+        // Esign_StoredProcedures.sql) instead of an inline SQL string. This
+        // helper just saves repeating "CommandType = CommandType.StoredProcedure"
+        // at every call site.
+        private static SqlCommand SP(string procName, SqlConnection c) =>
+            new SqlCommand(procName, c) { CommandType = CommandType.StoredProcedure };
+
         public async Task<int> CreateDocumentAsync(EsignDocument d)
         {
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand(@"
-                    INSERT INTO EsignDocuments (Name, OriginalGcsPath, WorkingGcsPath, Status, CreatedBy, CreatedOn, IsOrdered, CachedPageImagesJson,SavedEmpID)
-                    OUTPUT INSERTED.Id
-                    VALUES (@Name, @OriginalGcsPath, @WorkingGcsPath, @Status, @CreatedBy, @CreatedOn, @IsOrdered, @CachedPageImagesJson,@EmpID)", c))
+                using (var cmd = SP("usp_Esign_CreateDocument", c))
                 {
                     cmd.Parameters.AddWithValue("@Name", d.Name);
                     cmd.Parameters.AddWithValue("@OriginalGcsPath", d.OriginalGcsPath);
@@ -51,40 +55,65 @@ namespace ALHMobileAppAPI.Esign.Services
                     cmd.Parameters.AddWithValue("@CreatedBy", d.CreatedBy);
                     cmd.Parameters.AddWithValue("@CreatedOn", d.CreatedOn);
                     cmd.Parameters.AddWithValue("@IsOrdered", d.IsOrdered);
-                    cmd.Parameters.AddWithValue("@CachedPageImagesJson",
-                        d.CachedPageImages != null && d.CachedPageImages.Count > 0
-                            ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
-                            : DBNull.Value);
-                    cmd.Parameters.AddWithValue("@EmpID", d.EmpID);
+                    //cmd.Parameters.AddWithValue("@CachedPageImagesJson",
+                    //    d.CachedPageImages != null && d.CachedPageImages.Count > 0
+                    //        ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
+                    //        : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@CachedPageImagesJson", DBNull.Value);                    
+                    cmd.Parameters.AddWithValue("@EmpID", (object)d.EmpID ?? DBNull.Value);
 
-                    var id = (int)await cmd.ExecuteScalarAsync();
-                    d.Id = id;
-                    return id;
+                    // usp_Esign_CreateDocument now generates the HAMS-prefixed
+                    // DocumentNumber server-side and returns it alongside the new
+                    // Id (OUTPUT INSERTED.Id, INSERTED.DocumentNumber), so this
+                    // reads a single-row result set instead of ExecuteScalar.
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (!await reader.ReadAsync())
+                            throw new InvalidOperationException("usp_Esign_CreateDocument did not return the new document's Id/DocumentNumber.");
+
+                        d.Id = (int)reader["Id"];
+                        d.DocumentNumber = reader["DocumentNumber"] as string;
+                    }
+
+                    return d.Id;
                 }
             }
         }
 
-        public async Task<EsignDocument> GetDocumentAsyncOld(int documentId)
+
+        public async Task LogAuditAsync(EsignAuditLog e)
         {
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                EsignDocument doc = null;
-                using (var cmd = new SqlCommand("SELECT * FROM EsignDocuments WHERE Id=@id AND IsDeleted=0", c))
+                using (var cmd = SP("usp_Esign_LogAudit", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", documentId);
-                    using (var reader = await cmd.ExecuteReaderAsync())
-                    {
-                        if (await reader.ReadAsync())
-                            doc = MapDocument(reader);
-                    }
+                    cmd.Parameters.AddWithValue("@DocumentId", e.DocumentId);
+                    cmd.Parameters.AddWithValue("@RecipientId", (object)e.RecipientId ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Action", e.Action);
+                    cmd.Parameters.AddWithValue("@Timestamp", e.Timestamp);
+                    cmd.Parameters.AddWithValue("@IpAddress", (object)e.IpAddress ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@UserAgent", (object)e.UserAgent ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Details", (object)e.Details ?? DBNull.Value);
+                    await cmd.ExecuteNonQueryAsync();
                 }
-                if (doc == null) return null;
-
-                doc.Recipients = await GetRecipientsAsync(documentId);
-                doc.Fields = await GetFieldsAsync(documentId);
-                return doc;
             }
+        }
+
+
+
+        // NOTE: this used to run "SELECT * FROM EsignDocuments WHERE Id=@id AND
+        // IsDeleted=0" directly and hand the reader to MapDocument -- which also
+        // reads EmpNo/FullName/DepartmentName. Those three columns only exist via
+        // the V_EmployeesDetails join used in GetDocumentAsync below, not on
+        // EsignDocuments itself, so this method would throw the moment MapDocument
+        // touched them. It isn't part of IEsignRepository (FileBasedEsignRepository
+        // has no equivalent) and nothing in the provided code calls it, so rather
+        // than port a query guaranteed to fail, this now just delegates to the
+        // already-correct query. Safe to delete entirely if nothing references it.
+        public async Task<EsignDocument> GetDocumentAsyncOld(int documentId)
+        {
+            return await GetDocumentAsync(documentId);
         }
 
         public async Task<EsignDocument> GetDocumentAsync(int documentId)
@@ -94,19 +123,9 @@ namespace ALHMobileAppAPI.Esign.Services
                 await c.OpenAsync();
                 EsignDocument doc = null;
 
-                string query = @"
-            SELECT 
-                ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
-                ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
-                ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID,
-                VD.FullName, VD.EmpNo, VD.DepartmentName
-            FROM EsignDocuments ED
-            INNER JOIN V_EmployeesDetails VD ON VD.EmpID = ED.SavedEmpID
-            WHERE ED.Id = @id AND ED.IsDeleted = 0";
-
-                using (var cmd = new SqlCommand(query, c))
+                using (var cmd = SP("usp_Esign_GetDocumentById", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", documentId);
+                    cmd.Parameters.AddWithValue("@Id", documentId);
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
                         if (await reader.ReadAsync())
@@ -127,14 +146,9 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand(@"
-                    UPDATE EsignDocuments SET
-                        Name=@Name, WorkingGcsPath=@WorkingGcsPath, FinalGcsPath=@FinalGcsPath,
-                        Status=@Status, SentOn=@SentOn, CompletedOn=@CompletedOn,
-                        DaysToComplete=@DaysToComplete, ReminderDays=@ReminderDays, Note=@Note,
-                        IsOrdered=@IsOrdered, CachedPageImagesJson=@CachedPageImagesJson
-                    WHERE Id=@Id", c))
+                using (var cmd = SP("usp_Esign_UpdateDocument", c))
                 {
+                    cmd.Parameters.AddWithValue("@Id", d.Id);
                     cmd.Parameters.AddWithValue("@Name", d.Name);
                     cmd.Parameters.AddWithValue("@WorkingGcsPath", (object)d.WorkingGcsPath ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@FinalGcsPath", (object)d.FinalGcsPath ?? DBNull.Value);
@@ -145,11 +159,12 @@ namespace ALHMobileAppAPI.Esign.Services
                     cmd.Parameters.AddWithValue("@ReminderDays", (object)d.ReminderDays ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@Note", (object)d.Note ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@IsOrdered", d.IsOrdered);
-                    cmd.Parameters.AddWithValue("@CachedPageImagesJson",
-                        d.CachedPageImages != null && d.CachedPageImages.Count > 0
-                            ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
-                            : DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Id", d.Id);
+                    //cmd.Parameters.AddWithValue("@CachedPageImagesJson",
+                    //    d.CachedPageImages != null && d.CachedPageImages.Count > 0
+                    //        ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
+                    //        : DBNull.Value);
+                    cmd.Parameters.AddWithValue("@CachedPageImagesJson", DBNull.Value);
+                  
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -160,9 +175,9 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("UPDATE EsignDocuments SET IsDeleted=1 WHERE Id=@id", c))
+                using (var cmd = SP("usp_Esign_DeleteDocument", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", documentId);
+                    cmd.Parameters.AddWithValue("@Id", documentId);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -180,32 +195,7 @@ namespace ALHMobileAppAPI.Esign.Services
 
                     foreach (var r in recipients)
                     {
-                        using (var cmd = new SqlCommand(@"
-                    INSERT INTO EsignRecipients
-                    (
-                        DocumentId,
-                        Email,
-                        Name,
-                        Role,
-                        SigningOrder,
-                        Status,
-                        DeliveryMethod,
-                        AccessToken,
-                        signRecipientEmpID
-                    )
-                    OUTPUT INSERTED.Id
-                    VALUES
-                    (
-                        @DocumentId,
-                        @Email,
-                        @Name,
-                        @Role,
-                        @SigningOrder,
-                        @Status,
-                        @DeliveryMethod,
-                        @AccessToken,
-                        @signRecipientEmpID
-                    )", c))
+                        using (var cmd = SP("usp_Esign_AddRecipient", c))
                         {
                             cmd.Parameters.AddWithValue("@DocumentId", documentId);
                             cmd.Parameters.AddWithValue("@Email", r.Email);
@@ -254,12 +244,42 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignRecipients WHERE DocumentId=@id", c))
+                using (var cmd = SP("usp_Esign_GetRecipientsByDocument", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", documentId);
+                    cmd.Parameters.AddWithValue("@DocumentId", documentId);
                     using (var reader = await cmd.ExecuteReaderAsync())
                         while (await reader.ReadAsync())
                             result.Add(MapRecipient(reader));
+                }
+            }
+            return result;
+        }
+
+        // Batch version of GetRecipientsAsync -- fetches recipients for MANY documents
+        // in one round trip instead of one call per document. Use this from any code
+        // path that loops over a list of documents (e.g. EsignService.GetMyDocumentsAsync
+        // / GetMyPendingDocumentsAsync) to avoid the N+1 pattern where a 20-document list
+        // turned into 20 separate "usp_Esign_GetRecipientsByDocument @DocumentId=..." calls.
+        public async Task<Dictionary<int, List<EsignRecipient>>> GetRecipientsForDocumentsAsync(IEnumerable<int> documentIds)
+        {
+            var ids = (documentIds ?? Enumerable.Empty<int>()).Distinct().ToList();
+            var result = ids.ToDictionary(id => id, id => new List<EsignRecipient>());
+            if (ids.Count == 0) return result;
+
+            using (var c = Conn())
+            {
+                await c.OpenAsync();
+                using (var cmd = SP("usp_Esign_GetRecipientsByDocumentIds", c))
+                {
+                    cmd.Parameters.AddWithValue("@DocumentIds", string.Join(",", ids));
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                        while (await reader.ReadAsync())
+                        {
+                            var recipient = MapRecipient(reader);
+                            if (!result.TryGetValue(recipient.DocumentId, out var list))
+                                result[recipient.DocumentId] = list = new List<EsignRecipient>();
+                            list.Add(recipient);
+                        }
                 }
             }
             return result;
@@ -270,9 +290,9 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignRecipients WHERE AccessToken=@token", c))
+                using (var cmd = SP("usp_Esign_GetRecipientByToken", c))
                 {
-                    cmd.Parameters.AddWithValue("@token", accessToken);
+                    cmd.Parameters.AddWithValue("@AccessToken", accessToken);
                     using (var reader = await cmd.ExecuteReaderAsync())
                         return await reader.ReadAsync() ? MapRecipient(reader) : null;
                 }
@@ -285,10 +305,10 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignRecipients WHERE DocumentId=@docId AND Email=@email", c))
+                using (var cmd = SP("usp_Esign_GetRecipientByDocumentAndEmail", c))
                 {
-                    cmd.Parameters.AddWithValue("@docId", documentId);
-                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@DocumentId", documentId);
+                    cmd.Parameters.AddWithValue("@Email", email);
                     using (var reader = await cmd.ExecuteReaderAsync())
                         return await reader.ReadAsync() ? MapRecipient(reader) : null;
                 }
@@ -300,16 +320,14 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand(@"
-                    UPDATE EsignRecipients SET Status=@Status, SentOn=@SentOn, ViewedOn=@ViewedOn,
-                        SignedOn=@SignedOn, RejectReason=@RejectReason WHERE Id=@Id", c))
+                using (var cmd = SP("usp_Esign_UpdateRecipient", c))
                 {
+                    cmd.Parameters.AddWithValue("@Id", r.Id);
                     cmd.Parameters.AddWithValue("@Status", r.Status.ToString());
                     cmd.Parameters.AddWithValue("@SentOn", (object)r.SentOn ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@ViewedOn", (object)r.ViewedOn ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@SignedOn", (object)r.SignedOn ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@RejectReason", (object)r.RejectReason ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Id", r.Id);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -322,10 +340,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 await c.OpenAsync();
                 foreach (var f in fields)
                 {
-                    using (var cmd = new SqlCommand(@"
-                        INSERT INTO EsignFields (DocumentId, RecipientId, FieldType, PageNumber, XPct, YPct, WidthPct, HeightPct, IsRequired)
-                        OUTPUT INSERTED.Id
-                        VALUES (@DocumentId, @RecipientId, @FieldType, @PageNumber, @XPct, @YPct, @WidthPct, @HeightPct, @IsRequired)", c))
+                    using (var cmd = SP("usp_Esign_AddField", c))
                     {
                         cmd.Parameters.AddWithValue("@DocumentId", documentId);
                         cmd.Parameters.AddWithValue("@RecipientId", f.RecipientId);
@@ -350,9 +365,9 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignFields WHERE DocumentId=@id", c))
+                using (var cmd = SP("usp_Esign_GetFieldsByDocument", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", documentId);
+                    cmd.Parameters.AddWithValue("@DocumentId", documentId);
                     using (var reader = await cmd.ExecuteReaderAsync())
                         while (await reader.ReadAsync())
                             result.Add(MapField(reader));
@@ -367,12 +382,39 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("SELECT * FROM EsignFields WHERE RecipientId=@id", c))
+                using (var cmd = SP("usp_Esign_GetFieldsByRecipient", c))
                 {
-                    cmd.Parameters.AddWithValue("@id", recipientId);
+                    cmd.Parameters.AddWithValue("@RecipientId", recipientId);
                     using (var reader = await cmd.ExecuteReaderAsync())
                         while (await reader.ReadAsync())
                             result.Add(MapField(reader));
+                }
+            }
+            return result;
+        }
+
+        // Batch version of GetFieldsAsync -- same idea as GetRecipientsForDocumentsAsync
+        // above: one round trip for a whole list of documents instead of one per document.
+        public async Task<Dictionary<int, List<EsignField>>> GetFieldsForDocumentsAsync(IEnumerable<int> documentIds)
+        {
+            var ids = (documentIds ?? Enumerable.Empty<int>()).Distinct().ToList();
+            var result = ids.ToDictionary(id => id, id => new List<EsignField>());
+            if (ids.Count == 0) return result;
+
+            using (var c = Conn())
+            {
+                await c.OpenAsync();
+                using (var cmd = SP("usp_Esign_GetFieldsByDocumentIds", c))
+                {
+                    cmd.Parameters.AddWithValue("@DocumentIds", string.Join(",", ids));
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                        while (await reader.ReadAsync())
+                        {
+                            var field = MapField(reader);
+                            if (!result.TryGetValue(field.DocumentId, out var list))
+                                result[field.DocumentId] = list = new List<EsignField>();
+                            list.Add(field);
+                        }
                 }
             }
             return result;
@@ -383,71 +425,27 @@ namespace ALHMobileAppAPI.Esign.Services
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand("UPDATE EsignFields SET Value=@value, FilledOn=@filledOn WHERE Id=@id", c))
+                using (var cmd = SP("usp_Esign_UpdateFieldValue", c))
                 {
-                    cmd.Parameters.AddWithValue("@value", (object)value ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@filledOn", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@id", fieldId);
+                    cmd.Parameters.AddWithValue("@Id", fieldId);
+                    cmd.Parameters.AddWithValue("@Value", (object)value ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@FilledOn", DateTime.Now);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
         }
 
-        public async Task LogAuditAsync(EsignAuditLog e)
-        {
-            using (var c = Conn())
-            {
-                await c.OpenAsync();
-                using (var cmd = new SqlCommand(@"
-                    INSERT INTO EsignAuditLog (DocumentId, RecipientId, Action, Timestamp, IpAddress, UserAgent, Details)
-                    VALUES (@DocumentId, @RecipientId, @Action, @Timestamp, @IpAddress, @UserAgent, @Details)", c))
-                {
-                    cmd.Parameters.AddWithValue("@DocumentId", e.DocumentId);
-                    cmd.Parameters.AddWithValue("@RecipientId", (object)e.RecipientId ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Action", e.Action);
-                    cmd.Parameters.AddWithValue("@Timestamp", e.Timestamp);
-                    cmd.Parameters.AddWithValue("@IpAddress", (object)e.IpAddress ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@UserAgent", (object)e.UserAgent ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@Details", (object)e.Details ?? DBNull.Value);
-                    await cmd.ExecuteNonQueryAsync();
-                }
-            }
-        }
+
 
         public async Task<List<EsignDocument>> GetPendingDocumentsForRecipientAsync(string email,string EmpID)
         {
             var result = new List<EsignDocument>();
-            //using (var c = Conn())
-            //{
-            //    await c.OpenAsync();
-            //    using (var cmd = new SqlCommand(@"
-            //        SELECT DISTINCT d.* FROM EsignDocuments d
-            //        JOIN EsignRecipients r ON r.DocumentId = d.Id
-            //        WHERE d.IsDeleted=0 AND r.Email=@email AND r.Status IN ('Sent','Viewed')", c))
-            //    {
-            //        cmd.Parameters.AddWithValue("@email", email);
-            //        using (var reader = await cmd.ExecuteReaderAsync())
-            //            while (await reader.ReadAsync())
-            //                result.Add(MapDocument(reader));
-            //    }
-            //}
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var cmd = new SqlCommand(@"
-        SELECT DISTINCT 
-d.Id, d.Name, d.OriginalGcsPath, d.WorkingGcsPath, d.FinalGcsPath, 
-                        d.Status, d.CreatedBy, d.CreatedOn, d.SentOn, d.CompletedOn, 
-                        d.DaysToComplete, d.ReminderDays, d.Note, d.IsOrdered, d.IsDeleted, d.SavedEmpID ,
-VD.FullName, VD.EmpNo, VD.DepartmentName
-        FROM EsignDocuments d
-        JOIN EsignRecipients r ON r.DocumentId = d.Id
-        INNER JOIN V_EmployeesDetails VD ON VD.EmpID = d.SavedEmpID
-        WHERE d.IsDeleted = 0 
-          AND r.signRecipientEmpID = @empId 
-          AND r.Status IN ('Sent', 'Viewed')", c))
+                using (var cmd = SP("usp_Esign_GetPendingDocumentsForRecipient", c))
                 {
-                    cmd.Parameters.Add("@empId", SqlDbType.VarChar, 18).Value = (object)EmpID ?? DBNull.Value;
+                    cmd.Parameters.Add("@EmpID", SqlDbType.VarChar, 18).Value = (object)EmpID ?? DBNull.Value;
 
                     using (var reader = await cmd.ExecuteReaderAsync())
                     {
@@ -484,36 +482,10 @@ VD.FullName, VD.EmpNo, VD.DepartmentName
             {
                 await c.OpenAsync();
 
-
-                //string query = @"SELECT ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
-                //        ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
-                //        ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID ,
-                //        VD.FullName,VD.EmpNo,VD.DepartmentName	
-                //        FROM EsignDocuments ED
-                //        Inner join V_EmployeesDetails VD on VD.EmpID=ED.SavedEmpID
-                //        WHERE IsDeleted = 0 
-                //        AND SavedEmpID = @EmpID
-                //        AND CreatedOn >= @FromDate 
-                //        AND CreatedOn <= @ToDate";
-
-                string query = @"
-                                SELECT 
-                                    ED.Id, ED.Name, ED.OriginalGcsPath, ED.WorkingGcsPath, ED.FinalGcsPath, 
-                                    ED.Status, ED.CreatedBy, ED.CreatedOn, ED.SentOn, ED.CompletedOn, 
-                                    ED.DaysToComplete, ED.ReminderDays, ED.Note, ED.IsOrdered, ED.IsDeleted, ED.SavedEmpID,
-                                    VD.FullName, VD.EmpNo, VD.DepartmentName	
-                                FROM EsignDocuments ED
-                                INNER JOIN V_EmployeesDetails VD ON VD.EmpID = ED.SavedEmpID
-                                WHERE ED.IsDeleted = 0 
-                                  AND (@EmpID IS NULL OR @EmpID = '0' OR @EmpID = '' OR ED.SavedEmpID = @EmpID)
-                                  AND (@FromDate IS NULL OR ED.CreatedOn >= @FromDate)
-                                  AND (@ToDate IS NULL OR ED.CreatedOn <= @ToDate)";
-
-
-                using (var cmd = new SqlCommand(query, c))
+                using (var cmd = SP("usp_Esign_GetDocumentsCreatedBy", c))
                 {
                     // Use explicit type definition instead of AddWithValue for proper SQL parameter typing
-                    cmd.Parameters.Add("@EmpID", SqlDbType.VarChar, 18).Value = EmpID;
+                    cmd.Parameters.Add("@EmpID", SqlDbType.VarChar, 18).Value = (object)EmpID ?? DBNull.Value;
                     cmd.Parameters.Add("@FromDate", SqlDbType.DateTime).Value = startDate;
                     cmd.Parameters.Add("@ToDate", SqlDbType.DateTime).Value = endDate;
 
@@ -539,6 +511,7 @@ VD.FullName, VD.EmpNo, VD.DepartmentName
             return new EsignDocument
             {
                 Id = (int)r["Id"],
+                DocumentNumber = r["DocumentNumber"] as string,
                 Name = r["Name"] as string,
                 OriginalGcsPath = r["OriginalGcsPath"] as string,
                 WorkingGcsPath = r["WorkingGcsPath"] as string,
@@ -604,42 +577,22 @@ VD.FullName, VD.EmpNo, VD.DepartmentName
             using (var c = Conn())
             {
                 await c.OpenAsync();
-                using (var tx = c.BeginTransaction())
+                using (var cmd = SP("usp_Esign_DraftDeleteDocument", c))
                 {
+                    cmd.Parameters.AddWithValue("@Id", documentId);
                     try
                     {
-                        using (var check = new SqlCommand("SELECT COUNT(1) FROM EsignDocuments WHERE Id=@id", c, tx))
-                        {
-                            check.Parameters.AddWithValue("@id", documentId);
-                            var exists = (int)await check.ExecuteScalarAsync();
-                            if (exists == 0)
-                            {
-                                tx.Rollback();
-                                throw new InvalidOperationException($"Document {documentId} was not found.");
-                            }
-                        }
-
-                        // Child rows first (FK dependency) ...
-                        using (var delAudit = new SqlCommand("DELETE FROM EsignAuditLog WHERE DocumentId=@id", c, tx))
-                        {
-                            delAudit.Parameters.AddWithValue("@id", documentId);
-                            await delAudit.ExecuteNonQueryAsync();
-                        }
-
-                        // ... then the parent row.
-                        using (var delDoc = new SqlCommand("DELETE FROM EsignDocuments WHERE Id=@id", c, tx))
-                        {
-                            delDoc.Parameters.AddWithValue("@id", documentId);
-                            await delDoc.ExecuteNonQueryAsync();
-                        }
-
-                        tx.Commit();
+                        await cmd.ExecuteNonQueryAsync();
                     }
-                    catch
+                    catch (SqlException ex) when (ex.Message.IndexOf("was not found", StringComparison.OrdinalIgnoreCase) >= 0)
                     {
-                        try { tx.Rollback(); } catch { /* connection already broken -- nothing left to roll back */ }
-                        throw;
+                        // usp_Esign_DraftDeleteDocument RAISERRORs this exact message when the
+                        // document doesn't exist (mirrors the old inline-SQL/transaction check).
+                        // Translate it back to the same exception type callers already handle.
+                        throw new InvalidOperationException($"Document {documentId} was not found.");
                     }
+                    // Any other SqlException (deadlock, FK violation, etc.) propagates as-is,
+                    // same as before -- the procedure's own TRY/CATCH already rolled back.
                 }
             }
         }
