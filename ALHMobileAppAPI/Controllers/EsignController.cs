@@ -25,7 +25,8 @@ namespace ALHMobileAppAPI.Controllers
                 signingBaseUrl: "http://localhost:4200/esign/sign/"); // TODO: move to Web.config appSetting
         }
 
-        private IPdfRenderingService BuildPdfRenderingService() => new AsposePdfRenderingService();
+        //private IPdfRenderingService BuildPdfRenderingService() => new AsposePdfRenderingService();
+        private IPdfRenderingService BuildPdfRenderingService() => new PdfiumViewerRenderingService();
 
         private string GetClientIp()
         {
