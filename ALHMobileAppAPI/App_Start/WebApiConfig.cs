@@ -1,4 +1,5 @@
 ﻿using ALHMobileAppAPI.App_Start;
+using ALHMobileAppAPI.Services;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -19,6 +20,7 @@ namespace ALHMobileAppAPI
             config.MapHttpAttributeRoutes();
             config.Filters.Add(new ValidateModelStateFilter());
             config.MessageHandlers.Add(new BasicAuthHandler());
+            config.MessageHandlers.Add(new JwtAuthenticationHandler());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

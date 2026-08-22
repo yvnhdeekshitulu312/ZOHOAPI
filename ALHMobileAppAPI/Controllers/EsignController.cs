@@ -1,5 +1,6 @@
 using ALHMobileAppAPI.Esign.DTOs;
 using ALHMobileAppAPI.Esign.Services;
+using ALHMobileAppAPI.Services;
 using System;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Web.Http;
 
 namespace ALHMobileAppAPI.Controllers
 {
+    [RequireJwtAuth]
     public class EsignController : BaseController
     {
         private IEsignService BuildEsignService()
