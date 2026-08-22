@@ -1,6 +1,7 @@
 using System;
 using System.Configuration;
 using System.IO;
+using System.Reflection;
 using System.Security.Authentication;
 using System.Threading;
 using System.Threading.Tasks;
@@ -30,22 +31,35 @@ namespace ALHMobileAppAPI.CommonUtilities
         // Content-Id referenced by the branded email templates as
         // <img src="cid:ahhlogo" .../> (see SignatureService.cs and
         // EsignService.cs BuildEmailBody). Email clients cannot
-        // reach a Windows file path directly, so the logo is read
-        // from disk once and attached to every outgoing message as
-        // an inline (CID) resource instead of linked by URL.
+        // reach a Windows file path directly, so the logo is
+        // attached to every outgoing message as an inline (CID)
+        // resource instead of linked by URL.
         //
-        // Override the path via the "EsignLogoPath" appSetting if
-        // it ever needs to point somewhere other than the default
-        // below.
+        // The logo is read from an EMBEDDED RESOURCE baked into this
+        // assembly, not an external file path -- this was previously
+        // a hardcoded dev-machine path (D:\GIT\ZOHOAPI\...) that
+        // didn't exist on the real server, so the logo silently
+        // failed to attach (best-effort -- see the try/catch below)
+        // and every branded email went out with a broken image.
+        // Embedding it removes the server-path dependency entirely:
+        // wherever this DLL is deployed, the logo goes with it.
+        //
+        // SETUP (one-time, in Visual Studio):
+        //   1. Add AHH-Logo.png to the project, e.g. under
+        //      CommonUtilities\EmbeddedResources\AHH-Logo.png
+        //   2. Select it in Solution Explorer -> Properties ->
+        //      Build Action = "Embedded Resource"
+        //   3. Its resource name becomes:
+        //      <DefaultNamespace>.CommonUtilities.EmbeddedResources.AHH-Logo.png
+        //      (dots replace folder separators). Adjust
+        //      LogoResourceName below to match your project's actual
+        //      default namespace / folder if it differs.
         // =========================================================
 
         public const string LogoContentId = "ahhlogo";
 
-        private const string DefaultLogoPath =
-            @"D:\GIT\ZOHOAPI\ALHMobileAppAPI\Images\AHH-Logo.png";
-
-        private static string LogoPath =>
-            Cfg("EsignLogoPath") ?? DefaultLogoPath;
+        private const string LogoResourceName =
+            "ALHMobileAppAPI.CommonUtilities.EmbeddedResources.AHH-Logo.png";
 
         // =========================================================
         // MSAL Application
@@ -177,22 +191,44 @@ namespace ALHMobileAppAPI.CommonUtilities
 
             // -----------------------------------------------------
             // Inline logo attachment (best-effort -- a missing or
-            // unreadable logo file must never block the email from
-            // sending; the template's <img> just renders broken/
-            // shows its alt text in that case).
+            // unreadable embedded resource must never block the
+            // email from sending; the template's <img> just renders
+            // broken/shows its alt text in that case).
             // -----------------------------------------------------
 
             try
             {
-                string logoPath = LogoPath;
+                var assembly = Assembly.GetExecutingAssembly();
 
-                if (!string.IsNullOrWhiteSpace(logoPath) &&
-                    File.Exists(logoPath))
+                using (var resourceStream =
+                    assembly.GetManifestResourceStream(LogoResourceName))
                 {
-                    var logo =
-                        bodyBuilder.LinkedResources.Add(logoPath);
+                    if (resourceStream != null)
+                    {
+                        // MimeKit's LinkedResources.Add(name, stream) reads the
+                        // stream fully before returning, so it's safe to let the
+                        // `using` above dispose it right after this call.
+                        var logo = bodyBuilder.LinkedResources.Add(
+                            "AHH-Logo.png",
+                            resourceStream);
 
-                    logo.ContentId = LogoContentId;
+                        logo.ContentId = LogoContentId;
+                    }
+                    else
+                    {
+                        // Wrong resource name is a setup mistake, not a runtime
+                        // fluke -- log it so it doesn't silently ship broken.
+                        // GetManifestResourceNames() lists what's actually
+                        // embedded, useful for fixing LogoResourceName above.
+                        HIS.TOOLS.Logger.ErrorLog.ErrorRoutine(
+                            new FileNotFoundException(
+                                "Embedded logo resource not found: " + LogoResourceName +
+                                ". Available resources: " +
+                                string.Join(", ", assembly.GetManifestResourceNames())),
+                            "EmailHelper",
+                            "Could not attach inline logo",
+                            "");
+                    }
                 }
             }
             catch (Exception ex)
