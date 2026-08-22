@@ -18,7 +18,7 @@ namespace ALHMobileAppAPI.Esign.Services
     {
         Task SignAsLoggedInUserAsync(int documentId, string email, List<FieldValueDto> fieldValues, string ipAddress);
         Task<DocumentDetailResponse> GetDocumentForLoggedInSignerAsync(int documentId, string email);
-        Task<UploadDocumentResponse> UploadDocumentAsync(Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID);
+        Task<UploadDocumentResponse> UploadDocumentAsync(Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID, string HospitalID);
         Task SendDocumentAsync(SendDocumentRequest request, string sentBy,string EmpID);
         Task<DocumentDetailResponse> GetDocumentAsync(int documentId);
         Task<DocumentDetailResponse> GetDocumentForSignerAsync(Guid accessToken);
@@ -138,7 +138,8 @@ namespace ALHMobileAppAPI.Esign.Services
                 EmpNo = doc.EmpNo,
                 FullName = doc.FullName,
                 DepartmentName = doc.DepartmentName,
-
+                HospitalID = doc.HospitalID,
+                HospitalName = doc.HospitalName,
 
                 Recipients = recipients.Select(r => new RecipientSummaryDto
                 {
@@ -236,7 +237,7 @@ namespace ALHMobileAppAPI.Esign.Services
         }
 
         public async Task<UploadDocumentResponse> UploadDocumentAsync(
-            Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID)
+            Stream fileStream, string fileName, string contentType, string uploadedBy,string EmpID, string HospitalID)
         {
             var fileBytes = await ReadAllBytesAsync(fileStream);
             var gcsPath = await _storage.UploadAsync(new MemoryStream(fileBytes), fileName, contentType);
@@ -254,6 +255,7 @@ namespace ALHMobileAppAPI.Esign.Services
                 Status = DocumentStatus.Draft,
                 CreatedBy = uploadedBy,
                 EmpID = EmpID,
+                HospitalID = HospitalID,
                 CreatedOn = DateTime.Now
             };
 
@@ -267,7 +269,8 @@ namespace ALHMobileAppAPI.Esign.Services
                 DocumentId = doc.Id,
                 Action = "Created",
                 Timestamp = DateTime.Now,
-                Details = $"Uploaded by {uploadedBy}"
+                Details = $"Uploaded by {uploadedBy}",
+                HospitalID = doc.HospitalID
             });
 
             return new UploadDocumentResponse
@@ -418,7 +421,8 @@ namespace ALHMobileAppAPI.Esign.Services
                 DocumentId = doc.Id,
                 Action = "Sent",
                 Timestamp = DateTime.Now,
-                Details = $"Sent by {sentBy} to {savedRecipients.Count} recipient(s), ordered={request.IsOrdered}"
+                Details = $"Sent by {sentBy} to {savedRecipients.Count} recipient(s), ordered={request.IsOrdered}",
+                HospitalID = doc.HospitalID
             });
 
             var toNotify = (request.IsOrdered
@@ -764,6 +768,11 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
             var recipient = await _repo.GetRecipientByTokenAsync(accessToken);
             if (recipient == null) throw new InvalidOperationException("Invalid or expired signing link.");
 
+            // Fetched here (rather than after the Viewed audit entry below, as
+            // before) so the audit row can carry doc.HospitalID instead of
+            // always leaving it null.
+            var doc = await _repo.GetDocumentAsync(recipient.DocumentId);
+
             if (recipient.Status == RecipientStatus.Sent)
             {
                 recipient.Status = RecipientStatus.Viewed;
@@ -774,11 +783,11 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
                     DocumentId = recipient.DocumentId,
                     RecipientId = recipient.Id,
                     Action = "Viewed",
-                    Timestamp = DateTime.Now
+                    Timestamp = DateTime.Now,
+                    HospitalID = doc?.HospitalID
                 });
             }
 
-            var doc = await _repo.GetDocumentAsync(recipient.DocumentId);
             return await BuildDetailResponseAsync(doc, restrictToRecipientId: recipient.Id);
         }
 
@@ -830,16 +839,22 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
                 recipient.SignedOn = DateTime.Now;
                 await _repo.UpdateRecipientAsync(recipient);
 
+                // Fetched here (rather than after the Signed audit entry below,
+                // as before) so that entry can carry doc.HospitalID. It's used
+                // again immediately below regardless, so this isn't an extra
+                // round trip on top of what already ran.
+                var doc = await _repo.GetDocumentAsync(recipient.DocumentId);
+
                 await _repo.LogAuditAsync(new EsignAuditLog
                 {
                     DocumentId = recipient.DocumentId,
                     RecipientId = recipient.Id,
                     Action = "Signed",
                     Timestamp = DateTime.Now,
-                    IpAddress = ipAddress
+                    IpAddress = ipAddress,
+                    HospitalID = doc?.HospitalID
                 });
 
-                var doc = await _repo.GetDocumentAsync(recipient.DocumentId);
                 var allRecipients = await _repo.GetRecipientsAsync(doc.Id);
                 var allSigners = allRecipients.Where(r => r.Role == RecipientRole.Sign || r.Role == RecipientRole.Approve).ToList();
                 var stillPending = allSigners.Where(r => r.Status != RecipientStatus.Signed).ToList();
@@ -876,7 +891,8 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
                     {
                         DocumentId = doc.Id,
                         Action = "Completed",
-                        Timestamp = DateTime.Now
+                        Timestamp = DateTime.Now,
+                        HospitalID = doc.HospitalID
                     });
 
                     await _notifier.NotifyDocumentCompletedAsync(doc);
@@ -925,7 +941,8 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
                 Action = "Rejected",
                 Timestamp = DateTime.Now,
                 IpAddress = ipAddress,
-                Details = request.Reason
+                Details = request.Reason,
+                HospitalID = doc.HospitalID
             });
 
             await _notifier.NotifyDocumentRejectedAsync(doc, recipient);
@@ -933,13 +950,19 @@ $@"<table role=""presentation"" width=""100%"" cellpadding=""0"" cellspacing=""0
 
         public async Task DeleteDocumentAsync(int documentId, string requestedBy)
         {
+            // Fetched first (this is a soft delete -- IsDeleted=1 -- so the row
+            // is still readable right up until this call) purely so the audit
+            // entry below can carry HospitalID instead of leaving it null.
+            var doc = await _repo.GetDocumentAsync(documentId);
+
             await _repo.DeleteDocumentAsync(documentId);
             await _repo.LogAuditAsync(new EsignAuditLog
             {
                 DocumentId = documentId,
                 Action = "Deleted",
                 Timestamp = DateTime.Now,
-                Details = $"Deleted by {requestedBy}"
+                Details = $"Deleted by {requestedBy}",
+                HospitalID = doc?.HospitalID
             });
         }
 

@@ -67,8 +67,8 @@ namespace ALHMobileAppAPI.Esign.DTOs
         public string EmpNo { get; set; }
         public string FullName { get; set; }
         public string DepartmentName { get; set; }
-
-
+        public string HospitalID { get; set; }
+        public string HospitalName { get; set; }
 
         public List<RecipientSummaryDto> Recipients { get; set; }
         public List<FieldSummaryDto> Fields { get; set; }

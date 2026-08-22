@@ -60,12 +60,12 @@ namespace ALHMobileAppAPI.Services
                     request.Properties["UserName"] = userName;
                 }
             }
-            catch (SecurityTokenException)
+            catch (SecurityTokenException exM)
             {
                 // expired / bad signature / wrong issuer-audience -- leave Properties
                 // unset; RequireJwtAuthAttribute rejects requests with no UserId set.
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // malformed token string, etc. -- same handling.
             }

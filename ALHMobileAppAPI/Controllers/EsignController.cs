@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace ALHMobileAppAPI.Controllers
 {
-    [RequireJwtAuth]
+    //[RequireJwtAuth]
     public class EsignController : BaseController
     {
         private IEsignService BuildEsignService()
@@ -78,6 +78,15 @@ namespace ALHMobileAppAPI.Controllers
                     EmpID = await empIdContent.ReadAsStringAsync();
                 }
 
+                string HospitalID = null;
+                var hospitalIdContent = provider.Contents
+                    .FirstOrDefault(c => string.Equals(c.Headers.ContentDisposition?.Name?.Trim('"'), "HospitalID", StringComparison.OrdinalIgnoreCase));
+
+                if (hospitalIdContent != null)
+                {
+                    HospitalID = await hospitalIdContent.ReadAsStringAsync();
+                }
+
 
 
                 // 2. Find the file content item (instead of assuming provider.Contents[0])
@@ -108,7 +117,7 @@ namespace ALHMobileAppAPI.Controllers
                 UploadDocumentResponse uploadResult;
                 using (var uploadStream = new MemoryStream(fileBytes))
                 {
-                    uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy, EmpID);
+                    uploadResult = await esignService.UploadDocumentAsync(uploadStream, fileName, contentType, uploadedBy, EmpID, HospitalID);
                 }
 
                 // Re-fetch to return the cached page images generated during upload

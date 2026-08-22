@@ -59,8 +59,10 @@ namespace ALHMobileAppAPI.Esign.Services
                     //    d.CachedPageImages != null && d.CachedPageImages.Count > 0
                     //        ? (object)JsonConvert.SerializeObject(d.CachedPageImages)
                     //        : DBNull.Value);
-                    cmd.Parameters.AddWithValue("@CachedPageImagesJson", DBNull.Value);                    
+                    cmd.Parameters.AddWithValue("@CachedPageImagesJson", DBNull.Value);
                     cmd.Parameters.AddWithValue("@EmpID", (object)d.EmpID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@HospitalID",
+                        (object)d.HospitalID ?? (object)strDefaultHospitalId ?? DBNull.Value);
 
                     // usp_Esign_CreateDocument now generates the HAMS-prefixed
                     // DocumentNumber server-side and returns it alongside the new
@@ -95,6 +97,7 @@ namespace ALHMobileAppAPI.Esign.Services
                     cmd.Parameters.AddWithValue("@IpAddress", (object)e.IpAddress ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@UserAgent", (object)e.UserAgent ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@Details", (object)e.Details ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@HospitalID", (object)e.HospitalID ?? DBNull.Value);
                     await cmd.ExecuteNonQueryAsync();
                 }
             }
@@ -505,6 +508,27 @@ namespace ALHMobileAppAPI.Esign.Services
 
         // ---------- mapping helpers ----------
 
+        /// <summary>
+        /// Reads a nullable string column by name, but returns null instead of
+        /// throwing when the column isn't present in this particular result set
+        /// (e.g. HospitalName comes from a join that not every SP that calls
+        /// MapDocument has been updated to include yet). SqlDataReader's own
+        /// indexer/GetOrdinal throws IndexOutOfRangeException for a missing
+        /// column, so that's the one exception this deliberately swallows.
+        /// </summary>
+        private static string GetStringOrNull(SqlDataReader r, string columnName)
+        {
+            try
+            {
+                int ordinal = r.GetOrdinal(columnName);
+                return r.IsDBNull(ordinal) ? null : r.GetString(ordinal);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                return null;
+            }
+        }
+
         private static EsignDocument MapDocument(SqlDataReader r)
         {
             //var cachedJson = r["CachedPageImagesJson"] as string;
@@ -526,6 +550,8 @@ namespace ALHMobileAppAPI.Esign.Services
                 Note = r["Note"] as string,
                 IsOrdered = (bool)r["IsOrdered"],
                 IsDeleted = (bool)r["IsDeleted"],
+                HospitalID = r["HospitalID"] as string,
+                HospitalName = GetStringOrNull(r, "HospitalName"),
 
                 EmpNo = r["EmpNo"] as string,
                 FullName = r["FullName"] as string,

@@ -56,7 +56,8 @@ namespace ALHMobileAppAPI.Esign.Models
         public string EmpNo { get; set; }
         public string FullName { get; set; }
         public string DepartmentName { get; set; }
-
+        public string HospitalID { get; set; }
+        public string HospitalName { get; set; }
 
         public DateTime CreatedOn { get; set; }
         public DateTime? SentOn { get; set; }
@@ -121,5 +122,6 @@ namespace ALHMobileAppAPI.Esign.Models
         public string IpAddress { get; set; }
         public string UserAgent { get; set; }
         public string Details { get; set; }
+        public string HospitalID { get; set; }
     }
 }
